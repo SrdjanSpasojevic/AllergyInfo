@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E31E82D51A007305E3 /* AppDelegate.swift */; };
-		A270D9E61E82D51A007305E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E51E82D51A007305E3 /* ViewController.swift */; };
+		A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E51E82D51A007305E3 /* StartViewController.swift */; };
 		A270D9E91E82D51A007305E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A270D9E71E82D51A007305E3 /* Main.storyboard */; };
 		A270D9EB1E82D51A007305E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A270D9EA1E82D51A007305E3 /* Assets.xcassets */; };
 		A270D9EE1E82D51A007305E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */; };
 		A270D9F91E82D51A007305E3 /* AllergyInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9F81E82D51A007305E3 /* AllergyInfoTests.swift */; };
 		A270DA041E82D51A007305E3 /* AllergyInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270DA031E82D51A007305E3 /* AllergyInfoUITests.swift */; };
+		D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		A270D9E01E82D51A007305E3 /* AllergyInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270D9E31E82D51A007305E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A270D9E51E82D51A007305E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A270D9E51E82D51A007305E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		A270D9E81E82D51A007305E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A270D9EA1E82D51A007305E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A270D9ED1E82D51A007305E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		A270D9FF1E82D51A007305E3 /* AllergyInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllergyInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270DA031E82D51A007305E3 /* AllergyInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyInfoUITests.swift; sourceTree = "<group>"; };
 		A270DA051E82D51A007305E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424866E0828758E84A2EAD80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99DD206E1EC30E2EFDDDD784 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */,
+				CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A270D9D71E82D51A007305E3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				A270D9F71E82D51A007305E3 /* AllergyInfoTests */,
 				A270DA021E82D51A007305E3 /* AllergyInfoUITests */,
 				A270D9E11E82D51A007305E3 /* Products */,
+				99DD206E1EC30E2EFDDDD784 /* Pods */,
+				424866E0828758E84A2EAD80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A270D9E31E82D51A007305E3 /* AppDelegate.swift */,
-				A270D9E51E82D51A007305E3 /* ViewController.swift */,
+				A270D9E51E82D51A007305E3 /* StartViewController.swift */,
 				A270D9E71E82D51A007305E3 /* Main.storyboard */,
 				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
 				A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */,
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A270DA081E82D51A007305E3 /* Build configuration list for PBXNativeTarget "AllergyInfo" */;
 			buildPhases = (
+				242590F9240AC249F9F107BA /* [CP] Check Pods Manifest.lock */,
 				A270D9DC1E82D51A007305E3 /* Sources */,
 				A270D9DD1E82D51A007305E3 /* Frameworks */,
 				A270D9DE1E82D51A007305E3 /* Resources */,
+				97DB1DAA62CDB1A171D59EAA /* [CP] Embed Pods Frameworks */,
+				15E4DFCD3B3B61555D0E8795 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +284,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15E4DFCD3B3B61555D0E8795 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		242590F9240AC249F9F107BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97DB1DAA62CDB1A171D59EAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A270D9DC1E82D51A007305E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A270D9E61E82D51A007305E3 /* ViewController.swift in Sources */,
+				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
 				A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +488,7 @@
 		};
 		A270DA091E82D51A007305E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
@@ -426,6 +502,7 @@
 		};
 		A270DA0A1E82D51A007305E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
