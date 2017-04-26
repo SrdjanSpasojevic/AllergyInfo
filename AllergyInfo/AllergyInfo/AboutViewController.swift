@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class AboutViewController: UIViewController {
 
@@ -15,7 +16,7 @@ class AboutViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "About"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 196.0/255.0, green: 241.0/255.0, blue: 190.0/255.0, alpha: 1.0)]
     }
 
     override func didReceiveMemoryWarning() {

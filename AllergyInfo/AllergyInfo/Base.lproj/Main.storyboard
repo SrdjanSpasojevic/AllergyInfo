@@ -59,7 +59,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SelectVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBf-1G-0Y1">
-                                                    <rect key="frame" x="8" y="8" width="359" height="54"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="55"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
                                                 <constraint firstAttribute="topMargin" secondItem="HBf-1G-0Y1" secondAttribute="top" id="JzI-Jh-i5C"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="HBf-1G-0Y1" secondAttribute="leading" id="Q8V-NL-Aq1"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HBf-1G-0Y1" secondAttribute="trailing" id="V1z-O1-GqA"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="HBf-1G-0Y1" secondAttribute="bottom" id="bpl-r7-Zbb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HBf-1G-0Y1" secondAttribute="bottom" constant="-1" id="bpl-r7-Zbb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.24654260277748108" green="0.24139058589935303" blue="0.40771734714508057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iM-BI-Xae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="1396"/>
+            <point key="canvasLocation" x="1056.8" y="1395.6521739130435"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="xMZ-eq-0QL">
@@ -171,13 +171,46 @@
                     <view key="view" contentMode="scaleToFill" id="aQO-qY-eb7">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kQ-YV-ttS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGR-1z-uhQ">
+                                        <rect key="frame" x="318" y="10" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.24483479189999999" green="0.24031841840000001" blue="0.40894672529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA7-ad-Xmm">
+                                        <rect key="frame" x="8" y="8" width="302" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" red="0.24483479194405236" green="0.24031841837420617" blue="0.4089467252725888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wA7-ad-Xmm" firstAttribute="top" secondItem="2kQ-YV-ttS" secondAttribute="top" constant="8" id="DUu-pm-HQb"/>
+                                    <constraint firstItem="wA7-ad-Xmm" firstAttribute="leading" secondItem="2kQ-YV-ttS" secondAttribute="leading" constant="8" id="DuB-ef-1ap"/>
+                                    <constraint firstAttribute="bottom" secondItem="wA7-ad-Xmm" secondAttribute="bottom" constant="8" id="GLW-sH-axT"/>
+                                    <constraint firstItem="KGR-1z-uhQ" firstAttribute="top" secondItem="2kQ-YV-ttS" secondAttribute="top" constant="10" id="RIi-mY-evF"/>
+                                    <constraint firstAttribute="trailing" secondItem="KGR-1z-uhQ" secondAttribute="trailing" constant="8" id="Scl-aA-kTW"/>
+                                    <constraint firstItem="KGR-1z-uhQ" firstAttribute="leading" secondItem="wA7-ad-Xmm" secondAttribute="trailing" constant="8" id="ebK-Xb-Dbf"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGR-1z-uhQ" secondAttribute="bottom" constant="9" id="iuK-bi-4zp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2kQ-YV-ttS" firstAttribute="top" secondItem="nUv-0D-NbT" secondAttribute="bottom" constant="20" id="lvD-q3-blq"/>
+                            <constraint firstItem="2kQ-YV-ttS" firstAttribute="leading" secondItem="aQO-qY-eb7" secondAttribute="leadingMargin" constant="-16" id="oPy-TN-HP4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2kQ-YV-ttS" secondAttribute="trailing" constant="-16" id="x8N-lu-ftp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LFW-gs-VVe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKm-gq-asM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="656"/>
+            <point key="canvasLocation" x="3053.5999999999999" y="655.32233883058473"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="f60-v7-Jdu">
@@ -190,20 +223,79 @@
                     <view key="view" contentMode="scaleToFill" id="fF8-20-rhn">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1l5-xT-r8H" customClass="SpringTextView" customModule="Spring">
+                                <rect key="frame" x="16" y="8" width="343" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.24654260277748108" green="0.24139058589935303" blue="0.40771734714508057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="88X-re-Acb" customClass="SpringTextView" customModule="Spring">
+                                <rect key="frame" x="16" y="237" width="343" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.24654260277748108" green="0.24139058589935303" blue="0.40771734714508057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BIz-ml-9Yq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4t-YJ-DGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="1355"/>
+            <point key="canvasLocation" x="3053.5999999999999" y="1354.2728635682161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xa6-7v-4bO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A7f-9i-5bs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="jh3-pa-CQt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jh3-pa-CQt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,10 +315,9 @@
         <!--Navigation Controller-->
         <scene sceneID="wve-Nd-orW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yi-Pz-CO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tm0-J6-8Ma" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="M5t-Hp-e8G">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M5t-Hp-e8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.24654260277748108" green="0.24139058589935303" blue="0.40771734714508057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,6 +327,7 @@
                         <segue destination="JOP-EI-yoS" kind="relationship" relationship="rootViewController" id="n71-yW-86b"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yi-Pz-CO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="-27"/>
         </scene>
@@ -244,7 +336,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lev-UG-M9R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="59b-Jk-JL6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="59b-Jk-JL6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -263,7 +355,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BEy-bb-tNF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="FHi-E9-wNp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FHi-E9-wNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

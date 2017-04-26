@@ -7,77 +7,160 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034DE5410F7DC55327DA0C0292EAC84B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		0383E0584C14C0EDB8C5EE3668636769 /* CenterContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A70C11496DDE36B696687F4BF8E9F /* CenterContainmentSegue.swift */; };
-		280E8EA14C3567A1809E2F2F1938539E /* SideContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388CF0F933A9C4C7CE9AEF8B64362FCA /* SideContainmentSegue.swift */; };
-		340F5355E2B06881839DFD975218FA08 /* SideMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4DCA2CAA3BE907AF33A78862BCA75 /* SideMenuController-dummy.m */; };
-		38386C84B8EB384FC4AC87DAFAB5F7E0 /* SideMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E3A69CFB0455A074D54E57BFA87648FA /* SideMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C9BC9A541F1ED565973F0E8E552C0C3 /* Pods-AllergyInfo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C411A3D447010D67A503D5CC78249E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		AF105F765657764DD8FCC09428D5BF6E /* SideMenuController+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E871657BF9104F2DEEF87127CF2BBF14 /* SideMenuController+CustomTypes.swift */; };
-		B4E5DCC5E3B11570B4044E0D8B535F1E /* SideMenuController+SideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363F45C01B97966DB459CF005A7073DC /* SideMenuController+SideOver.swift */; };
-		B981B3954D9A79711CC431BBA1E08DD6 /* SideMenuController+SideUnder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D92716ED87BA85C35C649430F34394 /* SideMenuController+SideUnder.swift */; };
-		BCE2A329771A776DDD2A8CBB12A6B5C2 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ACC4417FACEA860D046BC680762C8B /* SideMenuController.swift */; };
-		DA412A7ADB0839DE44AD881B4F423E23 /* Pods-AllergyInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */; };
-		F77B92DC8A27AA30FF6B447969A89F6A /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A53C9856ACF3E72B498E682345703 /* TransitionAnimator.swift */; };
-		F9E71F505EB038A35EEFAC08FE1805D1 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EF0C0029FEDB0E550AF7DA36E606A4 /* UIKitExtensions.swift */; };
+		028183AADE93E1B186B00467FEE0ED5B /* SideMenuController+SideUnder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */; };
+		059263CDB1D78A81061A15FFFE3CEB66 /* SideMenuController+SideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */; };
+		0FE8CBD696CAB1CC4EF49513524CF3D5 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */; };
+		25928A6620EBEC08CC1E4C3CC99C308C /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2662CD0D94C3A9404BF40427D19E6AFF /* CenterContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */; };
+		2714338C9905A5EED04022C0700DD412 /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */; };
+		2C707F59775542389509DEC12902E2AF /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */; };
+		2CC9B777F86CE52B9EF6992752953A34 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */; };
+		2FD6FB38D2EBFC02195FE029052FD526 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		312039689D23E1009D53C160FB33C586 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */; };
+		3BD6F16BEA9CAD1F48041F12A0D8258B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */; };
+		41E64974A95288B17512627C94586FC8 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */; };
+		4FEBFA4C866C55FF22266EA9CA29A21D /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */; };
+		5EFAB0141284E0428C5970B233A3BF24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */; };
+		6255D6129BC805B886B992FEF1A471CD /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */; };
+		75E4363BDD209D529ED6A5FA3507B6B4 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */; };
+		7E6275691FA3B87E619630C159830478 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */; };
+		7EB45C22515024CB8EFB9C8BBBE7F7AA /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */; };
+		82641EBB28CD326AB2D3F3117AA2C30A /* Pods-AllergyInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */; };
+		82E97614AD316BAC22F2B1398CDA1221 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */; };
+		92D9C60C132DFCABB9C42E98D07FDC74 /* SideMenuController+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */; };
+		95DE46C07E9F11A7C70D17B033CE2CD2 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */; };
+		A102A5D1EA631E745ABEDF80A4287EF4 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */; };
+		AAADB3893E89C2D183200E21FCBB9429 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */; };
+		B0E93ACB4A8278B5A835A7E82A0F9022 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */; };
+		B30C3D00607E75CB1399F082101BAF54 /* SideMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */; };
+		B58AB6383C46687337C79E782FB35E84 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */; };
+		BD6F7C1FD6EB2DE4B07FB7B8A0CC41F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */; };
+		BF2EB5BA7155AF6FA19A9B78F7BFDCE9 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */; };
+		BFF804813605919475EAB2D864F4CA0E /* SideMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5E17195002B35E26B777ECB5917BC60 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */; };
+		C628599E86727418C4879F8366F60156 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */; };
+		C82BF725382D4395D627DCDCA66966F2 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */; };
+		CA2876387B4577DF69C9ED2B5D0CE975 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */; };
+		CFF8D987F209E5279639FC99B7521563 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */; };
+		D325D8360FDC56F3222E3BAF29012427 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */; };
+		D5FAE0BDE84A1E5925BDECAB6FCD04A4 /* SideContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */; };
+		E3117927B6956D4E838716C8800F0EAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E458645EED18F694FF3CCEDF96498690 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */; };
+		E601C53E805209DA7A71B34D498B146A /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */; };
+		EB0C790745C4009504FE9B3CB92869A4 /* Pods-AllergyInfo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECD5BFFAEBEB1BEC4F0F396790DCF2D9 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */; };
+		F2087FAA944005411DE244CB17AD888E /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */; };
+		F4D2DD72E52ADF8490877A54CB2B805A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */; };
+		FC888E1E43ED8A7E4010FA177D7909A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FFFD82015D18745FC557E376BA8A3992 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		99CEE240F037AE7CC6B54B20E652C521 /* PBXContainerItemProxy */ = {
+		8C32D724F0D77DC11BD93244B9FE833A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0CF43C040D2DB0074476994C49FB8C03;
+			remoteGlobalIDString = 44796A9E493BD93CD65DEA2CC9C65347;
 			remoteInfo = SideMenuController;
+		};
+		921084BFEEDE400E6A6104968ED778E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0787E39F4089D0AB9B972F6A52F1D7FF;
+			remoteInfo = Spring;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		077A70C11496DDE36B696687F4BF8E9F /* CenterContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenterContainmentSegue.swift; path = Source/CenterContainmentSegue.swift; sourceTree = "<group>"; };
+		044AA06DEF565B4B548136DD5AE45ACB /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AllergyInfo.framework; path = "Pods-AllergyInfo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = Source/TransitionAnimator.swift; sourceTree = "<group>"; };
 		0CE2727DA91DA1161D136ACDFAF62F61 /* Pods-AllergyInfo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AllergyInfo-resources.sh"; sourceTree = "<group>"; };
+		12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Source/SideMenuController.swift; sourceTree = "<group>"; };
+		138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
 		1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AllergyInfo-dummy.m"; sourceTree = "<group>"; };
-		363F45C01B97966DB459CF005A7073DC /* SideMenuController+SideOver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideOver.swift"; path = "Source/SideMenuController+SideOver.swift"; sourceTree = "<group>"; };
-		388CF0F933A9C4C7CE9AEF8B64362FCA /* SideContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideContainmentSegue.swift; path = Source/SideContainmentSegue.swift; sourceTree = "<group>"; };
-		4B1A53C9856ACF3E72B498E682345703 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = Source/TransitionAnimator.swift; sourceTree = "<group>"; };
+		20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		3711558936702E9D0B2D9A885E0E0747 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
+		5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideUnder.swift"; path = "Source/SideMenuController+SideUnder.swift"; sourceTree = "<group>"; };
 		52F9230A67D4EB8BB4EBC5B51AB83A58 /* Pods-AllergyInfo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AllergyInfo-frameworks.sh"; sourceTree = "<group>"; };
-		60568D9345EE4FF25D4B2F99F3583EE9 /* SideMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SideMenuController.modulemap; sourceTree = "<group>"; };
+		5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Source/UIKitExtensions.swift; sourceTree = "<group>"; };
 		6A9574C5C8424E1D2D532D2538DEF32F /* Pods-AllergyInfo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AllergyInfo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		75E10267E2FBC32FEA9F7811F409FC9B /* SideMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-prefix.pch"; sourceTree = "<group>"; };
+		7764B5F5A413114B9D33EFEBA87F22D8 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Spring.modulemap; sourceTree = "<group>"; };
+		7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+CustomTypes.swift"; path = "Source/SideMenuController+CustomTypes.swift"; sourceTree = "<group>"; };
+		7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuController.xcconfig; sourceTree = "<group>"; };
+		8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A199726180937E8ED7E27A78A977240 /* SideMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-prefix.pch"; sourceTree = "<group>"; };
 		9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AllergyInfo-umbrella.h"; sourceTree = "<group>"; };
 		9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AllergyInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuController-dummy.m"; sourceTree = "<group>"; };
+		A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
 		AEB5554BC5198E746DE483CB5DD7786A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0FAC252BFC126161727EB306CB60F01 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AllergyInfo.framework; path = "Pods-AllergyInfo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7ACC4417FACEA860D046BC680762C8B /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Source/SideMenuController.swift; sourceTree = "<group>"; };
+		B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenterContainmentSegue.swift; path = Source/CenterContainmentSegue.swift; sourceTree = "<group>"; };
+		B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuController.framework; path = SideMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
+		B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-umbrella.h"; sourceTree = "<group>"; };
+		C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0D92716ED87BA85C35C649430F34394 /* SideMenuController+SideUnder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideUnder.swift"; path = "Source/SideMenuController+SideUnder.swift"; sourceTree = "<group>"; };
-		DDF878D96A7A88F53582C07FED8AB7F4 /* SideMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuController.xcconfig; sourceTree = "<group>"; };
-		E3A69CFB0455A074D54E57BFA87648FA /* SideMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-umbrella.h"; sourceTree = "<group>"; };
-		E3EF0C0029FEDB0E550AF7DA36E606A4 /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Source/UIKitExtensions.swift; sourceTree = "<group>"; };
-		E871657BF9104F2DEEF87127CF2BBF14 /* SideMenuController+CustomTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+CustomTypes.swift"; path = "Source/SideMenuController+CustomTypes.swift"; sourceTree = "<group>"; };
+		D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		E5134BB8BB56A8845522BB7A47BAC26E /* SideMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SideMenuController.modulemap; sourceTree = "<group>"; };
+		E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideOver.swift"; path = "Source/SideMenuController+SideOver.swift"; sourceTree = "<group>"; };
 		EAE19AAC91722F128BAB82C4E43452F2 /* Pods-AllergyInfo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AllergyInfo.modulemap"; sourceTree = "<group>"; };
-		EC46F2A1D5471007C1FF0E7F9606E752 /* SideMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuController.framework; path = SideMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
+		F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideContainmentSegue.swift; path = Source/SideContainmentSegue.swift; sourceTree = "<group>"; };
 		F82F43D6245F3B5E19D73798B49BF672 /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
-		FAD4DCA2CAA3BE907AF33A78862BCA75 /* SideMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuController-dummy.m"; sourceTree = "<group>"; };
+		F8CB158E0332C619569DC3BEC87C3E54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
 		FDEFD06520B1D097116057E63DF3124F /* Pods-AllergyInfo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AllergyInfo-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE22917F7F05645ECC73AEA6AC00B7A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		423A0CB69CAC265763C53763DAEBB5F9 /* Frameworks */ = {
+		44523C402E98BDAE6CD5920BE87EAB23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034DE5410F7DC55327DA0C0292EAC84B /* Foundation.framework in Frameworks */,
+				FC888E1E43ED8A7E4010FA177D7909A4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6700FE622BAFD51F59D0C1B52F4D2D4 /* Frameworks */ = {
+		57F83113072049687E9401856DC1AFFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C411A3D447010D67A503D5CC78249E8 /* Foundation.framework in Frameworks */,
+				2FD6FB38D2EBFC02195FE029052FD526 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A5B174A79FA6CD80818FDE3956D1534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3117927B6956D4E838716C8800F0EAF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +185,20 @@
 			path = "Target Support Files/Pods-AllergyInfo";
 			sourceTree = "<group>";
 		};
+		1715D1165260BC146B73617CF0A4C287 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8CB158E0332C619569DC3BEC87C3E54 /* Info.plist */,
+				E5134BB8BB56A8845522BB7A47BAC26E /* SideMenuController.modulemap */,
+				7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */,
+				A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */,
+				75E10267E2FBC32FEA9F7811F409FC9B /* SideMenuController-prefix.pch */,
+				C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideMenuController";
+			sourceTree = "<group>";
+		};
 		213704621E8FC8C070A11A6262ADD2A5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,18 +207,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2DFCD323E5B1BD93181548FF1C14434E /* Support Files */ = {
+		256F2732ED95074EC38C4E5CAB978F2D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE22917F7F05645ECC73AEA6AC00B7A6 /* Info.plist */,
-				60568D9345EE4FF25D4B2F99F3583EE9 /* SideMenuController.modulemap */,
-				DDF878D96A7A88F53582C07FED8AB7F4 /* SideMenuController.xcconfig */,
-				FAD4DCA2CAA3BE907AF33A78862BCA75 /* SideMenuController-dummy.m */,
-				9A199726180937E8ED7E27A78A977240 /* SideMenuController-prefix.pch */,
-				E3A69CFB0455A074D54E57BFA87648FA /* SideMenuController-umbrella.h */,
+				3711558936702E9D0B2D9A885E0E0747 /* Info.plist */,
+				7764B5F5A413114B9D33EFEBA87F22D8 /* Spring.modulemap */,
+				8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */,
+				9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */,
+				044AA06DEF565B4B548136DD5AE45ACB /* Spring-prefix.pch */,
+				74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SideMenuController";
+			path = "../Target Support Files/Spring";
+			sourceTree = "<group>";
+		};
+		5A31F742D98938D1808640185930CDE0 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */,
+				26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */,
+				E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */,
+				415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */,
+				4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */,
+				47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */,
+				4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */,
+				25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */,
+				060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */,
+				DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */,
+				4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */,
+				A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */,
+				5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */,
+				F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */,
+				C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */,
+				138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */,
+				F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */,
+				20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */,
+				12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */,
+				734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */,
+				B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */,
+				9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */,
+				E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */,
+				AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */,
+				EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */,
+				A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */,
+				D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */,
+				C5AB3C64848362D4C089733B65DA8AEB /* Resources */,
+				256F2732ED95074EC38C4E5CAB978F2D /* Support Files */,
+			);
+			name = Spring;
+			path = Spring;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -137,10 +271,29 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BC6E69CD27C8F8A72C62A3881AB65A5F /* Pods */,
-				D6B87A423F995D7D99BE8A1C6BB1C735 /* Products */,
+				7E50D3424B410679D56DEDDD82216F44 /* Pods */,
+				90C754633015EE7A082E74BDBE6D68C2 /* Products */,
 				213704621E8FC8C070A11A6262ADD2A5 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7E50D3424B410679D56DEDDD82216F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD3BD4044D58F9752960FF9F6D53B61B /* SideMenuController */,
+				5A31F742D98938D1808640185930CDE0 /* Spring */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90C754633015EE7A082E74BDBE6D68C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */,
+				B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */,
+				3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -151,69 +304,106 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC6E69CD27C8F8A72C62A3881AB65A5F /* Pods */ = {
+		BD3BD4044D58F9752960FF9F6D53B61B /* SideMenuController */ = {
 			isa = PBXGroup;
 			children = (
-				C42C1ED35CE3E362650E44EA30B4C4A2 /* SideMenuController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C42C1ED35CE3E362650E44EA30B4C4A2 /* SideMenuController */ = {
-			isa = PBXGroup;
-			children = (
-				077A70C11496DDE36B696687F4BF8E9F /* CenterContainmentSegue.swift */,
-				388CF0F933A9C4C7CE9AEF8B64362FCA /* SideContainmentSegue.swift */,
-				B7ACC4417FACEA860D046BC680762C8B /* SideMenuController.swift */,
-				E871657BF9104F2DEEF87127CF2BBF14 /* SideMenuController+CustomTypes.swift */,
-				363F45C01B97966DB459CF005A7073DC /* SideMenuController+SideOver.swift */,
-				D0D92716ED87BA85C35C649430F34394 /* SideMenuController+SideUnder.swift */,
-				4B1A53C9856ACF3E72B498E682345703 /* TransitionAnimator.swift */,
-				E3EF0C0029FEDB0E550AF7DA36E606A4 /* UIKitExtensions.swift */,
-				2DFCD323E5B1BD93181548FF1C14434E /* Support Files */,
+				B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */,
+				F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */,
+				1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */,
+				7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */,
+				E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */,
+				5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */,
+				0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */,
+				661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */,
+				1715D1165260BC146B73617CF0A4C287 /* Support Files */,
 			);
 			name = SideMenuController;
 			path = SideMenuController;
 			sourceTree = "<group>";
 		};
-		D6B87A423F995D7D99BE8A1C6BB1C735 /* Products */ = {
+		C5AB3C64848362D4C089733B65DA8AEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B0FAC252BFC126161727EB306CB60F01 /* Pods_AllergyInfo.framework */,
-				EC46F2A1D5471007C1FF0E7F9606E752 /* SideMenuController.framework */,
+				FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */,
+				2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */,
 			);
-			name = Products;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B182F1D062BF1BC6AC2DCBFB0392240E /* Headers */ = {
+		6B19828599107C833273AA6FEFECD67E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C9BC9A541F1ED565973F0E8E552C0C3 /* Pods-AllergyInfo-umbrella.h in Headers */,
+				25928A6620EBEC08CC1E4C3CC99C308C /* Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9C90C15E52B8436A5BB4B63EC4309EB /* Headers */ = {
+		75D4D2CFCCC29E75D00B007D40AD534A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38386C84B8EB384FC4AC87DAFAB5F7E0 /* SideMenuController-umbrella.h in Headers */,
+				BFF804813605919475EAB2D864F4CA0E /* SideMenuController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81D2241E18626C8D5C9C76E1C499DCD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB0C790745C4009504FE9B3CB92869A4 /* Pods-AllergyInfo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0CF43C040D2DB0074476994C49FB8C03 /* SideMenuController */ = {
+		0612718227EE15ABA8F8CA06570D1B0C /* Pods-AllergyInfo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E444FA39EBFA523F1C598BA75EC2378 /* Build configuration list for PBXNativeTarget "SideMenuController" */;
+			buildConfigurationList = AA20F75F35A0D30377AA394F4FF20C42 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */;
 			buildPhases = (
-				C9BB4F0BEAFE3B7C7B7B2C568A1E281B /* Sources */,
-				423A0CB69CAC265763C53763DAEBB5F9 /* Frameworks */,
-				E9C90C15E52B8436A5BB4B63EC4309EB /* Headers */,
+				9385C6427FC50760E08CAFA922FB20A3 /* Sources */,
+				44523C402E98BDAE6CD5920BE87EAB23 /* Frameworks */,
+				81D2241E18626C8D5C9C76E1C499DCD8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3B5A34F2BF40BA1C7B931930AC3867 /* PBXTargetDependency */,
+				2FE1A152C927472AC5E6943151C87890 /* PBXTargetDependency */,
+			);
+			name = "Pods-AllergyInfo";
+			productName = "Pods-AllergyInfo";
+			productReference = 0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C644DBF43E2A750C051662E272DF4943 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildPhases = (
+				F5DEC77B939E0618D4851883012E9A24 /* Sources */,
+				57F83113072049687E9401856DC1AFFA /* Frameworks */,
+				1A41E3696104470C5F577C86E2C9618A /* Resources */,
+				6B19828599107C833273AA6FEFECD67E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spring;
+			productName = Spring;
+			productReference = 3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2256D71D1CF94BCB518A81719DB1BAF0 /* Build configuration list for PBXNativeTarget "SideMenuController" */;
+			buildPhases = (
+				7F1FAD635274E24432270F8227801544 /* Sources */,
+				6A5B174A79FA6CD80818FDE3956D1534 /* Frameworks */,
+				75D4D2CFCCC29E75D00B007D40AD534A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -221,25 +411,7 @@
 			);
 			name = SideMenuController;
 			productName = SideMenuController;
-			productReference = EC46F2A1D5471007C1FF0E7F9606E752 /* SideMenuController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EF7E158267962538FFDA374FDEB1A4DA /* Pods-AllergyInfo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2ADE3732390C1CE4D9141D9CC729576F /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */;
-			buildPhases = (
-				646559BAEC9625120C19821F0EAD3762 /* Sources */,
-				F6700FE622BAFD51F59D0C1B52F4D2D4 /* Frameworks */,
-				B182F1D062BF1BC6AC2DCBFB0392240E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B3327EA3CBB1DC4DDFBAD9099B925BA /* PBXTargetDependency */,
-			);
-			name = "Pods-AllergyInfo";
-			productName = "Pods-AllergyInfo";
-			productReference = B0FAC252BFC126161727EB306CB60F01 /* Pods_AllergyInfo.framework */;
+			productReference = B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -259,53 +431,207 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D6B87A423F995D7D99BE8A1C6BB1C735 /* Products */;
+			productRefGroup = 90C754633015EE7A082E74BDBE6D68C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF7E158267962538FFDA374FDEB1A4DA /* Pods-AllergyInfo */,
-				0CF43C040D2DB0074476994C49FB8C03 /* SideMenuController */,
+				0612718227EE15ABA8F8CA06570D1B0C /* Pods-AllergyInfo */,
+				44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */,
+				0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		646559BAEC9625120C19821F0EAD3762 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		1A41E3696104470C5F577C86E2C9618A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA412A7ADB0839DE44AD881B4F423E23 /* Pods-AllergyInfo-dummy.m in Sources */,
+				5EFAB0141284E0428C5970B233A3BF24 /* Images.xcassets in Resources */,
+				F4D2DD72E52ADF8490877A54CB2B805A /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9BB4F0BEAFE3B7C7B7B2C568A1E281B /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F1FAD635274E24432270F8227801544 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0383E0584C14C0EDB8C5EE3668636769 /* CenterContainmentSegue.swift in Sources */,
-				280E8EA14C3567A1809E2F2F1938539E /* SideContainmentSegue.swift in Sources */,
-				AF105F765657764DD8FCC09428D5BF6E /* SideMenuController+CustomTypes.swift in Sources */,
-				B4E5DCC5E3B11570B4044E0D8B535F1E /* SideMenuController+SideOver.swift in Sources */,
-				B981B3954D9A79711CC431BBA1E08DD6 /* SideMenuController+SideUnder.swift in Sources */,
-				340F5355E2B06881839DFD975218FA08 /* SideMenuController-dummy.m in Sources */,
-				BCE2A329771A776DDD2A8CBB12A6B5C2 /* SideMenuController.swift in Sources */,
-				F77B92DC8A27AA30FF6B447969A89F6A /* TransitionAnimator.swift in Sources */,
-				F9E71F505EB038A35EEFAC08FE1805D1 /* UIKitExtensions.swift in Sources */,
+				2662CD0D94C3A9404BF40427D19E6AFF /* CenterContainmentSegue.swift in Sources */,
+				D5FAE0BDE84A1E5925BDECAB6FCD04A4 /* SideContainmentSegue.swift in Sources */,
+				92D9C60C132DFCABB9C42E98D07FDC74 /* SideMenuController+CustomTypes.swift in Sources */,
+				059263CDB1D78A81061A15FFFE3CEB66 /* SideMenuController+SideOver.swift in Sources */,
+				028183AADE93E1B186B00467FEE0ED5B /* SideMenuController+SideUnder.swift in Sources */,
+				B30C3D00607E75CB1399F082101BAF54 /* SideMenuController-dummy.m in Sources */,
+				312039689D23E1009D53C160FB33C586 /* SideMenuController.swift in Sources */,
+				BF2EB5BA7155AF6FA19A9B78F7BFDCE9 /* TransitionAnimator.swift in Sources */,
+				75E4363BDD209D529ED6A5FA3507B6B4 /* UIKitExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9385C6427FC50760E08CAFA922FB20A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82641EBB28CD326AB2D3F3117AA2C30A /* Pods-AllergyInfo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DEC77B939E0618D4851883012E9A24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2087FAA944005411DE244CB17AD888E /* AsyncButton.swift in Sources */,
+				7E6275691FA3B87E619630C159830478 /* AsyncImageView.swift in Sources */,
+				4FEBFA4C866C55FF22266EA9CA29A21D /* AutoTextView.swift in Sources */,
+				3BD6F16BEA9CAD1F48041F12A0D8258B /* BlurView.swift in Sources */,
+				C5E17195002B35E26B777ECB5917BC60 /* DesignableButton.swift in Sources */,
+				82E97614AD316BAC22F2B1398CDA1221 /* DesignableImageView.swift in Sources */,
+				B58AB6383C46687337C79E782FB35E84 /* DesignableLabel.swift in Sources */,
+				2C707F59775542389509DEC12902E2AF /* DesignableTabBarController.swift in Sources */,
+				41E64974A95288B17512627C94586FC8 /* DesignableTextField.swift in Sources */,
+				C82BF725382D4395D627DCDCA66966F2 /* DesignableTextView.swift in Sources */,
+				CA2876387B4577DF69C9ED2B5D0CE975 /* DesignableView.swift in Sources */,
+				AAADB3893E89C2D183200E21FCBB9429 /* ImageLoader.swift in Sources */,
+				6255D6129BC805B886B992FEF1A471CD /* KeyboardLayoutConstraint.swift in Sources */,
+				BD6F7C1FD6EB2DE4B07FB7B8A0CC41F7 /* LoadingView.swift in Sources */,
+				FFFD82015D18745FC557E376BA8A3992 /* Misc.swift in Sources */,
+				95DE46C07E9F11A7C70D17B033CE2CD2 /* SoundPlayer.swift in Sources */,
+				2714338C9905A5EED04022C0700DD412 /* Spring-dummy.m in Sources */,
+				D325D8360FDC56F3222E3BAF29012427 /* Spring.swift in Sources */,
+				C628599E86727418C4879F8366F60156 /* SpringAnimation.swift in Sources */,
+				ECD5BFFAEBEB1BEC4F0F396790DCF2D9 /* SpringButton.swift in Sources */,
+				2CC9B777F86CE52B9EF6992752953A34 /* SpringImageView.swift in Sources */,
+				B0E93ACB4A8278B5A835A7E82A0F9022 /* SpringLabel.swift in Sources */,
+				E458645EED18F694FF3CCEDF96498690 /* SpringTextField.swift in Sources */,
+				E601C53E805209DA7A71B34D498B146A /* SpringTextView.swift in Sources */,
+				0FE8CBD696CAB1CC4EF49513524CF3D5 /* SpringView.swift in Sources */,
+				CFF8D987F209E5279639FC99B7521563 /* TransitionManager.swift in Sources */,
+				A102A5D1EA631E745ABEDF80A4287EF4 /* TransitionZoom.swift in Sources */,
+				7EB45C22515024CB8EFB9C8BBBE7F7AA /* UnwindSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B3327EA3CBB1DC4DDFBAD9099B925BA /* PBXTargetDependency */ = {
+		2FE1A152C927472AC5E6943151C87890 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spring;
+			target = 0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */;
+			targetProxy = 921084BFEEDE400E6A6104968ED778E5 /* PBXContainerItemProxy */;
+		};
+		8E3B5A34F2BF40BA1C7B931930AC3867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SideMenuController;
-			target = 0CF43C040D2DB0074476994C49FB8C03 /* SideMenuController */;
-			targetProxy = 99CEE240F037AE7CC6B54B20E652C521 /* PBXContainerItemProxy */;
+			target = 44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */;
+			targetProxy = 8C32D724F0D77DC11BD93244B9FE833A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		021543DC9410B576A30786C426B893C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82F43D6245F3B5E19D73798B49BF672 /* Pods-AllergyInfo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AllergyInfo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		034008223DBE38A9E6C1AD08C41A9ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SideMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F47B4232A3D6C5CCB4DBA5ABC9177D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SideMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -346,9 +672,9 @@
 			};
 			name = Release;
 		};
-		7FFA7023460D9031E587F025DAB3C311 /* Release */ = {
+		820B4C81B9B62DF9F92DE72B6D69AC70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDF878D96A7A88F53582C07FED8AB7F4 /* SideMenuController.xcconfig */;
+			baseConfigurationReference = 8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -361,14 +687,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SideMenuController;
+				PRODUCT_NAME = Spring;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -378,9 +704,9 @@
 			};
 			name = Release;
 		};
-		ACAE69630DA69CBC9613E57E6821ECCB /* Debug */ = {
+		CB02947D7272ADECD5C62B9368BD685D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDF878D96A7A88F53582C07FED8AB7F4 /* SideMenuController.xcconfig */;
+			baseConfigurationReference = 8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -393,89 +719,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SideMenuController;
+				PRODUCT_NAME = Spring;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BB62FD6C6B2701D08621943DFBD0AA1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F82F43D6245F3B5E19D73798B49BF672 /* Pods-AllergyInfo.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AllergyInfo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C2DC567FC16546B7BC7EC1F3E5C7EA44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AllergyInfo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -526,14 +781,50 @@
 			};
 			name = Debug;
 		};
+		F49E3DBA69D0F4EE15BCB12BA9C3220F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AllergyInfo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2ADE3732390C1CE4D9141D9CC729576F /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */ = {
+		2256D71D1CF94BCB518A81719DB1BAF0 /* Build configuration list for PBXNativeTarget "SideMenuController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2DC567FC16546B7BC7EC1F3E5C7EA44 /* Debug */,
-				BB62FD6C6B2701D08621943DFBD0AA1E /* Release */,
+				034008223DBE38A9E6C1AD08C41A9ED1 /* Debug */,
+				0F47B4232A3D6C5CCB4DBA5ABC9177D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -547,11 +838,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E444FA39EBFA523F1C598BA75EC2378 /* Build configuration list for PBXNativeTarget "SideMenuController" */ = {
+		AA20F75F35A0D30377AA394F4FF20C42 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACAE69630DA69CBC9613E57E6821ECCB /* Debug */,
-				7FFA7023460D9031E587F025DAB3C311 /* Release */,
+				F49E3DBA69D0F4EE15BCB12BA9C3220F /* Debug */,
+				021543DC9410B576A30786C426B893C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C644DBF43E2A750C051662E272DF4943 /* Build configuration list for PBXNativeTarget "Spring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB02947D7272ADECD5C62B9368BD685D /* Debug */,
+				820B4C81B9B62DF9F92DE72B6D69AC70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

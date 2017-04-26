@@ -38,7 +38,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath as NSIndexPath?
-        let selectedCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
     }
     

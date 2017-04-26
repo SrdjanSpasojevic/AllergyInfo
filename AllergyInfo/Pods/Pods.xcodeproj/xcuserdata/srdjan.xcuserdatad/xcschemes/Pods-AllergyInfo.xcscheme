@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF7E158267962538FFDA374FDEB1A4DA"
+               BlueprintIdentifier = "0612718227EE15ABA8F8CA06570D1B0C"
                BuildableName = "Pods_AllergyInfo.framework"
                BlueprintName = "Pods-AllergyInfo"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EF7E158267962538FFDA374FDEB1A4DA"
+            BlueprintIdentifier = "0612718227EE15ABA8F8CA06570D1B0C"
             BuildableName = "Pods_AllergyInfo.framework"
             BlueprintName = "Pods-AllergyInfo"
             ReferencedContainer = "container:Pods.xcodeproj">
