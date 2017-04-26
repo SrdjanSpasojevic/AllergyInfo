@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import SideMenuController
 
-class StartViewController: UIViewController {
+
+class StartViewController: SideMenuController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu_icon")
+        SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft
+        SideMenuController.preferences.drawing.sidePanelWidth = UIScreen.main.bounds.width - 100
+        SideMenuController.preferences.drawing.centerPanelShadow = true
+        SideMenuController.preferences.animating.statusBarBehaviour = .horizontalPan
+        SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
+        performSegue(withIdentifier: "showCenterController1", sender: nil)
+//        performSegue(withIdentifier: "showCenterController2", sender: nil)
+//        performSegue(withIdentifier: "showCenterController3", sender: nil)
+//        performSegue(withIdentifier: "showCenterController4", sender: nil)
+//        performSegue(withIdentifier: "showCenterController5", sender: nil)
+        
+        performSegue(withIdentifier: "containSideMenu", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print("Memory warning")
     }
-
-
 }
-

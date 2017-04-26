@@ -14,6 +14,12 @@
 		A270D9EE1E82D51A007305E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */; };
 		A270D9F91E82D51A007305E3 /* AllergyInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9F81E82D51A007305E3 /* AllergyInfoTests.swift */; };
 		A270DA041E82D51A007305E3 /* AllergyInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270DA031E82D51A007305E3 /* AllergyInfoUITests.swift */; };
+		A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66A91EB0C7650070471D /* SecondViewController.swift */; };
+		A28C66AD1EB0CF5C0070471D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66AC1EB0CF5C0070471D /* MenuViewController.swift */; };
+		A28C66B11EB0E2A50070471D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B01EB0E2A50070471D /* MenuTableViewCell.swift */; };
+		A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */; };
+		A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */; };
+		A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B61EB0ED3D0070471D /* AboutViewController.swift */; };
 		D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +56,12 @@
 		A270D9FF1E82D51A007305E3 /* AllergyInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllergyInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270DA031E82D51A007305E3 /* AllergyInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyInfoUITests.swift; sourceTree = "<group>"; };
 		A270DA051E82D51A007305E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28C66A91EB0C7650070471D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A28C66AC1EB0CF5C0070471D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A28C66B01EB0E2A50070471D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentInfoViewController.swift; sourceTree = "<group>"; };
+		A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A28C66B61EB0ED3D0070471D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A270D9E31E82D51A007305E3 /* AppDelegate.swift */,
-				A270D9E51E82D51A007305E3 /* StartViewController.swift */,
+				A28C66AE1EB0E2830070471D /* Controllers */,
 				A270D9E71E82D51A007305E3 /* Main.storyboard */,
 				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
 				A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */,
@@ -147,6 +159,28 @@
 				A270DA051E82D51A007305E3 /* Info.plist */,
 			);
 			path = AllergyInfoUITests;
+			sourceTree = "<group>";
+		};
+		A28C66AE1EB0E2830070471D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A28C66AF1EB0E2900070471D /* CustomCells */,
+				A270D9E51E82D51A007305E3 /* StartViewController.swift */,
+				A28C66A91EB0C7650070471D /* SecondViewController.swift */,
+				A28C66AC1EB0CF5C0070471D /* MenuViewController.swift */,
+				A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */,
+				A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */,
+				A28C66B61EB0ED3D0070471D /* AboutViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A28C66AF1EB0E2900070471D /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				A28C66B01EB0E2A50070471D /* MenuTableViewCell.swift */,
+			);
+			name = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
+				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
+				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
 				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
 				A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */,
+				A28C66AD1EB0CF5C0070471D /* MenuViewController.swift in Sources */,
+				A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */,
+				A28C66B11EB0E2A50070471D /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +631,7 @@
 				A270DA0A1E82D51A007305E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A270DA0B1E82D51A007305E3 /* Build configuration list for PBXNativeTarget "AllergyInfoTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +640,7 @@
 				A270DA0D1E82D51A007305E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A270DA0E1E82D51A007305E3 /* Build configuration list for PBXNativeTarget "AllergyInfoUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +649,7 @@
 				A270DA101E82D51A007305E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
