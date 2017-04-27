@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IHKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PasswordTextField-PasswordTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PasswordTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AllergyInfo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,20 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0612718227EE15ABA8F8CA06570D1B0C</key>
+		<key>033B2F5EFC98402794E5FA4A2E42BD9F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0787E39F4089D0AB9B972F6A52F1D7FF</key>
+		<key>10D0829CA57A57621A665DF0943D306D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44796A9E493BD93CD65DEA2CC9C65347</key>
+		<key>17941F99CFEEB0B16C40D09A14DF2A49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24DDA4200F812E6B2FB75042D66E5885</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FF7D710F5489D1890599C269A1FF1BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C94E4B34B3742A46711F31B262DC90E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B661CE0C04090E2BCD70E92914C098FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

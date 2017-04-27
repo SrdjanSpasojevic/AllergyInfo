@@ -6,5 +6,8 @@ target 'AllergyInfo' do
   use_frameworks!
   pod 'SideMenuController'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+  pod 'TextFieldEffects'
+  pod 'PasswordTextField'
+  pod 'IHKeyboardAvoiding'
 
 end

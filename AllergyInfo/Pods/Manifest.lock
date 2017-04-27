@@ -1,10 +1,16 @@
 PODS:
+  - IHKeyboardAvoiding (3.7)
+  - PasswordTextField (1.0.4)
   - SideMenuController (0.2.4)
   - Spring (1.0.3)
+  - TextFieldEffects (1.3.1)
 
 DEPENDENCIES:
+  - IHKeyboardAvoiding
+  - PasswordTextField
   - SideMenuController
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - TextFieldEffects
 
 EXTERNAL SOURCES:
   Spring:
@@ -17,9 +23,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  IHKeyboardAvoiding: 4c852fae85667469307678c65f14f5cac8a7be92
+  PasswordTextField: 1fccb24dd769cfc963f1f60cb9fece692ad40530
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
 
-PODFILE CHECKSUM: 627b7c8325b2aac41820e18df1afe37829c9a77d
+PODFILE CHECKSUM: e2f224ba6efb559474f6112d57bcdac77c330326
 
 COCOAPODS: 1.1.1

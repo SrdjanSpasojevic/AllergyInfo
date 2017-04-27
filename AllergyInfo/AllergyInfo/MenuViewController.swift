@@ -11,7 +11,7 @@ import SideMenuController
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let segues = ["showCenterController1", "showCenterController2", "showCenterController3", "showCenterController4", "showCenterController1"]
+    let segues = ["showCenterController1", "showCenterController2", "showCenterController3", "showCenterController4", "logOutSegue"]
     let controllerNames = ["Home", "Current info about allergy", "Settings", "About", "Log out"]
     var selectedIndexPath : NSIndexPath?
     
@@ -39,6 +39,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath as NSIndexPath?
         sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

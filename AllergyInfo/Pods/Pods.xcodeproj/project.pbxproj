@@ -7,160 +7,307 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028183AADE93E1B186B00467FEE0ED5B /* SideMenuController+SideUnder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */; };
-		059263CDB1D78A81061A15FFFE3CEB66 /* SideMenuController+SideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */; };
-		0FE8CBD696CAB1CC4EF49513524CF3D5 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */; };
-		25928A6620EBEC08CC1E4C3CC99C308C /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2662CD0D94C3A9404BF40427D19E6AFF /* CenterContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */; };
-		2714338C9905A5EED04022C0700DD412 /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */; };
-		2C707F59775542389509DEC12902E2AF /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */; };
-		2CC9B777F86CE52B9EF6992752953A34 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */; };
-		2FD6FB38D2EBFC02195FE029052FD526 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		312039689D23E1009D53C160FB33C586 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */; };
-		3BD6F16BEA9CAD1F48041F12A0D8258B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */; };
-		41E64974A95288B17512627C94586FC8 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */; };
-		4FEBFA4C866C55FF22266EA9CA29A21D /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */; };
-		5EFAB0141284E0428C5970B233A3BF24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */; };
-		6255D6129BC805B886B992FEF1A471CD /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */; };
-		75E4363BDD209D529ED6A5FA3507B6B4 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */; };
-		7E6275691FA3B87E619630C159830478 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */; };
-		7EB45C22515024CB8EFB9C8BBBE7F7AA /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */; };
-		82641EBB28CD326AB2D3F3117AA2C30A /* Pods-AllergyInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */; };
-		82E97614AD316BAC22F2B1398CDA1221 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */; };
-		92D9C60C132DFCABB9C42E98D07FDC74 /* SideMenuController+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */; };
-		95DE46C07E9F11A7C70D17B033CE2CD2 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */; };
-		A102A5D1EA631E745ABEDF80A4287EF4 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */; };
-		AAADB3893E89C2D183200E21FCBB9429 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */; };
-		B0E93ACB4A8278B5A835A7E82A0F9022 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */; };
-		B30C3D00607E75CB1399F082101BAF54 /* SideMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */; };
-		B58AB6383C46687337C79E782FB35E84 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */; };
-		BD6F7C1FD6EB2DE4B07FB7B8A0CC41F7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */; };
-		BF2EB5BA7155AF6FA19A9B78F7BFDCE9 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */; };
-		BFF804813605919475EAB2D864F4CA0E /* SideMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5E17195002B35E26B777ECB5917BC60 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */; };
-		C628599E86727418C4879F8366F60156 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */; };
-		C82BF725382D4395D627DCDCA66966F2 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */; };
-		CA2876387B4577DF69C9ED2B5D0CE975 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */; };
-		CFF8D987F209E5279639FC99B7521563 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */; };
-		D325D8360FDC56F3222E3BAF29012427 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */; };
-		D5FAE0BDE84A1E5925BDECAB6FCD04A4 /* SideContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */; };
-		E3117927B6956D4E838716C8800F0EAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		E458645EED18F694FF3CCEDF96498690 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */; };
-		E601C53E805209DA7A71B34D498B146A /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */; };
-		EB0C790745C4009504FE9B3CB92869A4 /* Pods-AllergyInfo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECD5BFFAEBEB1BEC4F0F396790DCF2D9 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */; };
-		F2087FAA944005411DE244CB17AD888E /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */; };
-		F4D2DD72E52ADF8490877A54CB2B805A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */; };
-		FC888E1E43ED8A7E4010FA177D7909A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		FFFD82015D18745FC557E376BA8A3992 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */; };
+		01B30C7D3D9A831EA39D3EAD663D8B0F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E9B9B5C2FD3CB27B866EE447FE8E6 /* ImageLoader.swift */; };
+		0992E9E6AFD28294DCDB56E5BBB830B6 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EAADD0F4510A55ADC58E584F8BEBAB /* DesignableLabel.swift */; };
+		0A7902CCCB71D657E7AA2700028F587A /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B62BCD0EF5306AAA17315174444E /* MadokaTextField.swift */; };
+		0E945ABF74AD42B8E19E676C5BE84F24 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090C7AC4FA2C5A0E1CDB0000E6012263 /* Misc.swift */; };
+		0ECB343A796A71B1A6478A65149A6AD4 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5EA0642799F0166C11C83102B8ACF /* SoundPlayer.swift */; };
+		0ECBE0A2291F098FE03B78499141E637 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		105E2B2D62FE95442BDA8B5FD8A6E214 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0BAFAF3BDA50B43E77B9B81884752 /* PasswordTextField.swift */; };
+		1247D73185C18F13226B44071B6C7FB8 /* SideMenuController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FDB0CD7778075FBBD970D48D7D642C /* SideMenuController-dummy.m */; };
+		134A69AFC4E09AD76429C7A4DE41C731 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B9C1FA6ABCCEF2CD9F5198D04149F3 /* TransitionZoom.swift */; };
+		1469E17040328651B897BFA37D9D1FB4 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88523A42E93E1CB35A63C65A778C3B /* AsyncImageView.swift */; };
+		146CEF0787CEF8204777F0F43CB51E01 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C90FCC74173FCA382C66840C6A71A /* TransitionManager.swift */; };
+		17D96AF731C01EA09F5B2C1233063369 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5184895EB61F59A2314EA4BC4CEAA2F3 /* IsaoTextField.swift */; };
+		1A5EA0A7CC8F4F9F188803E2884EEA7A /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E23FEE31931F5C69D18835E41A61815 /* TextFieldsEffects.swift */; };
+		1B6D0BEAAE28EA6635B0ED032F809363 /* visibility_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A3FE1F3AE6C1DAE516BDAFA2B16166 /* visibility_off@2x.png */; };
+		20C479BA3D6EA1FC02B77DDF87EC78DB /* PasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E62CE2432302E2840210E3D9157043 /* PasswordTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21662C64A371BDF77972D3EFD57A6252 /* KeyboardAvoiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE059757BC366B6DD0E580616F8D575 /* KeyboardAvoiding.swift */; };
+		21A4BFD0508CA24D77183CD52A4963E7 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D38D3B69AE8F398CB43B412F211D5 /* SpringView.swift */; };
+		231DB56953E42169C092D3F5F03367D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		23AA71965504D5C87C60AFBBFEEFE669 /* visibility_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE73D5D5407C0B42655DC94DD5749C39 /* visibility_on@2x.png */; };
+		26D22DB13F35A01EA70FDEBBEE76062C /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA2806DF757715B38D1D9CB21863D8 /* KeyboardLayoutConstraint.swift */; };
+		26D28F681065F8DECC81DFB2399830C5 /* TextFieldEffects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FFFDC70D9CEBA2F8BDF43F1068A1EC /* TextFieldEffects-dummy.m */; };
+		2735C6FF52720A469AFDFCD0CF1282AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		282C11F794909218ED539C9058C735EA /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A319B425FA3CC9FE6D385FAC27CF9C /* JiroTextField.swift */; };
+		2B6EF0A64CD10CAE08DD5803A1B75ED0 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867EFCAAEEDDCF57C2ADCACEA2BF4950 /* YokoTextField.swift */; };
+		2D3074D50B457DAAC8856DA89BCC1DFA /* Spring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D36C15C15CBB8930342B3E0FCD52E /* Spring-dummy.m */; };
+		2D5CFADB7CF9879A833B97D1F6FB686E /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398FDC280D6C8A489D0CF6D5D7263F40 /* DesignableTextField.swift */; };
+		32AB0BA6756BCA6B24EE851D4AB8AAB5 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8B6F3797C747E3363268DDE7F3E67 /* DesignableTextView.swift */; };
+		3E7C1FE50058D6CE01F9ABF152AFC61A /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D959573CF69AA4E05FF4DD176654F /* MinoruTextField.swift */; };
+		4289A6BA490E261D4AFEBC4797706D6E /* IHKeyboardAvoiding-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8A37DAC0DD597F96C0D03C5A74CCBF /* IHKeyboardAvoiding-dummy.m */; };
+		436661B013F66836C164D5922DEEF02C /* CenterContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41E78A3B2D4CCAB2989FDB9C994FD5 /* CenterContainmentSegue.swift */; };
+		495A067B594270773871A8253EDC0F55 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8C1FA9B35D1BFE5F32ECE63927D6D /* AkiraTextField.swift */; };
+		50D7EF26E6ABE825BFA0FCA7474BA8EC /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44E8893B4D3895D3306F7FBD1E8E9B /* HoshiTextField.swift */; };
+		53F12B207E4D5663994454D158605601 /* TextFieldEffects-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C346DB01CCEC2E13DF027442E42FA6C2 /* TextFieldEffects-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55A64D404813AB54302BE6863E1691C6 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089EE106544B713D993F739AFF3D3447 /* Spring.swift */; };
+		5DF771D0E0037CA0888B7E88D87CB9B3 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5EC62188F64897FE785DA55A18D2E6 /* DesignableButton.swift */; };
+		657DBD2D246F4D8E54E2CC8033C7067F /* Spring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B7E63509DFCA938A19C75B13FF4ABC /* Spring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6759939CCC7314BEBFF045720B3E6831 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D763FE7E22FC6064132BB6EE94B81E41 /* LoadingView.swift */; };
+		676D2F4235E7135D1CD45C8C7DC26789 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F57272A4CB72A6B40CAC587D1EFD5C /* AutoTextView.swift */; };
+		69121812FDEDD8D94DAF9244E4FDFA6F /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CCB8E6DAE997089F9B6FC1DA13753F /* DesignableImageView.swift */; };
+		6A78CB9DA8733DC8940441F2095F78A2 /* visibility_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 231EC82586E71619ABC44EE2F222087D /* visibility_on@3x.png */; };
+		6AB4B4E8C6BAB165334E8C6CB7F2082E /* SideMenuController+SideUnder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5042D514A35DB8DAEC5C48A7A9C821 /* SideMenuController+SideUnder.swift */; };
+		6F50000DDF1AA499E0934AB0E414638E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		73E68266AC81878688511F2B3BF575C8 /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125D889161FD43872D9378CBB2F45CA5 /* AsyncButton.swift */; };
+		7A37A6B29817AA12ABA115E4712BC890 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD0944E4C5CCFEA5A0774A67268E0A5 /* StringExtension.swift */; };
+		7C9228C7AA90F9E0BAE3FC7FEBBBF733 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E5167EC1182CDAA2DBE8A05FDA5836 /* SpringTextView.swift */; };
+		8228DB6F0F22194C0B6B67A3E49E3CFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		8820497B5B3385F365FDEAA7579AB5EA /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59213E918D37EC811F070B2D2545644 /* PasswordRule.swift */; };
+		889FF86BE845740C9C4E3864D75DF9A9 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B46DC8ED53B2E40DC547DE720667 /* BlurView.swift */; };
+		88CD3739938F64C289D929677E3D10EE /* Pods-AllergyInfo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E110761E9CB6113ED0B66FC500C538E /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F253C663098051ABB3B4C7631A4922 /* SpringButton.swift */; };
+		90058AA6AE59EAA415CBC30B72FB2EEB /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97C1F52A190C60004938D0F586FD29 /* UnwindSegue.swift */; };
+		A2C4C113285DF063495C3B4C10D4E090 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB62F31814C14B06AB4529D46E08E77 /* SpringImageView.swift */; };
+		A3842AE1B2F4ADAE346F045F6227848D /* SideMenuController+SideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A07554B4CFEF169A9F6AD84BD2D549 /* SideMenuController+SideOver.swift */; };
+		A48469B18263E63ADD1ABF56B6E2FCAA /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BB33734F79A7A82E22B6C3DDA1C7B7 /* SideMenuController.swift */; };
+		AC1BB08012FF5CC1762FEE153B02B282 /* SecureTextToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B009C0E651038AFA8BB94B3442E08 /* SecureTextToggleButton.swift */; };
+		AE6B37D90867E6836A51785EC52A95F5 /* SideContainmentSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFAEDA4E0E76C3A5F7EA9915CDCB28 /* SideContainmentSegue.swift */; };
+		B21A9946950DF15C0ABE9F4D66B20483 /* visibility_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 82EE6C8B5C66044D0FA1F78BDF39808E /* visibility_off.png */; };
+		BC7DF759D09A659D6A4F56C2A1708DEA /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644A9FB4EDD3592222F644018A1E463 /* UIKitExtensions.swift */; };
+		C0E550CA10896211CB390794DCC5225D /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F340284D35442EC275E8A99578B50AD /* SpringTextField.swift */; };
+		C30EC6CF1527C64A9E612294C61672CA /* RegexRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E182B0538111F93A46C5249D6256F3E1 /* RegexRule.swift */; };
+		C90E10351CD6B4E34F101420159DE668 /* KeyboardDismissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351DD85141C1357985A789E322D7146 /* KeyboardDismissingView.swift */; };
+		CA36293058BE0D6220880910F4D09055 /* Pods-AllergyInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */; };
+		CDF8E8053ACB3A13B7F7ABB24C5A7008 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E7EB492350AA3F3DED0BCF21B4D54F /* SpringAnimation.swift */; };
+		D40F60975B649A896B146E07B87F054D /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03882E5E215D51ACC79AB7FE64D604C9 /* TransitionAnimator.swift */; };
+		D4235A0E4E199E80DE1DF133ACCB84F5 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28083A2BB5AFC9162C767723DB64C133 /* KaedeTextField.swift */; };
+		DC9CD8E5A6E6B7F5EB4441D629F5D938 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA996252241ED9A8E3C01B3AC93E9 /* DesignableView.swift */; };
+		DDC41DE1A814C5C61C55F93EAE6B7CBA /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F485E57A129E0D38812BBF489F7CE /* SpringLabel.swift */; };
+		E7432B2B4518AB5C23C0F1C685467192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		E84C74629116ECCCA9ECA91B0CD91B20 /* SideMenuController+CustomTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8550C9EE8D4BEE99EBEE20299DC130CA /* SideMenuController+CustomTypes.swift */; };
+		E9CF6379D934C4B7481B2B3FD8C8266D /* PasswordTextField.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 50890947A712C804AB1CA0981B333FB8 /* PasswordTextField.bundle */; };
+		EA548116DC1647B5BF83E5935E4F666A /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98969BA8ACD484D46119E79B73ED422D /* DesignableTabBarController.swift */; };
+		EB807B36ABC5887D00F3FB5B75312681 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E73124CB0541CFA71E93DC43474AE0 /* LoadingView.xib */; };
+		EBA49F55F1E15D22FB191CD55127BC5E /* IHKeyboardAvoiding-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000F64D528D53FCA4CC1D586E0A39296 /* IHKeyboardAvoiding-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD6DB97EB226B27678A244DF95F0876 /* BundleUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2120480345E4D7EDC0BB87F79D9A43 /* BundleUtil.swift */; };
+		EF40FB68A5AB7D8FEB9267285118F178 /* Ruleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184593A3F70204EAF626CA6ABBA0A8C /* Ruleable.swift */; };
+		F26310C2BE4A1C15B3F499C2F0F77083 /* visibility_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA84F66C7CC6AD28762B9C10FF7BD7A1 /* visibility_off@3x.png */; };
+		F564EE72CA2841FE18D9CD81FBE19385 /* visibility_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E2E857AC0A7DEC8C36A01D7D88B17D /* visibility_on.png */; };
+		F6A3BADD27443B328ECD600ED2E7E9FD /* PasswordTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA036D7224402763FA445E34B9C00BC /* PasswordTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F93B4A34BBF3BB7D064E3A69632423ED /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39854AB6E04CBD29FA0CEA3DC4DB7936 /* YoshikoTextField.swift */; };
+		FA93A44D6E0FFEFEC310B0F8B0956881 /* SideMenuController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6EA253B0B64F2F322D63241BCCE21 /* SideMenuController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB98DA8C1EFB1FDDAB5FBAB3AD77D2DC /* PasswordTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1760473656891B09FE6AE4A68740699 /* PasswordTextField-dummy.m */; };
+		FC7953811BB7E5744001C2AD2A03F877 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		FC8FE7B45AAB7E36B23DE0A44402A5BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0475EB7BF91EA9CB40C4F0ED256CFE8E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8C32D724F0D77DC11BD93244B9FE833A /* PBXContainerItemProxy */ = {
+		0B706AB986D669E1ADFBA74A9A4CEED6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 44796A9E493BD93CD65DEA2CC9C65347;
+			remoteGlobalIDString = 033B2F5EFC98402794E5FA4A2E42BD9F;
+			remoteInfo = IHKeyboardAvoiding;
+		};
+		70E3C10E9FF3C761F407889873F9A0A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C94E4B34B3742A46711F31B262DC90E;
+			remoteInfo = "PasswordTextField-PasswordTextField";
+		};
+		90AA9F5C3674500B4936721DDD6BD394 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FF7D710F5489D1890599C269A1FF1BD;
+			remoteInfo = PasswordTextField;
+		};
+		B0A13EBCBD7B41CACFC57882C05CEF98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24DDA4200F812E6B2FB75042D66E5885;
 			remoteInfo = SideMenuController;
 		};
-		921084BFEEDE400E6A6104968ED778E5 /* PBXContainerItemProxy */ = {
+		B7F7E8CCCF69603A107560C6CBA162E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0787E39F4089D0AB9B972F6A52F1D7FF;
+			remoteGlobalIDString = 17941F99CFEEB0B16C40D09A14DF2A49;
 			remoteInfo = Spring;
+		};
+		EE4E63570C4A4CA8871EE70DD29E32D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10D0829CA57A57621A665DF0943D306D;
+			remoteInfo = TextFieldEffects;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044AA06DEF565B4B548136DD5AE45ACB /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
-		060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
-		0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AllergyInfo.framework; path = "Pods-AllergyInfo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = Source/TransitionAnimator.swift; sourceTree = "<group>"; };
+		000F64D528D53FCA4CC1D586E0A39296 /* IHKeyboardAvoiding-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IHKeyboardAvoiding-umbrella.h"; sourceTree = "<group>"; };
+		01FDB0CD7778075FBBD970D48D7D642C /* SideMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuController-dummy.m"; sourceTree = "<group>"; };
+		03882E5E215D51ACC79AB7FE64D604C9 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = Source/TransitionAnimator.swift; sourceTree = "<group>"; };
+		0475EB7BF91EA9CB40C4F0ED256CFE8E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		07CCB8E6DAE997089F9B6FC1DA13753F /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
+		089EE106544B713D993F739AFF3D3447 /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
+		08E2E857AC0A7DEC8C36A01D7D88B17D /* visibility_on.png */ = {isa = PBXFileReference; includeInIndex = 1; name = visibility_on.png; path = PasswordTextField/Media/visibility_on.png; sourceTree = "<group>"; };
+		090C7AC4FA2C5A0E1CDB0000E6012263 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
+		09A319B425FA3CC9FE6D385FAC27CF9C /* JiroTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiroTextField.swift; path = TextFieldEffects/TextFieldEffects/JiroTextField.swift; sourceTree = "<group>"; };
 		0CE2727DA91DA1161D136ACDFAF62F61 /* Pods-AllergyInfo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AllergyInfo-resources.sh"; sourceTree = "<group>"; };
-		12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
-		1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Source/SideMenuController.swift; sourceTree = "<group>"; };
-		138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		125D889161FD43872D9378CBB2F45CA5 /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
 		1A9DA944E22E409C5358919D6CE3CC3F /* Pods-AllergyInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AllergyInfo-dummy.m"; sourceTree = "<group>"; };
-		20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
-		25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
-		26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
-		2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
-		3711558936702E9D0B2D9A885E0E0747 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
-		4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
-		47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableImageView.swift; path = Spring/DesignableImageView.swift; sourceTree = "<group>"; };
-		4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
-		4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
-		5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideUnder.swift"; path = "Source/SideMenuController+SideUnder.swift"; sourceTree = "<group>"; };
+		222D38D3B69AE8F398CB43B412F211D5 /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		231EC82586E71619ABC44EE2F222087D /* visibility_on@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "visibility_on@3x.png"; path = "PasswordTextField/Media/visibility_on@3x.png"; sourceTree = "<group>"; };
+		23B0BAFAF3BDA50B43E77B9B81884752 /* PasswordTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasswordTextField.swift; path = PasswordTextField/PasswordTextField.swift; sourceTree = "<group>"; };
+		27AF4D28DA913F4F2EA10CCA809B05D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28083A2BB5AFC9162C767723DB64C133 /* KaedeTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KaedeTextField.swift; path = TextFieldEffects/TextFieldEffects/KaedeTextField.swift; sourceTree = "<group>"; };
+		29A3FE1F3AE6C1DAE516BDAFA2B16166 /* visibility_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "visibility_off@2x.png"; path = "PasswordTextField/Media/visibility_off@2x.png"; sourceTree = "<group>"; };
+		2E9B96B23B3CA4F20ED5F850971046C5 /* IHKeyboardAvoiding-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IHKeyboardAvoiding-prefix.pch"; sourceTree = "<group>"; };
+		2FE059757BC366B6DD0E580616F8D575 /* KeyboardAvoiding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiding.swift; path = Sources/KeyboardAvoiding.swift; sourceTree = "<group>"; };
+		343D234ED61895899F006EBC95EAAE45 /* IHKeyboardAvoiding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IHKeyboardAvoiding.framework; path = IHKeyboardAvoiding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B9C1FA6ABCCEF2CD9F5198D04149F3 /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
+		365D6CCD929D7FB75011D6E9D30AE41C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39854AB6E04CBD29FA0CEA3DC4DB7936 /* YoshikoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YoshikoTextField.swift; path = TextFieldEffects/TextFieldEffects/YoshikoTextField.swift; sourceTree = "<group>"; };
+		398FDC280D6C8A489D0CF6D5D7263F40 /* DesignableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = Spring/DesignableTextField.swift; sourceTree = "<group>"; };
+		3E2120480345E4D7EDC0BB87F79D9A43 /* BundleUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleUtil.swift; path = PasswordTextField/BundleUtil.swift; sourceTree = "<group>"; };
+		40F3EDD377888EBDEA3B3BB2C7B0B18F /* PasswordTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PasswordTextField.modulemap; sourceTree = "<group>"; };
+		42671FDA67134F8188F0E16F96C05659 /* ResourceBundle-PasswordTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PasswordTextField-Info.plist"; sourceTree = "<group>"; };
+		43E7EB492350AA3F3DED0BCF21B4D54F /* SpringAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringAnimation.swift; path = Spring/SpringAnimation.swift; sourceTree = "<group>"; };
+		44E73124CB0541CFA71E93DC43474AE0 /* LoadingView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LoadingView.xib; path = Spring/LoadingView.xib; sourceTree = "<group>"; };
+		46DEF873D040951BB39AC5616CA97271 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AllergyInfo.framework; path = "Pods-AllergyInfo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB62F31814C14B06AB4529D46E08E77 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
+		4FF0B62BCD0EF5306AAA17315174444E /* MadokaTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MadokaTextField.swift; path = TextFieldEffects/TextFieldEffects/MadokaTextField.swift; sourceTree = "<group>"; };
+		50890947A712C804AB1CA0981B333FB8 /* PasswordTextField.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PasswordTextField.bundle; path = PasswordTextField.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5184895EB61F59A2314EA4BC4CEAA2F3 /* IsaoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IsaoTextField.swift; path = TextFieldEffects/TextFieldEffects/IsaoTextField.swift; sourceTree = "<group>"; };
 		52F9230A67D4EB8BB4EBC5B51AB83A58 /* Pods-AllergyInfo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AllergyInfo-frameworks.sh"; sourceTree = "<group>"; };
-		5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
-		661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Source/UIKitExtensions.swift; sourceTree = "<group>"; };
+		5E23FEE31931F5C69D18835E41A61815 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = TextFieldEffects/TextFieldEffects/TextFieldsEffects.swift; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		639D36C15C15CBB8930342B3E0FCD52E /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		63CA2806DF757715B38D1D9CB21863D8 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardLayoutConstraint.swift; path = Spring/KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		65B7E63509DFCA938A19C75B13FF4ABC /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
+		66BB33734F79A7A82E22B6C3DDA1C7B7 /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Source/SideMenuController.swift; sourceTree = "<group>"; };
+		68E5167EC1182CDAA2DBE8A05FDA5836 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
+		6A8A37DAC0DD597F96C0D03C5A74CCBF /* IHKeyboardAvoiding-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IHKeyboardAvoiding-dummy.m"; sourceTree = "<group>"; };
 		6A9574C5C8424E1D2D532D2538DEF32F /* Pods-AllergyInfo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AllergyInfo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringImageView.swift; path = Spring/SpringImageView.swift; sourceTree = "<group>"; };
-		74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-umbrella.h"; sourceTree = "<group>"; };
-		75E10267E2FBC32FEA9F7811F409FC9B /* SideMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-prefix.pch"; sourceTree = "<group>"; };
-		7764B5F5A413114B9D33EFEBA87F22D8 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Spring.modulemap; sourceTree = "<group>"; };
-		7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+CustomTypes.swift"; path = "Source/SideMenuController+CustomTypes.swift"; sourceTree = "<group>"; };
-		7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuController.xcconfig; sourceTree = "<group>"; };
-		8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
-		9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spring-dummy.m"; sourceTree = "<group>"; };
+		6BDAA996252241ED9A8E3C01B3AC93E9 /* DesignableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableView.swift; path = Spring/DesignableView.swift; sourceTree = "<group>"; };
+		6D44E8893B4D3895D3306F7FBD1E8E9B /* HoshiTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = TextFieldEffects/TextFieldEffects/HoshiTextField.swift; sourceTree = "<group>"; };
+		705D959573CF69AA4E05FF4DD176654F /* MinoruTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MinoruTextField.swift; path = TextFieldEffects/TextFieldEffects/MinoruTextField.swift; sourceTree = "<group>"; };
+		73F57272A4CB72A6B40CAC587D1EFD5C /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
+		75204FE0A54C1741C8FC8977AA31430D /* TextFieldEffects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-prefix.pch"; sourceTree = "<group>"; };
+		76A07554B4CFEF169A9F6AD84BD2D549 /* SideMenuController+SideOver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideOver.swift"; path = "Source/SideMenuController+SideOver.swift"; sourceTree = "<group>"; };
+		7AA036D7224402763FA445E34B9C00BC /* PasswordTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PasswordTextField-umbrella.h"; sourceTree = "<group>"; };
+		7DD5EA0642799F0166C11C83102B8ACF /* SoundPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Spring/SoundPlayer.swift; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7FD0944E4C5CCFEA5A0774A67268E0A5 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = PasswordTextField/StringExtension.swift; sourceTree = "<group>"; };
+		818800146BDC9C239D5A1F95D6858E6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C43341F1F1FE99A6112A6B0AE448A5 /* Spring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Spring.modulemap; sourceTree = "<group>"; };
+		82EE6C8B5C66044D0FA1F78BDF39808E /* visibility_off.png */ = {isa = PBXFileReference; includeInIndex = 1; name = visibility_off.png; path = PasswordTextField/Media/visibility_off.png; sourceTree = "<group>"; };
+		8550C9EE8D4BEE99EBEE20299DC130CA /* SideMenuController+CustomTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+CustomTypes.swift"; path = "Source/SideMenuController+CustomTypes.swift"; sourceTree = "<group>"; };
+		867EFCAAEEDDCF57C2ADCACEA2BF4950 /* YokoTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YokoTextField.swift; path = TextFieldEffects/TextFieldEffects/YokoTextField.swift; sourceTree = "<group>"; };
+		8F340284D35442EC275E8A99578B50AD /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
+		9351DD85141C1357985A789E322D7146 /* KeyboardDismissingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardDismissingView.swift; path = Sources/KeyboardDismissingView.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		969B53A966D76780C2653EE69F2D1E8E /* TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TextFieldEffects.modulemap; sourceTree = "<group>"; };
+		979E943393CE4982505457A2CD9986FD /* Spring-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spring-prefix.pch"; sourceTree = "<group>"; };
+		97F8C1FA9B35D1BFE5F32ECE63927D6D /* AkiraTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AkiraTextField.swift; path = TextFieldEffects/TextFieldEffects/AkiraTextField.swift; sourceTree = "<group>"; };
+		98969BA8ACD484D46119E79B73ED422D /* DesignableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTabBarController.swift; path = Spring/DesignableTabBarController.swift; sourceTree = "<group>"; };
+		9A4A7BFEA5A9BB4E6F0E0B223D713635 /* SideMenuController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuController.xcconfig; sourceTree = "<group>"; };
 		9AC033C95CC0689B29456477D3143121 /* Pods-AllergyInfo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AllergyInfo-umbrella.h"; sourceTree = "<group>"; };
 		9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AllergyInfo.debug.xcconfig"; sourceTree = "<group>"; };
-		9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextField.swift; path = Spring/SpringTextField.swift; sourceTree = "<group>"; };
-		A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuController-dummy.m"; sourceTree = "<group>"; };
-		A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
-		A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionZoom.swift; path = Spring/TransitionZoom.swift; sourceTree = "<group>"; };
-		AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringView.swift; path = Spring/SpringView.swift; sourceTree = "<group>"; };
+		9E88523A42E93E1CB35A63C65A778C3B /* AsyncImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = Spring/AsyncImageView.swift; sourceTree = "<group>"; };
+		A1760473656891B09FE6AE4A68740699 /* PasswordTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PasswordTextField-dummy.m"; sourceTree = "<group>"; };
+		A24405B71BEF695A7A94B680D65A4063 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TextFieldEffects.framework; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F84B0D92D17EAA2D8E15A5121289BA /* PasswordTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PasswordTextField.framework; path = PasswordTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59213E918D37EC811F070B2D2545644 /* PasswordRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasswordRule.swift; path = PasswordTextField/PasswordRule.swift; sourceTree = "<group>"; };
+		AC2F873F2C1FD31388926B7C892F4405 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5042D514A35DB8DAEC5C48A7A9C821 /* SideMenuController+SideUnder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideUnder.swift"; path = "Source/SideMenuController+SideUnder.swift"; sourceTree = "<group>"; };
+		ADDC0885FEFB1F121053FF5757D21C52 /* SideMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuController.framework; path = SideMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE41E78A3B2D4CCAB2989FDB9C994FD5 /* CenterContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenterContainmentSegue.swift; path = Source/CenterContainmentSegue.swift; sourceTree = "<group>"; };
+		AE5EC62188F64897FE785DA55A18D2E6 /* DesignableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableButton.swift; path = Spring/DesignableButton.swift; sourceTree = "<group>"; };
 		AEB5554BC5198E746DE483CB5DD7786A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CenterContainmentSegue.swift; path = Source/CenterContainmentSegue.swift; sourceTree = "<group>"; };
-		B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuController.framework; path = SideMenuController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncButton.swift; path = Spring/AsyncButton.swift; sourceTree = "<group>"; };
-		B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
-		C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-umbrella.h"; sourceTree = "<group>"; };
-		C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Misc.swift; path = Spring/Misc.swift; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
-		DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
-		E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoTextView.swift; path = Spring/AutoTextView.swift; sourceTree = "<group>"; };
-		E5134BB8BB56A8845522BB7A47BAC26E /* SideMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SideMenuController.modulemap; sourceTree = "<group>"; };
-		E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringTextView.swift; path = Spring/SpringTextView.swift; sourceTree = "<group>"; };
-		E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SideMenuController+SideOver.swift"; path = "Source/SideMenuController+SideOver.swift"; sourceTree = "<group>"; };
+		AF1B009C0E651038AFA8BB94B3442E08 /* SecureTextToggleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureTextToggleButton.swift; path = PasswordTextField/SecureTextToggleButton.swift; sourceTree = "<group>"; };
+		B184593A3F70204EAF626CA6ABBA0A8C /* Ruleable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ruleable.swift; path = PasswordTextField/Ruleable.swift; sourceTree = "<group>"; };
+		B3FF20BC0009BAE4D68EA77B01B66FAE /* SideMenuController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SideMenuController.modulemap; sourceTree = "<group>"; };
+		B5B4F31659C87E08E12A14CC826D7E44 /* Spring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spring.xcconfig; sourceTree = "<group>"; };
+		B74F485E57A129E0D38812BBF489F7CE /* SpringLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringLabel.swift; path = Spring/SpringLabel.swift; sourceTree = "<group>"; };
+		B8E856AF835D271E068B9715C2945025 /* SideMenuController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-prefix.pch"; sourceTree = "<group>"; };
+		BB3CCB9D50D3D54082AA729950075340 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1799B394888D800936C5D46A2315B10 /* Spring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spring.framework; path = Spring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C346DB01CCEC2E13DF027442E42FA6C2 /* TextFieldEffects-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TextFieldEffects-umbrella.h"; sourceTree = "<group>"; };
+		C8D6C3CBC0240AD5053D869C75CDADB8 /* PasswordTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PasswordTextField-prefix.pch"; sourceTree = "<group>"; };
+		C9D8B46DC8ED53B2E40DC547DE720667 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Spring/BlurView.swift; sourceTree = "<group>"; };
+		C9EAADD0F4510A55ADC58E584F8BEBAB /* DesignableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableLabel.swift; path = Spring/DesignableLabel.swift; sourceTree = "<group>"; };
+		D0FFFDC70D9CEBA2F8BDF43F1068A1EC /* TextFieldEffects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TextFieldEffects-dummy.m"; sourceTree = "<group>"; };
+		D1E62CE2432302E2840210E3D9157043 /* PasswordTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PasswordTextField.h; path = PasswordTextField/PasswordTextField.h; sourceTree = "<group>"; };
+		D4F253C663098051ABB3B4C7631A4922 /* SpringButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpringButton.swift; path = Spring/SpringButton.swift; sourceTree = "<group>"; };
+		D644A9FB4EDD3592222F644018A1E463 /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Source/UIKitExtensions.swift; sourceTree = "<group>"; };
+		D763FE7E22FC6064132BB6EE94B81E41 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
+		D7D8B6F3797C747E3363268DDE7F3E67 /* DesignableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableTextView.swift; path = Spring/DesignableTextView.swift; sourceTree = "<group>"; };
+		DA84F66C7CC6AD28762B9C10FF7BD7A1 /* visibility_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "visibility_off@3x.png"; path = "PasswordTextField/Media/visibility_off@3x.png"; sourceTree = "<group>"; };
+		DA97C1F52A190C60004938D0F586FD29 /* UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnwindSegue.swift; path = Spring/UnwindSegue.swift; sourceTree = "<group>"; };
+		DF2A5CE9782C845471C65424C2713FCE /* IHKeyboardAvoiding.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IHKeyboardAvoiding.xcconfig; sourceTree = "<group>"; };
+		E182B0538111F93A46C5249D6256F3E1 /* RegexRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegexRule.swift; path = PasswordTextField/RegexRule.swift; sourceTree = "<group>"; };
+		E3CFAEDA4E0E76C3A5F7EA9915CDCB28 /* SideContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideContainmentSegue.swift; path = Source/SideContainmentSegue.swift; sourceTree = "<group>"; };
+		E5E6EA253B0B64F2F322D63241BCCE21 /* SideMenuController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuController-umbrella.h"; sourceTree = "<group>"; };
 		EAE19AAC91722F128BAB82C4E43452F2 /* Pods-AllergyInfo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AllergyInfo.modulemap"; sourceTree = "<group>"; };
-		EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
-		F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Spring/LoadingView.swift; sourceTree = "<group>"; };
-		F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
-		F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideContainmentSegue.swift; path = Source/SideContainmentSegue.swift; sourceTree = "<group>"; };
+		EE2E9B9B5C2FD3CB27B866EE447FE8E6 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Spring/ImageLoader.swift; sourceTree = "<group>"; };
+		F06934BC10C591A260CD42EA814FCCF5 /* IHKeyboardAvoiding.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IHKeyboardAvoiding.modulemap; sourceTree = "<group>"; };
+		F42C00F37A97E68E62B4E22CE512ED5D /* TextFieldEffects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TextFieldEffects.xcconfig; sourceTree = "<group>"; };
+		F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PasswordTextField.xcconfig; sourceTree = "<group>"; };
 		F82F43D6245F3B5E19D73798B49BF672 /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
-		F8CB158E0332C619569DC3BEC87C3E54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
+		FB5C90FCC74173FCA382C66840C6A71A /* TransitionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = Spring/TransitionManager.swift; sourceTree = "<group>"; };
 		FDEFD06520B1D097116057E63DF3124F /* Pods-AllergyInfo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AllergyInfo-acknowledgements.plist"; sourceTree = "<group>"; };
+		FE73D5D5407C0B42655DC94DD5749C39 /* visibility_on@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "visibility_on@2x.png"; path = "PasswordTextField/Media/visibility_on@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		44523C402E98BDAE6CD5920BE87EAB23 /* Frameworks */ = {
+		08DD7AEE0C339A8D1741F32CD30D0E2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC888E1E43ED8A7E4010FA177D7909A4 /* Foundation.framework in Frameworks */,
+				231DB56953E42169C092D3F5F03367D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57F83113072049687E9401856DC1AFFA /* Frameworks */ = {
+		2A6AD589B3993F42D1A88F23C6F7502C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD6FB38D2EBFC02195FE029052FD526 /* Foundation.framework in Frameworks */,
+				8228DB6F0F22194C0B6B67A3E49E3CFC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A5B174A79FA6CD80818FDE3956D1534 /* Frameworks */ = {
+		30A16003FC64C29DE8029775EB1345A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3117927B6956D4E838716C8800F0EAF /* Foundation.framework in Frameworks */,
+				6F50000DDF1AA499E0934AB0E414638E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		477A3F12FE3AAE77C2C0F8E169429DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4908E3F0460E3C9CDA7C3F4AA26EFF34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ECBE0A2291F098FE03B78499141E637 /* Foundation.framework in Frameworks */,
+				E7432B2B4518AB5C23C0F1C685467192 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7292B7864932A28AFB719C3B9FF6EC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2735C6FF52720A469AFDFCD0CF1282AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C458AA9A48FCB2CFD28DBE6BCA98E1DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC7953811BB7E5744001C2AD2A03F877 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,20 +332,6 @@
 			path = "Target Support Files/Pods-AllergyInfo";
 			sourceTree = "<group>";
 		};
-		1715D1165260BC146B73617CF0A4C287 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F8CB158E0332C619569DC3BEC87C3E54 /* Info.plist */,
-				E5134BB8BB56A8845522BB7A47BAC26E /* SideMenuController.modulemap */,
-				7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */,
-				A10BDE1A19ADBB7A55162273EC85FF8F /* SideMenuController-dummy.m */,
-				75E10267E2FBC32FEA9F7811F409FC9B /* SideMenuController-prefix.pch */,
-				C2F8740793194E5E879852BFCA7D5C98 /* SideMenuController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SideMenuController";
-			sourceTree = "<group>";
-		};
 		213704621E8FC8C070A11A6262ADD2A5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,125 +340,251 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		256F2732ED95074EC38C4E5CAB978F2D /* Support Files */ = {
+		38EF2BB6CE80A1FC62FD7B86C6B3DEF8 /* Spring */ = {
 			isa = PBXGroup;
 			children = (
-				3711558936702E9D0B2D9A885E0E0747 /* Info.plist */,
-				7764B5F5A413114B9D33EFEBA87F22D8 /* Spring.modulemap */,
-				8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */,
-				9080ABBC5C4AA59C09FFD33B5838300C /* Spring-dummy.m */,
-				044AA06DEF565B4B548136DD5AE45ACB /* Spring-prefix.pch */,
-				74A6661E240C430B1100216708A94323 /* Spring-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Spring";
-			sourceTree = "<group>";
-		};
-		5A31F742D98938D1808640185930CDE0 /* Spring */ = {
-			isa = PBXGroup;
-			children = (
-				B421938DB154A1B97A9F5FC7DD460ECE /* AsyncButton.swift */,
-				26BEB6AB2D94004C1F3BBBE9CE524D66 /* AsyncImageView.swift */,
-				E0FE5E0FDC8D800C56A86506F722430B /* AutoTextView.swift */,
-				415DE96654B6AF268B3BD20ABEC44422 /* BlurView.swift */,
-				4CE43BFB98D80F62A6D814D4BDD14C6A /* DesignableButton.swift */,
-				47ECE3B6EA2D5F82E278E361D41E1004 /* DesignableImageView.swift */,
-				4821D05FEA7554026C6EAC69EC9F50D5 /* DesignableLabel.swift */,
-				25F7AE7EAE91573E8341833B1B86D778 /* DesignableTabBarController.swift */,
-				060D19AEE563FE009BF5847CA9A1D203 /* DesignableTextField.swift */,
-				DEA7881BE16915694F49125DECB3CD6F /* DesignableTextView.swift */,
-				4349FA65DC8094D6BEC2CB648F221E04 /* DesignableView.swift */,
-				A213E1C3EE5859E572896F19912E13FE /* ImageLoader.swift */,
-				5627D2932F2B48CA4448FBBA88753044 /* KeyboardLayoutConstraint.swift */,
-				F00B84B1E68A425EF3E6E2DAFA5F5D40 /* LoadingView.swift */,
-				C437A87A6DD7D8FF29C9DE2727A456A3 /* Misc.swift */,
-				138CDD9F37D1D929575E3B47708890F1 /* SoundPlayer.swift */,
-				F1AC6EA459A5E9BC3ECA7625EFD11DC8 /* Spring.swift */,
-				20CA09EBADE244E517F5157707BB1EFA /* SpringAnimation.swift */,
-				12EBCE9EF89CEEDD3979BFC982E69C92 /* SpringButton.swift */,
-				734D00B509D211EE970BEBAB83142486 /* SpringImageView.swift */,
-				B5E4A8806263D272C7B82E1E2FCEFB2D /* SpringLabel.swift */,
-				9F0AD7C0BCE95CD67D15E74F281D35DF /* SpringTextField.swift */,
-				E55BEF15B19D7C0600FA826519EFDD52 /* SpringTextView.swift */,
-				AE0201328BE97303AFE401697BE757E6 /* SpringView.swift */,
-				EBFAA508DE5845497CD8EEA6A5329391 /* TransitionManager.swift */,
-				A39BB42007972F63CCA067E3CCC5D36D /* TransitionZoom.swift */,
-				D14CF3C2DD6811377838550B2960CF51 /* UnwindSegue.swift */,
-				C5AB3C64848362D4C089733B65DA8AEB /* Resources */,
-				256F2732ED95074EC38C4E5CAB978F2D /* Support Files */,
+				125D889161FD43872D9378CBB2F45CA5 /* AsyncButton.swift */,
+				9E88523A42E93E1CB35A63C65A778C3B /* AsyncImageView.swift */,
+				73F57272A4CB72A6B40CAC587D1EFD5C /* AutoTextView.swift */,
+				C9D8B46DC8ED53B2E40DC547DE720667 /* BlurView.swift */,
+				AE5EC62188F64897FE785DA55A18D2E6 /* DesignableButton.swift */,
+				07CCB8E6DAE997089F9B6FC1DA13753F /* DesignableImageView.swift */,
+				C9EAADD0F4510A55ADC58E584F8BEBAB /* DesignableLabel.swift */,
+				98969BA8ACD484D46119E79B73ED422D /* DesignableTabBarController.swift */,
+				398FDC280D6C8A489D0CF6D5D7263F40 /* DesignableTextField.swift */,
+				D7D8B6F3797C747E3363268DDE7F3E67 /* DesignableTextView.swift */,
+				6BDAA996252241ED9A8E3C01B3AC93E9 /* DesignableView.swift */,
+				EE2E9B9B5C2FD3CB27B866EE447FE8E6 /* ImageLoader.swift */,
+				63CA2806DF757715B38D1D9CB21863D8 /* KeyboardLayoutConstraint.swift */,
+				D763FE7E22FC6064132BB6EE94B81E41 /* LoadingView.swift */,
+				090C7AC4FA2C5A0E1CDB0000E6012263 /* Misc.swift */,
+				7DD5EA0642799F0166C11C83102B8ACF /* SoundPlayer.swift */,
+				089EE106544B713D993F739AFF3D3447 /* Spring.swift */,
+				43E7EB492350AA3F3DED0BCF21B4D54F /* SpringAnimation.swift */,
+				D4F253C663098051ABB3B4C7631A4922 /* SpringButton.swift */,
+				4BB62F31814C14B06AB4529D46E08E77 /* SpringImageView.swift */,
+				B74F485E57A129E0D38812BBF489F7CE /* SpringLabel.swift */,
+				8F340284D35442EC275E8A99578B50AD /* SpringTextField.swift */,
+				68E5167EC1182CDAA2DBE8A05FDA5836 /* SpringTextView.swift */,
+				222D38D3B69AE8F398CB43B412F211D5 /* SpringView.swift */,
+				FB5C90FCC74173FCA382C66840C6A71A /* TransitionManager.swift */,
+				35B9C1FA6ABCCEF2CD9F5198D04149F3 /* TransitionZoom.swift */,
+				DA97C1F52A190C60004938D0F586FD29 /* UnwindSegue.swift */,
+				7EEC9F7C6BA0BF43B32738D24D7DD767 /* Resources */,
+				EE170C198A1C3E71DCFF9E7C236E7C6B /* Support Files */,
 			);
 			name = Spring;
 			path = Spring;
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		3B2CDA21EC02413FBF7F8041954E0FB4 /* IHKeyboardAvoiding */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				2FE059757BC366B6DD0E580616F8D575 /* KeyboardAvoiding.swift */,
+				9351DD85141C1357985A789E322D7146 /* KeyboardDismissingView.swift */,
+				8311E411D139557A6CFCA52A4FC3A985 /* Support Files */,
 			);
-			name = iOS;
+			name = IHKeyboardAvoiding;
+			path = IHKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FE6929CCD7FEC4198603121FA26F753 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				818800146BDC9C239D5A1F95D6858E6F /* Info.plist */,
+				40F3EDD377888EBDEA3B3BB2C7B0B18F /* PasswordTextField.modulemap */,
+				F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */,
+				A1760473656891B09FE6AE4A68740699 /* PasswordTextField-dummy.m */,
+				C8D6C3CBC0240AD5053D869C75CDADB8 /* PasswordTextField-prefix.pch */,
+				7AA036D7224402763FA445E34B9C00BC /* PasswordTextField-umbrella.h */,
+				42671FDA67134F8188F0E16F96C05659 /* ResourceBundle-PasswordTextField-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PasswordTextField";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7E50D3424B410679D56DEDDD82216F44 /* Pods */,
-				90C754633015EE7A082E74BDBE6D68C2 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				DBB94A52B84DE55D2E3E4B043FB85E5D /* Pods */,
+				9914BBD5801F44171DBE8288388896C5 /* Products */,
 				213704621E8FC8C070A11A6262ADD2A5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E50D3424B410679D56DEDDD82216F44 /* Pods */ = {
+		7EEC9F7C6BA0BF43B32738D24D7DD767 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BD3BD4044D58F9752960FF9F6D53B61B /* SideMenuController */,
-				5A31F742D98938D1808640185930CDE0 /* Spring */,
+				0475EB7BF91EA9CB40C4F0ED256CFE8E /* Images.xcassets */,
+				44E73124CB0541CFA71E93DC43474AE0 /* LoadingView.xib */,
 			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		90C754633015EE7A082E74BDBE6D68C2 /* Products */ = {
+		8311E411D139557A6CFCA52A4FC3A985 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */,
-				B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */,
-				3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */,
+				F06934BC10C591A260CD42EA814FCCF5 /* IHKeyboardAvoiding.modulemap */,
+				DF2A5CE9782C845471C65424C2713FCE /* IHKeyboardAvoiding.xcconfig */,
+				6A8A37DAC0DD597F96C0D03C5A74CCBF /* IHKeyboardAvoiding-dummy.m */,
+				2E9B96B23B3CA4F20ED5F850971046C5 /* IHKeyboardAvoiding-prefix.pch */,
+				000F64D528D53FCA4CC1D586E0A39296 /* IHKeyboardAvoiding-umbrella.h */,
+				27AF4D28DA913F4F2EA10CCA809B05D1 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IHKeyboardAvoiding";
+			sourceTree = "<group>";
+		};
+		9914BBD5801F44171DBE8288388896C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				343D234ED61895899F006EBC95EAAE45 /* IHKeyboardAvoiding.framework */,
+				50890947A712C804AB1CA0981B333FB8 /* PasswordTextField.bundle */,
+				A2F84B0D92D17EAA2D8E15A5121289BA /* PasswordTextField.framework */,
+				46DEF873D040951BB39AC5616CA97271 /* Pods_AllergyInfo.framework */,
+				ADDC0885FEFB1F121053FF5757D21C52 /* SideMenuController.framework */,
+				C1799B394888D800936C5D46A2315B10 /* Spring.framework */,
+				A24405B71BEF695A7A94B680D65A4063 /* TextFieldEffects.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		A80867A8A3ACB0C24B62DA930EE345C0 /* SideMenuController */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD3BD4044D58F9752960FF9F6D53B61B /* SideMenuController */ = {
-			isa = PBXGroup;
-			children = (
-				B0BBC6D4E016EDA8556CE282DA99997D /* CenterContainmentSegue.swift */,
-				F4DCBD3D8EEACB13DDFA5BE443204E1F /* SideContainmentSegue.swift */,
-				1353773A79F76CC3E995CD91113708BE /* SideMenuController.swift */,
-				7DAB04CB5332FF0AC2A12FD1A6FC8DB1 /* SideMenuController+CustomTypes.swift */,
-				E5B303D1665DA556EA2B290637D01432 /* SideMenuController+SideOver.swift */,
-				5107F825F6C6BD7DB03D4AA9B68EF156 /* SideMenuController+SideUnder.swift */,
-				0AF5ED0DF76CD1472FA92468078DC5A3 /* TransitionAnimator.swift */,
-				661AC6FE6FAA293C552D85AC6C64430E /* UIKitExtensions.swift */,
-				1715D1165260BC146B73617CF0A4C287 /* Support Files */,
+				AE41E78A3B2D4CCAB2989FDB9C994FD5 /* CenterContainmentSegue.swift */,
+				E3CFAEDA4E0E76C3A5F7EA9915CDCB28 /* SideContainmentSegue.swift */,
+				66BB33734F79A7A82E22B6C3DDA1C7B7 /* SideMenuController.swift */,
+				8550C9EE8D4BEE99EBEE20299DC130CA /* SideMenuController+CustomTypes.swift */,
+				76A07554B4CFEF169A9F6AD84BD2D549 /* SideMenuController+SideOver.swift */,
+				AD5042D514A35DB8DAEC5C48A7A9C821 /* SideMenuController+SideUnder.swift */,
+				03882E5E215D51ACC79AB7FE64D604C9 /* TransitionAnimator.swift */,
+				D644A9FB4EDD3592222F644018A1E463 /* UIKitExtensions.swift */,
+				AA2C85BE12A11C2F8FE9CC69A8E67D8D /* Support Files */,
 			);
 			name = SideMenuController;
 			path = SideMenuController;
 			sourceTree = "<group>";
 		};
-		C5AB3C64848362D4C089733B65DA8AEB /* Resources */ = {
+		AA2C85BE12A11C2F8FE9CC69A8E67D8D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FDAF3FB84F336F4BB92EB8EF4C012CD6 /* Images.xcassets */,
-				2F404D9A204F8D12C82B34C28EFCE8EB /* LoadingView.xib */,
+				BB3CCB9D50D3D54082AA729950075340 /* Info.plist */,
+				B3FF20BC0009BAE4D68EA77B01B66FAE /* SideMenuController.modulemap */,
+				9A4A7BFEA5A9BB4E6F0E0B223D713635 /* SideMenuController.xcconfig */,
+				01FDB0CD7778075FBBD970D48D7D642C /* SideMenuController-dummy.m */,
+				B8E856AF835D271E068B9715C2945025 /* SideMenuController-prefix.pch */,
+				E5E6EA253B0B64F2F322D63241BCCE21 /* SideMenuController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SideMenuController";
+			sourceTree = "<group>";
+		};
+		B37A4A58BFE09F1D5235ECCF79DC92C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				365D6CCD929D7FB75011D6E9D30AE41C /* Info.plist */,
+				969B53A966D76780C2653EE69F2D1E8E /* TextFieldEffects.modulemap */,
+				F42C00F37A97E68E62B4E22CE512ED5D /* TextFieldEffects.xcconfig */,
+				D0FFFDC70D9CEBA2F8BDF43F1068A1EC /* TextFieldEffects-dummy.m */,
+				75204FE0A54C1741C8FC8977AA31430D /* TextFieldEffects-prefix.pch */,
+				C346DB01CCEC2E13DF027442E42FA6C2 /* TextFieldEffects-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TextFieldEffects";
+			sourceTree = "<group>";
+		};
+		BAE8102E31502C4F70A957D48AE7F13E /* PasswordTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3E2120480345E4D7EDC0BB87F79D9A43 /* BundleUtil.swift */,
+				A59213E918D37EC811F070B2D2545644 /* PasswordRule.swift */,
+				D1E62CE2432302E2840210E3D9157043 /* PasswordTextField.h */,
+				23B0BAFAF3BDA50B43E77B9B81884752 /* PasswordTextField.swift */,
+				E182B0538111F93A46C5249D6256F3E1 /* RegexRule.swift */,
+				B184593A3F70204EAF626CA6ABBA0A8C /* Ruleable.swift */,
+				AF1B009C0E651038AFA8BB94B3442E08 /* SecureTextToggleButton.swift */,
+				7FD0944E4C5CCFEA5A0774A67268E0A5 /* StringExtension.swift */,
+				F8E85EA6BBFAD7EA50B393FAFF233CBF /* Resources */,
+				5FE6929CCD7FEC4198603121FA26F753 /* Support Files */,
+			);
+			name = PasswordTextField;
+			path = PasswordTextField;
+			sourceTree = "<group>";
+		};
+		D4076294D459654C28DEC6E57429C87E /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				97F8C1FA9B35D1BFE5F32ECE63927D6D /* AkiraTextField.swift */,
+				6D44E8893B4D3895D3306F7FBD1E8E9B /* HoshiTextField.swift */,
+				5184895EB61F59A2314EA4BC4CEAA2F3 /* IsaoTextField.swift */,
+				09A319B425FA3CC9FE6D385FAC27CF9C /* JiroTextField.swift */,
+				28083A2BB5AFC9162C767723DB64C133 /* KaedeTextField.swift */,
+				4FF0B62BCD0EF5306AAA17315174444E /* MadokaTextField.swift */,
+				705D959573CF69AA4E05FF4DD176654F /* MinoruTextField.swift */,
+				5E23FEE31931F5C69D18835E41A61815 /* TextFieldsEffects.swift */,
+				867EFCAAEEDDCF57C2ADCACEA2BF4950 /* YokoTextField.swift */,
+				39854AB6E04CBD29FA0CEA3DC4DB7936 /* YoshikoTextField.swift */,
+				B37A4A58BFE09F1D5235ECCF79DC92C8 /* Support Files */,
+			);
+			name = TextFieldEffects;
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		DBB94A52B84DE55D2E3E4B043FB85E5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B2CDA21EC02413FBF7F8041954E0FB4 /* IHKeyboardAvoiding */,
+				BAE8102E31502C4F70A957D48AE7F13E /* PasswordTextField */,
+				A80867A8A3ACB0C24B62DA930EE345C0 /* SideMenuController */,
+				38EF2BB6CE80A1FC62FD7B86C6B3DEF8 /* Spring */,
+				D4076294D459654C28DEC6E57429C87E /* TextFieldEffects */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EE170C198A1C3E71DCFF9E7C236E7C6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC2F873F2C1FD31388926B7C892F4405 /* Info.plist */,
+				82C43341F1F1FE99A6112A6B0AE448A5 /* Spring.modulemap */,
+				B5B4F31659C87E08E12A14CC826D7E44 /* Spring.xcconfig */,
+				639D36C15C15CBB8930342B3E0FCD52E /* Spring-dummy.m */,
+				979E943393CE4982505457A2CD9986FD /* Spring-prefix.pch */,
+				65B7E63509DFCA938A19C75B13FF4ABC /* Spring-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spring";
+			sourceTree = "<group>";
+		};
+		F8E85EA6BBFAD7EA50B393FAFF233CBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82EE6C8B5C66044D0FA1F78BDF39808E /* visibility_off.png */,
+				29A3FE1F3AE6C1DAE516BDAFA2B16166 /* visibility_off@2x.png */,
+				DA84F66C7CC6AD28762B9C10FF7BD7A1 /* visibility_off@3x.png */,
+				08E2E857AC0A7DEC8C36A01D7D88B17D /* visibility_on.png */,
+				FE73D5D5407C0B42655DC94DD5749C39 /* visibility_on@2x.png */,
+				231EC82586E71619ABC44EE2F222087D /* visibility_on@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -333,60 +592,100 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6B19828599107C833273AA6FEFECD67E /* Headers */ = {
+		16EB55AFA89753E0FF1BDF9A1EEDF093 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25928A6620EBEC08CC1E4C3CC99C308C /* Spring-umbrella.h in Headers */,
+				657DBD2D246F4D8E54E2CC8033C7067F /* Spring-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D4D2CFCCC29E75D00B007D40AD534A /* Headers */ = {
+		43D0A076B4665D7FEDB4F37BAC43DD5C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFF804813605919475EAB2D864F4CA0E /* SideMenuController-umbrella.h in Headers */,
+				88CD3739938F64C289D929677E3D10EE /* Pods-AllergyInfo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81D2241E18626C8D5C9C76E1C499DCD8 /* Headers */ = {
+		564FCFA1B7930D3C3FFA7589F4C4B673 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB0C790745C4009504FE9B3CB92869A4 /* Pods-AllergyInfo-umbrella.h in Headers */,
+				EBA49F55F1E15D22FB191CD55127BC5E /* IHKeyboardAvoiding-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5935FFEB4FC89692158BC474BF37EF62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA93A44D6E0FFEFEC310B0F8B0956881 /* SideMenuController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E165E593A530D8D68DEEF02ED8849FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F12B207E4D5663994454D158605601 /* TextFieldEffects-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED18475B63D409636F082D0A1455BE5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A3BADD27443B328ECD600ED2E7E9FD /* PasswordTextField-umbrella.h in Headers */,
+				20C479BA3D6EA1FC02B77DDF87EC78DB /* PasswordTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0612718227EE15ABA8F8CA06570D1B0C /* Pods-AllergyInfo */ = {
+		033B2F5EFC98402794E5FA4A2E42BD9F /* IHKeyboardAvoiding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA20F75F35A0D30377AA394F4FF20C42 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */;
+			buildConfigurationList = B258119BB7B9D52B224581BE8D28E382 /* Build configuration list for PBXNativeTarget "IHKeyboardAvoiding" */;
 			buildPhases = (
-				9385C6427FC50760E08CAFA922FB20A3 /* Sources */,
-				44523C402E98BDAE6CD5920BE87EAB23 /* Frameworks */,
-				81D2241E18626C8D5C9C76E1C499DCD8 /* Headers */,
+				B888D5387385FB7503B8E94F0019DBA4 /* Sources */,
+				4908E3F0460E3C9CDA7C3F4AA26EFF34 /* Frameworks */,
+				564FCFA1B7930D3C3FFA7589F4C4B673 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8E3B5A34F2BF40BA1C7B931930AC3867 /* PBXTargetDependency */,
-				2FE1A152C927472AC5E6943151C87890 /* PBXTargetDependency */,
 			);
-			name = "Pods-AllergyInfo";
-			productName = "Pods-AllergyInfo";
-			productReference = 0A7659269BD8C1AC45C5D9AE3BD07CCF /* Pods_AllergyInfo.framework */;
+			name = IHKeyboardAvoiding;
+			productName = IHKeyboardAvoiding;
+			productReference = 343D234ED61895899F006EBC95EAAE45 /* IHKeyboardAvoiding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */ = {
+		10D0829CA57A57621A665DF0943D306D /* TextFieldEffects */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C644DBF43E2A750C051662E272DF4943 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildConfigurationList = E893FBEC0F4FE7101C2032BB799A04F8 /* Build configuration list for PBXNativeTarget "TextFieldEffects" */;
 			buildPhases = (
-				F5DEC77B939E0618D4851883012E9A24 /* Sources */,
-				57F83113072049687E9401856DC1AFFA /* Frameworks */,
-				1A41E3696104470C5F577C86E2C9618A /* Resources */,
-				6B19828599107C833273AA6FEFECD67E /* Headers */,
+				E161A8E4E4D13EC68019B2EA18559AB5 /* Sources */,
+				30A16003FC64C29DE8029775EB1345A1 /* Frameworks */,
+				9E165E593A530D8D68DEEF02ED8849FC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextFieldEffects;
+			productName = TextFieldEffects;
+			productReference = A24405B71BEF695A7A94B680D65A4063 /* TextFieldEffects.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		17941F99CFEEB0B16C40D09A14DF2A49 /* Spring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB6CFA6233B2DE0555FAC1C4405119B3 /* Build configuration list for PBXNativeTarget "Spring" */;
+			buildPhases = (
+				E4E91A5DDBE695568D913363FA070278 /* Sources */,
+				08DD7AEE0C339A8D1741F32CD30D0E2E /* Frameworks */,
+				2659C0429522DFE577EC050B9E64726F /* Resources */,
+				16EB55AFA89753E0FF1BDF9A1EEDF093 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -394,16 +693,16 @@
 			);
 			name = Spring;
 			productName = Spring;
-			productReference = 3F72A30DD4BD7EAFE432B5D0F8CAFAD4 /* Spring.framework */;
+			productReference = C1799B394888D800936C5D46A2315B10 /* Spring.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */ = {
+		24DDA4200F812E6B2FB75042D66E5885 /* SideMenuController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2256D71D1CF94BCB518A81719DB1BAF0 /* Build configuration list for PBXNativeTarget "SideMenuController" */;
+			buildConfigurationList = 4A11DBBEB4E12952D3076CAF5417A5D3 /* Build configuration list for PBXNativeTarget "SideMenuController" */;
 			buildPhases = (
-				7F1FAD635274E24432270F8227801544 /* Sources */,
-				6A5B174A79FA6CD80818FDE3956D1534 /* Frameworks */,
-				75D4D2CFCCC29E75D00B007D40AD534A /* Headers */,
+				29A8C1F7D4698AD9FCB15F10BD6D46EE /* Sources */,
+				C458AA9A48FCB2CFD28DBE6BCA98E1DB /* Frameworks */,
+				5935FFEB4FC89692158BC474BF37EF62 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -411,7 +710,65 @@
 			);
 			name = SideMenuController;
 			productName = SideMenuController;
-			productReference = B11BC3EE5BA53C0C3EF1AFC2210A5FB6 /* SideMenuController.framework */;
+			productReference = ADDC0885FEFB1F121053FF5757D21C52 /* SideMenuController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7FF7D710F5489D1890599C269A1FF1BD /* PasswordTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867C474E0650F3DF51AD76AA7AB1FCC7 /* Build configuration list for PBXNativeTarget "PasswordTextField" */;
+			buildPhases = (
+				74F9887A22EF812828F6AAE405C2475C /* Sources */,
+				2A6AD589B3993F42D1A88F23C6F7502C /* Frameworks */,
+				ECF1BF604C36484ED5C5A873C850BC35 /* Resources */,
+				ED18475B63D409636F082D0A1455BE5E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9924631E982B3E8B85DC73F8C5F2217 /* PBXTargetDependency */,
+			);
+			name = PasswordTextField;
+			productName = PasswordTextField;
+			productReference = A2F84B0D92D17EAA2D8E15A5121289BA /* PasswordTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8C94E4B34B3742A46711F31B262DC90E /* PasswordTextField-PasswordTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82935F1C873479D8900CC97FC2CE4C7 /* Build configuration list for PBXNativeTarget "PasswordTextField-PasswordTextField" */;
+			buildPhases = (
+				E697494D10C20153EA7DAAEE208BF598 /* Sources */,
+				477A3F12FE3AAE77C2C0F8E169429DD4 /* Frameworks */,
+				2964BFD838104AE5E54E853697907A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PasswordTextField-PasswordTextField";
+			productName = "PasswordTextField-PasswordTextField";
+			productReference = 50890947A712C804AB1CA0981B333FB8 /* PasswordTextField.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B661CE0C04090E2BCD70E92914C098FC /* Pods-AllergyInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 098ACF9F036F871C88614A2343C64887 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */;
+			buildPhases = (
+				DDEB67AFD113A1CF77C8FE34C06595E8 /* Sources */,
+				7292B7864932A28AFB719C3B9FF6EC0B /* Frameworks */,
+				43D0A076B4665D7FEDB4F37BAC43DD5C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EECBE1B8C6469AD6201CFE306C9235ED /* PBXTargetDependency */,
+				7508487BBDD17571E8BA67256A1DEA81 /* PBXTargetDependency */,
+				D418F120AE6C723ED22C96E45EBBC06A /* PBXTargetDependency */,
+				BEEE85B4D6983D0DE84E58C953F3D366 /* PBXTargetDependency */,
+				1A637EF11F689E3BD075D3F38AEDFE47 /* PBXTargetDependency */,
+			);
+			name = "Pods-AllergyInfo";
+			productName = "Pods-AllergyInfo";
+			productReference = 46DEF873D040951BB39AC5616CA97271 /* Pods_AllergyInfo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -431,108 +788,207 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 90C754633015EE7A082E74BDBE6D68C2 /* Products */;
+			productRefGroup = 9914BBD5801F44171DBE8288388896C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0612718227EE15ABA8F8CA06570D1B0C /* Pods-AllergyInfo */,
-				44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */,
-				0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */,
+				033B2F5EFC98402794E5FA4A2E42BD9F /* IHKeyboardAvoiding */,
+				7FF7D710F5489D1890599C269A1FF1BD /* PasswordTextField */,
+				8C94E4B34B3742A46711F31B262DC90E /* PasswordTextField-PasswordTextField */,
+				B661CE0C04090E2BCD70E92914C098FC /* Pods-AllergyInfo */,
+				24DDA4200F812E6B2FB75042D66E5885 /* SideMenuController */,
+				17941F99CFEEB0B16C40D09A14DF2A49 /* Spring */,
+				10D0829CA57A57621A665DF0943D306D /* TextFieldEffects */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A41E3696104470C5F577C86E2C9618A /* Resources */ = {
+		2659C0429522DFE577EC050B9E64726F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFAB0141284E0428C5970B233A3BF24 /* Images.xcassets in Resources */,
-				F4D2DD72E52ADF8490877A54CB2B805A /* LoadingView.xib in Resources */,
+				FC8FE7B45AAB7E36B23DE0A44402A5BF /* Images.xcassets in Resources */,
+				EB807B36ABC5887D00F3FB5B75312681 /* LoadingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2964BFD838104AE5E54E853697907A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21A9946950DF15C0ABE9F4D66B20483 /* visibility_off.png in Resources */,
+				1B6D0BEAAE28EA6635B0ED032F809363 /* visibility_off@2x.png in Resources */,
+				F26310C2BE4A1C15B3F499C2F0F77083 /* visibility_off@3x.png in Resources */,
+				F564EE72CA2841FE18D9CD81FBE19385 /* visibility_on.png in Resources */,
+				23AA71965504D5C87C60AFBBFEEFE669 /* visibility_on@2x.png in Resources */,
+				6A78CB9DA8733DC8940441F2095F78A2 /* visibility_on@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF1BF604C36484ED5C5A873C850BC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CF6379D934C4B7481B2B3FD8C8266D /* PasswordTextField.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7F1FAD635274E24432270F8227801544 /* Sources */ = {
+		29A8C1F7D4698AD9FCB15F10BD6D46EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2662CD0D94C3A9404BF40427D19E6AFF /* CenterContainmentSegue.swift in Sources */,
-				D5FAE0BDE84A1E5925BDECAB6FCD04A4 /* SideContainmentSegue.swift in Sources */,
-				92D9C60C132DFCABB9C42E98D07FDC74 /* SideMenuController+CustomTypes.swift in Sources */,
-				059263CDB1D78A81061A15FFFE3CEB66 /* SideMenuController+SideOver.swift in Sources */,
-				028183AADE93E1B186B00467FEE0ED5B /* SideMenuController+SideUnder.swift in Sources */,
-				B30C3D00607E75CB1399F082101BAF54 /* SideMenuController-dummy.m in Sources */,
-				312039689D23E1009D53C160FB33C586 /* SideMenuController.swift in Sources */,
-				BF2EB5BA7155AF6FA19A9B78F7BFDCE9 /* TransitionAnimator.swift in Sources */,
-				75E4363BDD209D529ED6A5FA3507B6B4 /* UIKitExtensions.swift in Sources */,
+				436661B013F66836C164D5922DEEF02C /* CenterContainmentSegue.swift in Sources */,
+				AE6B37D90867E6836A51785EC52A95F5 /* SideContainmentSegue.swift in Sources */,
+				E84C74629116ECCCA9ECA91B0CD91B20 /* SideMenuController+CustomTypes.swift in Sources */,
+				A3842AE1B2F4ADAE346F045F6227848D /* SideMenuController+SideOver.swift in Sources */,
+				6AB4B4E8C6BAB165334E8C6CB7F2082E /* SideMenuController+SideUnder.swift in Sources */,
+				1247D73185C18F13226B44071B6C7FB8 /* SideMenuController-dummy.m in Sources */,
+				A48469B18263E63ADD1ABF56B6E2FCAA /* SideMenuController.swift in Sources */,
+				D40F60975B649A896B146E07B87F054D /* TransitionAnimator.swift in Sources */,
+				BC7DF759D09A659D6A4F56C2A1708DEA /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9385C6427FC50760E08CAFA922FB20A3 /* Sources */ = {
+		74F9887A22EF812828F6AAE405C2475C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82641EBB28CD326AB2D3F3117AA2C30A /* Pods-AllergyInfo-dummy.m in Sources */,
+				EDD6DB97EB226B27678A244DF95F0876 /* BundleUtil.swift in Sources */,
+				8820497B5B3385F365FDEAA7579AB5EA /* PasswordRule.swift in Sources */,
+				FB98DA8C1EFB1FDDAB5FBAB3AD77D2DC /* PasswordTextField-dummy.m in Sources */,
+				105E2B2D62FE95442BDA8B5FD8A6E214 /* PasswordTextField.swift in Sources */,
+				C30EC6CF1527C64A9E612294C61672CA /* RegexRule.swift in Sources */,
+				EF40FB68A5AB7D8FEB9267285118F178 /* Ruleable.swift in Sources */,
+				AC1BB08012FF5CC1762FEE153B02B282 /* SecureTextToggleButton.swift in Sources */,
+				7A37A6B29817AA12ABA115E4712BC890 /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5DEC77B939E0618D4851883012E9A24 /* Sources */ = {
+		B888D5387385FB7503B8E94F0019DBA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2087FAA944005411DE244CB17AD888E /* AsyncButton.swift in Sources */,
-				7E6275691FA3B87E619630C159830478 /* AsyncImageView.swift in Sources */,
-				4FEBFA4C866C55FF22266EA9CA29A21D /* AutoTextView.swift in Sources */,
-				3BD6F16BEA9CAD1F48041F12A0D8258B /* BlurView.swift in Sources */,
-				C5E17195002B35E26B777ECB5917BC60 /* DesignableButton.swift in Sources */,
-				82E97614AD316BAC22F2B1398CDA1221 /* DesignableImageView.swift in Sources */,
-				B58AB6383C46687337C79E782FB35E84 /* DesignableLabel.swift in Sources */,
-				2C707F59775542389509DEC12902E2AF /* DesignableTabBarController.swift in Sources */,
-				41E64974A95288B17512627C94586FC8 /* DesignableTextField.swift in Sources */,
-				C82BF725382D4395D627DCDCA66966F2 /* DesignableTextView.swift in Sources */,
-				CA2876387B4577DF69C9ED2B5D0CE975 /* DesignableView.swift in Sources */,
-				AAADB3893E89C2D183200E21FCBB9429 /* ImageLoader.swift in Sources */,
-				6255D6129BC805B886B992FEF1A471CD /* KeyboardLayoutConstraint.swift in Sources */,
-				BD6F7C1FD6EB2DE4B07FB7B8A0CC41F7 /* LoadingView.swift in Sources */,
-				FFFD82015D18745FC557E376BA8A3992 /* Misc.swift in Sources */,
-				95DE46C07E9F11A7C70D17B033CE2CD2 /* SoundPlayer.swift in Sources */,
-				2714338C9905A5EED04022C0700DD412 /* Spring-dummy.m in Sources */,
-				D325D8360FDC56F3222E3BAF29012427 /* Spring.swift in Sources */,
-				C628599E86727418C4879F8366F60156 /* SpringAnimation.swift in Sources */,
-				ECD5BFFAEBEB1BEC4F0F396790DCF2D9 /* SpringButton.swift in Sources */,
-				2CC9B777F86CE52B9EF6992752953A34 /* SpringImageView.swift in Sources */,
-				B0E93ACB4A8278B5A835A7E82A0F9022 /* SpringLabel.swift in Sources */,
-				E458645EED18F694FF3CCEDF96498690 /* SpringTextField.swift in Sources */,
-				E601C53E805209DA7A71B34D498B146A /* SpringTextView.swift in Sources */,
-				0FE8CBD696CAB1CC4EF49513524CF3D5 /* SpringView.swift in Sources */,
-				CFF8D987F209E5279639FC99B7521563 /* TransitionManager.swift in Sources */,
-				A102A5D1EA631E745ABEDF80A4287EF4 /* TransitionZoom.swift in Sources */,
-				7EB45C22515024CB8EFB9C8BBBE7F7AA /* UnwindSegue.swift in Sources */,
+				4289A6BA490E261D4AFEBC4797706D6E /* IHKeyboardAvoiding-dummy.m in Sources */,
+				21662C64A371BDF77972D3EFD57A6252 /* KeyboardAvoiding.swift in Sources */,
+				C90E10351CD6B4E34F101420159DE668 /* KeyboardDismissingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDEB67AFD113A1CF77C8FE34C06595E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA36293058BE0D6220880910F4D09055 /* Pods-AllergyInfo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E161A8E4E4D13EC68019B2EA18559AB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495A067B594270773871A8253EDC0F55 /* AkiraTextField.swift in Sources */,
+				50D7EF26E6ABE825BFA0FCA7474BA8EC /* HoshiTextField.swift in Sources */,
+				17D96AF731C01EA09F5B2C1233063369 /* IsaoTextField.swift in Sources */,
+				282C11F794909218ED539C9058C735EA /* JiroTextField.swift in Sources */,
+				D4235A0E4E199E80DE1DF133ACCB84F5 /* KaedeTextField.swift in Sources */,
+				0A7902CCCB71D657E7AA2700028F587A /* MadokaTextField.swift in Sources */,
+				3E7C1FE50058D6CE01F9ABF152AFC61A /* MinoruTextField.swift in Sources */,
+				26D28F681065F8DECC81DFB2399830C5 /* TextFieldEffects-dummy.m in Sources */,
+				1A5EA0A7CC8F4F9F188803E2884EEA7A /* TextFieldsEffects.swift in Sources */,
+				2B6EF0A64CD10CAE08DD5803A1B75ED0 /* YokoTextField.swift in Sources */,
+				F93B4A34BBF3BB7D064E3A69632423ED /* YoshikoTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4E91A5DDBE695568D913363FA070278 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E68266AC81878688511F2B3BF575C8 /* AsyncButton.swift in Sources */,
+				1469E17040328651B897BFA37D9D1FB4 /* AsyncImageView.swift in Sources */,
+				676D2F4235E7135D1CD45C8C7DC26789 /* AutoTextView.swift in Sources */,
+				889FF86BE845740C9C4E3864D75DF9A9 /* BlurView.swift in Sources */,
+				5DF771D0E0037CA0888B7E88D87CB9B3 /* DesignableButton.swift in Sources */,
+				69121812FDEDD8D94DAF9244E4FDFA6F /* DesignableImageView.swift in Sources */,
+				0992E9E6AFD28294DCDB56E5BBB830B6 /* DesignableLabel.swift in Sources */,
+				EA548116DC1647B5BF83E5935E4F666A /* DesignableTabBarController.swift in Sources */,
+				2D5CFADB7CF9879A833B97D1F6FB686E /* DesignableTextField.swift in Sources */,
+				32AB0BA6756BCA6B24EE851D4AB8AAB5 /* DesignableTextView.swift in Sources */,
+				DC9CD8E5A6E6B7F5EB4441D629F5D938 /* DesignableView.swift in Sources */,
+				01B30C7D3D9A831EA39D3EAD663D8B0F /* ImageLoader.swift in Sources */,
+				26D22DB13F35A01EA70FDEBBEE76062C /* KeyboardLayoutConstraint.swift in Sources */,
+				6759939CCC7314BEBFF045720B3E6831 /* LoadingView.swift in Sources */,
+				0E945ABF74AD42B8E19E676C5BE84F24 /* Misc.swift in Sources */,
+				0ECB343A796A71B1A6478A65149A6AD4 /* SoundPlayer.swift in Sources */,
+				2D3074D50B457DAAC8856DA89BCC1DFA /* Spring-dummy.m in Sources */,
+				55A64D404813AB54302BE6863E1691C6 /* Spring.swift in Sources */,
+				CDF8E8053ACB3A13B7F7ABB24C5A7008 /* SpringAnimation.swift in Sources */,
+				8E110761E9CB6113ED0B66FC500C538E /* SpringButton.swift in Sources */,
+				A2C4C113285DF063495C3B4C10D4E090 /* SpringImageView.swift in Sources */,
+				DDC41DE1A814C5C61C55F93EAE6B7CBA /* SpringLabel.swift in Sources */,
+				C0E550CA10896211CB390794DCC5225D /* SpringTextField.swift in Sources */,
+				7C9228C7AA90F9E0BAE3FC7FEBBBF733 /* SpringTextView.swift in Sources */,
+				21A4BFD0508CA24D77183CD52A4963E7 /* SpringView.swift in Sources */,
+				146CEF0787CEF8204777F0F43CB51E01 /* TransitionManager.swift in Sources */,
+				134A69AFC4E09AD76429C7A4DE41C731 /* TransitionZoom.swift in Sources */,
+				90058AA6AE59EAA415CBC30B72FB2EEB /* UnwindSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E697494D10C20153EA7DAAEE208BF598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2FE1A152C927472AC5E6943151C87890 /* PBXTargetDependency */ = {
+		1A637EF11F689E3BD075D3F38AEDFE47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TextFieldEffects;
+			target = 10D0829CA57A57621A665DF0943D306D /* TextFieldEffects */;
+			targetProxy = EE4E63570C4A4CA8871EE70DD29E32D0 /* PBXContainerItemProxy */;
+		};
+		7508487BBDD17571E8BA67256A1DEA81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PasswordTextField;
+			target = 7FF7D710F5489D1890599C269A1FF1BD /* PasswordTextField */;
+			targetProxy = 90AA9F5C3674500B4936721DDD6BD394 /* PBXContainerItemProxy */;
+		};
+		BEEE85B4D6983D0DE84E58C953F3D366 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Spring;
-			target = 0787E39F4089D0AB9B972F6A52F1D7FF /* Spring */;
-			targetProxy = 921084BFEEDE400E6A6104968ED778E5 /* PBXContainerItemProxy */;
+			target = 17941F99CFEEB0B16C40D09A14DF2A49 /* Spring */;
+			targetProxy = B7F7E8CCCF69603A107560C6CBA162E6 /* PBXContainerItemProxy */;
 		};
-		8E3B5A34F2BF40BA1C7B931930AC3867 /* PBXTargetDependency */ = {
+		D418F120AE6C723ED22C96E45EBBC06A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SideMenuController;
-			target = 44796A9E493BD93CD65DEA2CC9C65347 /* SideMenuController */;
-			targetProxy = 8C32D724F0D77DC11BD93244B9FE833A /* PBXContainerItemProxy */;
+			target = 24DDA4200F812E6B2FB75042D66E5885 /* SideMenuController */;
+			targetProxy = B0A13EBCBD7B41CACFC57882C05CEF98 /* PBXContainerItemProxy */;
+		};
+		E9924631E982B3E8B85DC73F8C5F2217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PasswordTextField-PasswordTextField";
+			target = 8C94E4B34B3742A46711F31B262DC90E /* PasswordTextField-PasswordTextField */;
+			targetProxy = 70E3C10E9FF3C761F407889873F9A0A3 /* PBXContainerItemProxy */;
+		};
+		EECBE1B8C6469AD6201CFE306C9235ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IHKeyboardAvoiding;
+			target = 033B2F5EFC98402794E5FA4A2E42BD9F /* IHKeyboardAvoiding */;
+			targetProxy = 0B706AB986D669E1ADFBA74A9A4CEED6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		021543DC9410B576A30786C426B893C9 /* Release */ = {
+		1623DA3ED4F1D7C5D43C88B5DEFCF003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F82F43D6245F3B5E19D73798B49BF672 /* Pods-AllergyInfo.release.xcconfig */;
 			buildSettings = {
@@ -567,9 +1023,73 @@
 			};
 			name = Release;
 		};
-		034008223DBE38A9E6C1AD08C41A9ED1 /* Debug */ = {
+		18ADEC0A14BC16FDAB40F217C959F892 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */;
+			baseConfigurationReference = F42C00F37A97E68E62B4E22CE512ED5D /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D150E517C68B76D4D63BDCC2F4E5355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PasswordTextField/PasswordTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PasswordTextField/PasswordTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PasswordTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22E103B0773F8EFD82E5698AF7A486F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4A7BFEA5A9BB4E6F0E0B223D713635 /* SideMenuController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -600,37 +1120,88 @@
 			};
 			name = Debug;
 		};
-		0F47B4232A3D6C5CCB4DBA5ABC9177D1 /* Release */ = {
+		2A8D1B24D1C2552CF368F5E02CA1E7AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F7DC0E677A14AAB1CE64B89BA49CB79 /* SideMenuController.xcconfig */;
+			baseConfigurationReference = F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PasswordTextField/PasswordTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SideMenuController;
+				MODULEMAP_FILE = "Target Support Files/PasswordTextField/PasswordTextField.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PasswordTextField;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
+			name = Debug;
+		};
+		2D7B090F46008A18388646FB9433877C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PasswordTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
 			name = Release;
+		};
+		42461DB3E617734A498BD2F78B470316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B4F31659C87E08E12A14CC826D7E44 /* Spring.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spring;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -672,9 +1243,9 @@
 			};
 			name = Release;
 		};
-		820B4C81B9B62DF9F92DE72B6D69AC70 /* Release */ = {
+		7ADBB2DEF7ED27758B18B03D484F3B21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */;
+			baseConfigurationReference = B5B4F31659C87E08E12A14CC826D7E44 /* Spring.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -704,9 +1275,41 @@
 			};
 			name = Release;
 		};
-		CB02947D7272ADECD5C62B9368BD685D /* Debug */ = {
+		806B75DCCA4BAF9BDAF64DA3D8E0CFCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8692B883FCD51D4970C5FAD1E54EF7F7 /* Spring.xcconfig */;
+			baseConfigurationReference = 9A4A7BFEA5A9BB4E6F0E0B223D713635 /* SideMenuController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SideMenuController/SideMenuController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SideMenuController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SideMenuController/SideMenuController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SideMenuController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A0D50C596BA567DF7C394846A446BEDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -719,14 +1322,67 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Spring/Spring-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Spring/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AllergyInfo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B49F88D8014A16C032CEF18D65FF6864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F614778E4E79F10B95D11DB273B198AC /* PasswordTextField.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PasswordTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		DB206F1507484136C7D40AF760021F7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2A5CE9782C845471C65424C2713FCE /* IHKeyboardAvoiding.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IHKeyboardAvoiding/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Spring/Spring.modulemap";
+				MODULEMAP_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Spring;
+				PRODUCT_NAME = IHKeyboardAvoiding;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -736,6 +1392,71 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		DCFDB0E278FA91F212107425F9D66B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F42C00F37A97E68E62B4E22CE512ED5D /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E42282E971998B32183521E0D952D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2A5CE9782C845471C65424C2713FCE /* IHKeyboardAvoiding.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IHKeyboardAvoiding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IHKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -781,50 +1502,14 @@
 			};
 			name = Debug;
 		};
-		F49E3DBA69D0F4EE15BCB12BA9C3220F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BFE9E8DA8D754CAD9C824C7B3A5E43C /* Pods-AllergyInfo.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-AllergyInfo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_AllergyInfo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2256D71D1CF94BCB518A81719DB1BAF0 /* Build configuration list for PBXNativeTarget "SideMenuController" */ = {
+		098ACF9F036F871C88614A2343C64887 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				034008223DBE38A9E6C1AD08C41A9ED1 /* Debug */,
-				0F47B4232A3D6C5CCB4DBA5ABC9177D1 /* Release */,
+				A0D50C596BA567DF7C394846A446BEDC /* Debug */,
+				1623DA3ED4F1D7C5D43C88B5DEFCF003 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -838,20 +1523,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA20F75F35A0D30377AA394F4FF20C42 /* Build configuration list for PBXNativeTarget "Pods-AllergyInfo" */ = {
+		4A11DBBEB4E12952D3076CAF5417A5D3 /* Build configuration list for PBXNativeTarget "SideMenuController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F49E3DBA69D0F4EE15BCB12BA9C3220F /* Debug */,
-				021543DC9410B576A30786C426B893C9 /* Release */,
+				22E103B0773F8EFD82E5698AF7A486F3 /* Debug */,
+				806B75DCCA4BAF9BDAF64DA3D8E0CFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C644DBF43E2A750C051662E272DF4943 /* Build configuration list for PBXNativeTarget "Spring" */ = {
+		867C474E0650F3DF51AD76AA7AB1FCC7 /* Build configuration list for PBXNativeTarget "PasswordTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB02947D7272ADECD5C62B9368BD685D /* Debug */,
-				820B4C81B9B62DF9F92DE72B6D69AC70 /* Release */,
+				2A8D1B24D1C2552CF368F5E02CA1E7AD /* Debug */,
+				1D150E517C68B76D4D63BDCC2F4E5355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B258119BB7B9D52B224581BE8D28E382 /* Build configuration list for PBXNativeTarget "IHKeyboardAvoiding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB206F1507484136C7D40AF760021F7C /* Debug */,
+				E42282E971998B32183521E0D952D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82935F1C873479D8900CC97FC2CE4C7 /* Build configuration list for PBXNativeTarget "PasswordTextField-PasswordTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49F88D8014A16C032CEF18D65FF6864 /* Debug */,
+				2D7B090F46008A18388646FB9433877C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E893FBEC0F4FE7101C2032BB799A04F8 /* Build configuration list for PBXNativeTarget "TextFieldEffects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCFDB0E278FA91F212107425F9D66B70 /* Debug */,
+				18ADEC0A14BC16FDAB40F217C959F892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6CFA6233B2DE0555FAC1C4405119B3 /* Build configuration list for PBXNativeTarget "Spring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42461DB3E617734A498BD2F78B470316 /* Debug */,
+				7ADBB2DEF7ED27758B18B03D484F3B21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

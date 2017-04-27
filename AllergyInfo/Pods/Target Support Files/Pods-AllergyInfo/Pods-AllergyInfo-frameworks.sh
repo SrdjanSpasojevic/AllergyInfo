@@ -84,10 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PasswordTextField/PasswordTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SideMenuController/SideMenuController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spring/Spring.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TextFieldEffects/TextFieldEffects.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PasswordTextField/PasswordTextField.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SideMenuController/SideMenuController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spring/Spring.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TextFieldEffects/TextFieldEffects.framework"
 fi

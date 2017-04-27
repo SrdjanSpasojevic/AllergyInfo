@@ -20,6 +20,7 @@
 		A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */; };
 		A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */; };
 		A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B61EB0ED3D0070471D /* AboutViewController.swift */; };
+		A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D764421EB20502000FB20D /* LoginViewController.swift */; };
 		D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentInfoViewController.swift; sourceTree = "<group>"; };
 		A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A28C66B61EB0ED3D0070471D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A2D764421EB20502000FB20D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */,
 				A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */,
 				A28C66B61EB0ED3D0070471D /* AboutViewController.swift */,
+				A2D764421EB20502000FB20D /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
 				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
 				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
@@ -533,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,6 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
