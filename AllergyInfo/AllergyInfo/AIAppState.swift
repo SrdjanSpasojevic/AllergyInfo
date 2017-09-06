@@ -32,6 +32,7 @@ class AIAppState: NSObject {
         self.nvaActivity.center = view.center
         //self.progressHUD.showHUD()
         UIApplication.shared.keyWindow?.addSubview(blurEffectView)
+        blurEffectView.alpha = 0.7
         UIApplication.shared.keyWindow?.addSubview(self.nvaActivity)
         self.nvaActivity.startAnimating()
     }

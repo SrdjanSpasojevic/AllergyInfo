@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Welcome")
-        self.navigationController?.isNavigationBarHidden = true
+        
         KeyboardAvoiding.avoidingView = self.viewToAvoid
         self.usernameField.delegate = self
         self.passwordField.delegate = self
@@ -40,6 +40,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -94,6 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     @IBAction func singUpAction(_ sender: Any) {
+        self.navigationController?.isNavigationBarHidden = false
         self.performSegue(withIdentifier: "loginToRegister", sender: nil)
     }
     
