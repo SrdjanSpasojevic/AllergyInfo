@@ -21,12 +21,7 @@ class StartViewController: SideMenuController {
         SideMenuController.preferences.animating.statusBarBehaviour = .horizontalPan
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
         
-        //performSegue(withIdentifier: "showLoginController", sender: nil)
         performSegue(withIdentifier: "showCenterController1", sender: nil)
-//        performSegue(withIdentifier: "showCenterController2", sender: nil)
-//        performSegue(withIdentifier: "showCenterController3", sender: nil)
-//        performSegue(withIdentifier: "showCenterController4", sender: nil)
-//        performSegue(withIdentifier: "showCenterController5", sender: nil)
         
         performSegue(withIdentifier: "containSideMenu", sender: nil)
     }

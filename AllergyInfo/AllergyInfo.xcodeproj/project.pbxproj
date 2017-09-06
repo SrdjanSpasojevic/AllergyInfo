@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20756C61F602DA50064777C /* AIAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C51F602DA50064777C /* AIAppState.swift */; };
+		A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C71F603A4C0064777C /* AIProgressHud.swift */; };
+		A20756CA1F603A5C0064777C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C91F603A5C0064777C /* Constants.swift */; };
 		A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E31E82D51A007305E3 /* AppDelegate.swift */; };
 		A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E51E82D51A007305E3 /* StartViewController.swift */; };
 		A270D9E91E82D51A007305E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A270D9E71E82D51A007305E3 /* Main.storyboard */; };
@@ -20,6 +23,7 @@
 		A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */; };
 		A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */; };
 		A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B61EB0ED3D0070471D /* AboutViewController.swift */; };
+		A2BF40951F6028D3002E9E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2BF40941F6028D3002E9E38 /* GoogleService-Info.plist */; };
 		A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D764421EB20502000FB20D /* LoginViewController.swift */; };
 		D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +48,9 @@
 /* Begin PBXFileReference section */
 		1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		A20756C51F602DA50064777C /* AIAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIAppState.swift; sourceTree = "<group>"; };
+		A20756C71F603A4C0064777C /* AIProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIProgressHud.swift; sourceTree = "<group>"; };
+		A20756C91F603A5C0064777C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A270D9E01E82D51A007305E3 /* AllergyInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270D9E31E82D51A007305E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A270D9E51E82D51A007305E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +70,7 @@
 		A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentInfoViewController.swift; sourceTree = "<group>"; };
 		A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A28C66B61EB0ED3D0070471D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A2BF40941F6028D3002E9E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2D764421EB20502000FB20D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,11 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				A270D9E31E82D51A007305E3 /* AppDelegate.swift */,
+				A2BF40931F6028C1002E9E38 /* SupportFiles */,
 				A28C66AE1EB0E2830070471D /* Controllers */,
 				A270D9E71E82D51A007305E3 /* Main.storyboard */,
-				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
-				A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */,
-				A270D9EF1E82D51A007305E3 /* Info.plist */,
 			);
 			path = AllergyInfo;
 			sourceTree = "<group>";
@@ -184,6 +190,20 @@
 				A28C66B01EB0E2A50070471D /* MenuTableViewCell.swift */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		A2BF40931F6028C1002E9E38 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
+				A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */,
+				A270D9EF1E82D51A007305E3 /* Info.plist */,
+				A2BF40941F6028D3002E9E38 /* GoogleService-Info.plist */,
+				A20756C51F602DA50064777C /* AIAppState.swift */,
+				A20756C71F603A4C0064777C /* AIProgressHud.swift */,
+				A20756C91F603A5C0064777C /* Constants.swift */,
+			);
+			name = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A270D9EE1E82D51A007305E3 /* LaunchScreen.storyboard in Resources */,
+				A2BF40951F6028D3002E9E38 /* GoogleService-Info.plist in Resources */,
 				A270D9EB1E82D51A007305E3 /* Assets.xcassets in Resources */,
 				A270D9E91E82D51A007305E3 /* Main.storyboard in Resources */,
 			);
@@ -375,7 +396,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
+				A20756C61F602DA50064777C /* AIAppState.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
+				A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */,
 				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
 				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
 				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
@@ -383,6 +406,7 @@
 				A28C66AD1EB0CF5C0070471D /* MenuViewController.swift in Sources */,
 				A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */,
 				A28C66B11EB0E2A50070471D /* MenuTableViewCell.swift in Sources */,
+				A20756CA1F603A5C0064777C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

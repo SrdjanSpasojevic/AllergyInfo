@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IHKeyboardAvoiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>10D0829CA57A57621A665DF0943D306D</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17941F99CFEEB0B16C40D09A14DF2A49</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>24DDA4200F812E6B2FB75042D66E5885</key>
+		<key>762296E6A0066E3A0F4B488A8E6D5501</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B661CE0C04090E2BCD70E92914C098FC</key>
+		<key>9DD5971A2FCC0C8CD68D5909B984B109</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE0811433687F2A09FD64240244BCB38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD302970DAF4FEF64281926BA8EBA84A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
