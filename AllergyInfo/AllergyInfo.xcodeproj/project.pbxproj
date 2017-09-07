@@ -10,6 +10,7 @@
 		A20756C61F602DA50064777C /* AIAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C51F602DA50064777C /* AIAppState.swift */; };
 		A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C71F603A4C0064777C /* AIProgressHud.swift */; };
 		A20756CA1F603A5C0064777C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C91F603A5C0064777C /* Constants.swift */; };
+		A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756CB1F6172890064777C /* SingUpViewController.swift */; };
 		A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E31E82D51A007305E3 /* AppDelegate.swift */; };
 		A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A270D9E51E82D51A007305E3 /* StartViewController.swift */; };
 		A270D9E91E82D51A007305E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A270D9E71E82D51A007305E3 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		A20756C51F602DA50064777C /* AIAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIAppState.swift; sourceTree = "<group>"; };
 		A20756C71F603A4C0064777C /* AIProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIProgressHud.swift; sourceTree = "<group>"; };
 		A20756C91F603A5C0064777C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A20756CB1F6172890064777C /* SingUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		A270D9E01E82D51A007305E3 /* AllergyInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A270D9E31E82D51A007305E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A270D9E51E82D51A007305E3 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */,
 				A28C66B61EB0ED3D0070471D /* AboutViewController.swift */,
 				A2D764421EB20502000FB20D /* LoginViewController.swift */,
+				A20756CB1F6172890064777C /* SingUpViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
+				A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */,
 				A20756C61F602DA50064777C /* AIAppState.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
 				A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */,

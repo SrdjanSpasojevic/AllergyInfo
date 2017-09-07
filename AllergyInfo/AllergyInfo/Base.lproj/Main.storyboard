@@ -36,24 +36,23 @@
             </objects>
             <point key="canvasLocation" x="1996" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Sing up-->
         <scene sceneID="IDU-3i-lop">
             <objects>
-                <viewController id="j4I-JR-dFa" sceneMemberID="viewController">
+                <viewController title="Sing up" id="j4I-JR-dFa" customClass="SingUpViewController" customModule="AllergyInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ei1-dV-tRV"/>
                         <viewControllerLayoutGuide type="bottom" id="g68-Cq-U9H"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="91E-pa-PMi" customClass="KeyboardDismissingView" customModule="IHKeyboardAvoiding">
+                    <view key="view" contentMode="scaleToFill" id="91E-pa-PMi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-nS-VbN">
-                                <rect key="frame" x="16" y="141" width="343" height="385"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-nS-VbN">
+                                <rect key="frame" x="16" y="64" width="343" height="462"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJe-Q8-mDA" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="46" y="8" width="250" height="55"/>
+                                        <rect key="frame" x="38" y="203" width="250" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,13 +78,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKH-Nu-mh8" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="46" y="71" width="250" height="55"/>
+                                        <rect key="frame" x="38" y="266" width="250" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
                                                 <color key="value" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,13 +104,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-uC-dlv" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="46" y="141" width="250" height="55"/>
+                                        <rect key="frame" x="38" y="336" width="250" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
                                                 <color key="value" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,7 +130,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hui-xJ-vTK" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="46" y="204" width="250" height="55"/>
+                                        <rect key="frame" x="38" y="399" width="250" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24654260280000001" green="0.24139058590000001" blue="0.40771734710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.68734407419999999" green="0.84570866820000001" blue="0.66558623309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -156,6 +155,18 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JN2-7j-zLP">
+                                        <rect key="frame" x="107" y="9" width="129" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x6-2n-LS2">
+                                        <rect key="frame" x="95" y="101" width="152" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ic_add_a_photo_white"/>
+                                        <connections>
+                                            <action selector="addPhotoAction:" destination="j4I-JR-dFa" eventType="touchUpInside" id="Hp9-7d-Rgj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -169,11 +180,28 @@
                                 </state>
                                 <connections>
                                     <action selector="singInAction:" destination="1Er-de-bnf" eventType="touchUpInside" id="qgd-0f-Jcg"/>
+                                    <action selector="singUpAction:" destination="j4I-JR-dFa" eventType="touchUpInside" id="5Km-NC-FU0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24654260277748108" green="0.24139058589935303" blue="0.40771734714508057" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g68-Cq-U9H" firstAttribute="top" secondItem="BgW-nS-VbN" secondAttribute="bottom" constant="141" id="Q9S-F1-NWH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BgW-nS-VbN" secondAttribute="leading" id="atK-la-JTB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BgW-nS-VbN" secondAttribute="trailing" id="bb1-fS-Hwb"/>
+                            <constraint firstItem="BgW-nS-VbN" firstAttribute="top" secondItem="ei1-dV-tRV" secondAttribute="bottom" id="mm8-0V-WkD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choosePhotoButton" destination="4x6-2n-LS2" id="VK4-yE-QF2"/>
+                        <outlet property="confirmPasswordTextField" destination="dh0-uC-dlv" id="yhd-T7-Jsg"/>
+                        <outlet property="emailTextField" destination="PJe-Q8-mDA" id="2F2-pE-Ag0"/>
+                        <outlet property="locationTextField" destination="hui-xJ-vTK" id="txd-QN-c9J"/>
+                        <outlet property="passwordTextField" destination="dKH-Nu-mh8" id="BpL-TY-Hwj"/>
+                        <outlet property="profileImage" destination="JN2-7j-zLP" id="Hx6-aY-BUq"/>
+                        <outlet property="singUpButton" destination="nCU-tc-KpE" id="Egd-Gr-VAL"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="singUpToStart" id="HOE-ec-NGw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfT-r9-Vxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,15 +294,15 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="1395.6521739130435"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="mfo-ij-aDG">
             <objects>
-                <viewController id="1Er-de-bnf" customClass="LoginViewController" customModule="AllergyInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Er-de-bnf" customClass="LoginViewController" customModule="AllergyInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HlK-l3-LUr"/>
                         <viewControllerLayoutGuide type="bottom" id="wgw-Tk-gbW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tCy-CA-dzY" customClass="KeyboardDismissingView" customModule="IHKeyboardAvoiding">
+                    <view key="view" contentMode="scaleToFill" id="tCy-CA-dzY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -391,7 +419,6 @@
                         <outlet property="singInButton" destination="7sV-KG-psI" id="Ack-cO-DHA"/>
                         <outlet property="userNameView" destination="Mwd-B6-wSt" id="gVy-gK-mcf"/>
                         <outlet property="usernameField" destination="HEf-aI-ZmH" id="i2I-9j-Boz"/>
-                        <outlet property="viewToAvoid" destination="To0-WL-IqW" id="xXd-jo-mW8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showStartViewController" id="XRB-g8-onA"/>
                         <segue destination="j4I-JR-dFa" kind="show" identifier="loginToRegister" id="LyK-xb-zRT"/>
                     </connections>
@@ -655,6 +682,10 @@
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="Nak-5Z-hdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.68734407424926758" green="0.84570866823196411" blue="0.66558623313903809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -667,6 +698,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_add_a_photo_white" width="24" height="24"/>
         <image name="profilePhoto" width="720" height="1280"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HOE-ec-NGw"/>
+    </inferredMetricsTieBreakers>
 </document>

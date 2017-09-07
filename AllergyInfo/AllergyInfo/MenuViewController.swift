@@ -8,6 +8,7 @@
 
 import UIKit
 import SideMenuController
+import SDWebImage
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -24,9 +25,20 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.userNameLabel.text = "Срђан Спасојевић"
         self.userProfilePhoto.layer.masksToBounds = true
         self.userProfilePhoto.layer.cornerRadius = self.userProfilePhoto.bounds.size.height / 2
-        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let activity = UIActivityIndicatorView()
+        activity.hidesWhenStopped = true
+        activity.center = self.userProfilePhoto.center
+            self.userProfilePhoto.addSubview(activity)
+            activity.startAnimating()
+            let url = URL(string: AIAppState.sharedInstance.userPhoto)
+            self.userProfilePhoto.sd_setImage(with: url, completed: { (image, error, cache, url) in
+                activity.stopAnimating()
+            })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,7 +50,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath as NSIndexPath?
-        sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+        if indexPath.row == 4{
+            UserDefaults.standard.removeObject(forKey: "loggedInUser")
+            let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+            self.present(loginVC!, animated: true, completion: nil)
+        }else{
+           sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+        }
         
     }
     

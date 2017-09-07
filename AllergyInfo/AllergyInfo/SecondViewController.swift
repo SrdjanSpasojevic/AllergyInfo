@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SecondViewController: UIViewController {
 
@@ -16,6 +17,14 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Home"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 196.0/255.0, green: 241.0/255.0, blue: 190.0/255.0, alpha: 1.0)]
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        AIAppState.sharedInstance.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let userDict = snapshot.value as? NSDictionary
+            print("UserDict: \(userDict)")
+            AIAppState.sharedInstance.userPhoto = userDict?["profileImageUrl"] as! String
+        })
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

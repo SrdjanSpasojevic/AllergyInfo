@@ -18,6 +18,7 @@ class AIAppState: NSObject {
     var progressHUD : AIProgressHud = AIProgressHud()
     let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
     var blurEffectView : UIVisualEffectView = UIVisualEffectView()
+    var userPhoto = ""
     
     //MARK: Firebase Database
     var DB_REF_URL = FIRDatabase.database().reference()
@@ -47,18 +48,13 @@ class AIAppState: NSObject {
     func displayClassicAlert(message: String, viewController: UIViewController){
         let alertController: UIAlertController = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
         
-        let noAction: UIAlertAction = UIAlertAction(title: "No", style: .cancel) { action -> Void in
+        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel) { action -> Void in
             
         }
-        alertController.addAction(noAction)
-        
-        let yesAction: UIAlertAction = UIAlertAction(title: "Yes", style: .default) { action -> Void in
-            
-        }
-        alertController.addAction(yesAction)
+        alertController.addAction(okAction)
         
         
-        viewController.present(viewController, animated: true) {
+        viewController.present(alertController, animated: true) {
             
         }
     }

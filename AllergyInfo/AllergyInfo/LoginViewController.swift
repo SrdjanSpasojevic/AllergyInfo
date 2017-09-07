@@ -17,7 +17,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordView: SpringView!
     @IBOutlet weak var userNameView: SpringView!
-    @IBOutlet weak var viewToAvoid: UIView!
     @IBOutlet weak var usernameField: HoshiTextField!
     @IBOutlet weak var passwordField: HoshiTextField!
     @IBOutlet weak var singInButton: UIButton!
@@ -26,13 +25,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         print("Welcome")
         
-        KeyboardAvoiding.avoidingView = self.viewToAvoid
         self.usernameField.delegate = self
         self.passwordField.delegate = self
         self.singInButton.layer.masksToBounds = true
         self.singInButton.layer.cornerRadius = 20
         
-       
+        if let userDict = retrieveDictionary(withKey: "loggedInUser") {
+            self.firebaseUserLogin(username: userDict["username"]! as String, password: userDict["password"]! as String)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,32 +53,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         AIAppState.sharedInstance.startActivity(view: self.view)
         FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
-                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
                 AIAppState.sharedInstance.stopActivity()
                 print("No error on login")
+                let userDict = [
+                    "username" : username,
+                    "password" : password
+                ]
+                let archiver = NSKeyedArchiver.archivedData(withRootObject: userDict)
+                UserDefaults.standard.set(archiver, forKey: "loggedInUser")
+                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
             }else{
                 print("Error on login: \(error)")
                 AIAppState.sharedInstance.stopActivity()
-                self.displayAlert(message: "User has not been found, do you want to create a profile?", viewController: self)
+                self.displayClassicAlert(message: "Email or Password do not match to our records\nPlease try again", viewController: self)
             }
         })
     }
-    
-    func fireBaseCreateUser(username: String, password: String){
-        AIAppState.sharedInstance.startActivity(view: self.view)
-        FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user, error) in
-            if error == nil{
-                AIAppState.sharedInstance.stopActivity()
-                AIAppState.sharedInstance.DB_REF_URL.child("UserProfiles").child(user!.uid).setValue([
-                    "username" : username,
-                    "password" : password
-                    ])
-                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
-            }else{
-                print("Error on creating: \(error)")
-                AIAppState.sharedInstance.stopActivity()
-            }
-        })
+    func retrieveDictionary(withKey key: String) -> [String: String]? {
+        
+        // Check if data exists
+        guard let data = UserDefaults.standard.object(forKey: key) else {
+            return nil
+        }
+        
+        // Check if retrieved data has correct type
+        guard let retrievedData = data as? Data else {
+            return nil
+        }
+        
+        // Unarchive data
+        let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
+        return unarchivedObject as? [String: String]
     }
 
     @IBAction func singInAction(_ sender: Any) {
@@ -111,10 +116,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         alertController.addAction(okAction)
         
-        
-        viewController.present(alertController, animated: true) {
-            
-        }
+        viewController.present(alertController, animated: true,completion: nil)
     }
     
     func displayAlert(message: String, viewController: UIViewController){
@@ -127,7 +129,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let yesAction: UIAlertAction = UIAlertAction(title: "Yes", style: .default) { action -> Void in
             print("Yes Pressed")
-            self.fireBaseCreateUser(username: self.usernameField.text!, password: self.passwordField.text!)
         }
         
         alertController.addAction(yesAction)

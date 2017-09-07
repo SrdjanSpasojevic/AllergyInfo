@@ -41,6 +41,9 @@ PODS:
   - IHKeyboardAvoiding (3.7)
   - NVActivityIndicatorView (3.5.1)
   - PasswordTextField (1.0.4)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SideMenuController (0.2.4)
   - Spring (1.0.3)
   - TextFieldEffects (1.3.1)
@@ -53,6 +56,7 @@ DEPENDENCIES:
   - IHKeyboardAvoiding
   - NVActivityIndicatorView
   - PasswordTextField
+  - SDWebImage (~> 4.0)
   - SideMenuController
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - TextFieldEffects
@@ -80,10 +84,11 @@ SPEC CHECKSUMS:
   IHKeyboardAvoiding: 4c852fae85667469307678c65f14f5cac8a7be92
   NVActivityIndicatorView: 075563b3547445ebcff840e3297ce9dd4a23731f
   PasswordTextField: 1fccb24dd769cfc963f1f60cb9fece692ad40530
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
 
-PODFILE CHECKSUM: 3a363082f1d383c066384d54b6ce2df5e4612b91
+PODFILE CHECKSUM: 7402569859942f6bc35b1a5eb94f5df822b819e8
 
 COCOAPODS: 1.1.1

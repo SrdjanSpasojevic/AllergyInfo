@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SideMenuController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>17CD3FE8682EA9717565C339974E4DDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>762296E6A0066E3A0F4B488A8E6D5501</key>
+		<key>6C5AED56FB7BB5DBEFA1B1ED7A188B77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DD5971A2FCC0C8CD68D5909B984B109</key>
+		<key>9EB1E9DB4853A5A0C8F0576580E006B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE0811433687F2A09FD64240244BCB38</key>
+		<key>A4D4FB1B8E37AEFD861FFD6C90EAD57D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD302970DAF4FEF64281926BA8EBA84A</key>
+		<key>AFBF5E9951FD6E60AEA2815F2A33E4AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
