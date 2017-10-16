@@ -24,6 +24,10 @@
 		A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */; };
 		A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */; };
 		A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28C66B61EB0ED3D0070471D /* AboutViewController.swift */; };
+		A2B011571F94D7BA00B9A447 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B011561F94D63400B9A447 /* TPKeyboardAvoidingCollectionView.m */; };
+		A2B011581F94D7BD00B9A447 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B011531F94D63300B9A447 /* TPKeyboardAvoidingScrollView.m */; };
+		A2B011591F94D7BF00B9A447 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B011511F94D63300B9A447 /* TPKeyboardAvoidingTableView.m */; };
+		A2B0115A1F94D7C200B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B011541F94D63400B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		A2BF40951F6028D3002E9E38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2BF40941F6028D3002E9E38 /* GoogleService-Info.plist */; };
 		A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D764421EB20502000FB20D /* LoginViewController.swift */; };
 		D83E51DD3633E71B018BBFFC /* Pods_AllergyInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */; };
@@ -72,6 +76,15 @@
 		A28C66B21EB0ECBA0070471D /* CurrentInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentInfoViewController.swift; sourceTree = "<group>"; };
 		A28C66B41EB0ED0F0070471D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A28C66B61EB0ED3D0070471D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A2B0114E1F94D63200B9A447 /* AllergyInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AllergyInfo-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2B0114F1F94D63300B9A447 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		A2B011501F94D63300B9A447 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		A2B011511F94D63300B9A447 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		A2B011521F94D63300B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		A2B011531F94D63300B9A447 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		A2B011541F94D63400B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		A2B011551F94D63400B9A447 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		A2B011561F94D63400B9A447 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		A2BF40941F6028D3002E9E38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2D764421EB20502000FB20D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,9 +208,26 @@
 			name = CustomCells;
 			sourceTree = "<group>";
 		};
+		A2B0114D1F94D5ED00B9A447 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				A2B0114F1F94D63300B9A447 /* TPKeyboardAvoidingCollectionView.h */,
+				A2B011561F94D63400B9A447 /* TPKeyboardAvoidingCollectionView.m */,
+				A2B011551F94D63400B9A447 /* TPKeyboardAvoidingScrollView.h */,
+				A2B011531F94D63300B9A447 /* TPKeyboardAvoidingScrollView.m */,
+				A2B011501F94D63300B9A447 /* TPKeyboardAvoidingTableView.h */,
+				A2B011511F94D63300B9A447 /* TPKeyboardAvoidingTableView.m */,
+				A2B011521F94D63300B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				A2B011541F94D63400B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				A2B0114E1F94D63200B9A447 /* AllergyInfo-Bridging-Header.h */,
+			);
+			name = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
 		A2BF40931F6028C1002E9E38 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A2B0114D1F94D5ED00B9A447 /* TPKeyboardAvoiding */,
 				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
 				A270D9EC1E82D51A007305E3 /* LaunchScreen.storyboard */,
 				A270D9EF1E82D51A007305E3 /* Info.plist */,
@@ -281,6 +311,7 @@
 					A270D9DF1E82D51A007305E3 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = X6VF74TXRK;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					A270D9F31E82D51A007305E3 = {
@@ -399,11 +430,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
+				A2B011591F94D7BF00B9A447 /* TPKeyboardAvoidingTableView.m in Sources */,
 				A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */,
+				A2B0115A1F94D7C200B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				A20756C61F602DA50064777C /* AIAppState.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
 				A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */,
 				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
+				A2B011581F94D7BD00B9A447 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				A2B011571F94D7BA00B9A447 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
 				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
 				A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */,
@@ -563,12 +598,15 @@
 			baseConfigurationReference = 98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AllergyInfo/AllergyInfo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -578,12 +616,14 @@
 			baseConfigurationReference = CEB0A0CF05161E590D8A26CD /* Pods-AllergyInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AllergyInfo/AllergyInfo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

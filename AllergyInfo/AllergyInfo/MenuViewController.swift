@@ -9,6 +9,7 @@
 import UIKit
 import SideMenuController
 import SDWebImage
+import Firebase
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,21 +23,27 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.userNameLabel.text = "Срђан Спасојевић"
         self.userProfilePhoto.layer.masksToBounds = true
         self.userProfilePhoto.layer.cornerRadius = self.userProfilePhoto.bounds.size.height / 2
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let activity = UIActivityIndicatorView()
-        activity.hidesWhenStopped = true
-        activity.center = self.userProfilePhoto.center
-            self.userProfilePhoto.addSubview(activity)
-            activity.startAnimating()
-            let url = URL(string: AIAppState.sharedInstance.userPhoto)
-            self.userProfilePhoto.sd_setImage(with: url, completed: { (image, error, cache, url) in
-                activity.stopAnimating()
-            })
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        AIAppState.sharedInstance.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            print("Snapshot value: \(snapshot.value!)")
+            let userDict = snapshot.value as? NSDictionary
+            DispatchQueue.main.async {
+                let activity = UIActivityIndicatorView()
+                activity.hidesWhenStopped = true
+                activity.center = self.userProfilePhoto.center
+                self.userProfilePhoto.addSubview(activity)
+                activity.startAnimating()
+                let userName = userDict?["username"] as! String
+                self.userNameLabel.text = userName
+                let url = URL(string: userDict?["profileImageUrl"] as! String)
+                self.userProfilePhoto.sd_setImage(with: url, completed: { (image, error, cache, url) in
+                    activity.stopAnimating()
+                })
+            }
+            
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +71,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuTableCell") as! MenuTableViewCell
         
         cell.controllerLabel.text = self.controllerNames[indexPath.row]
+        cell.controllerLabel.layer.cornerRadius = 20
+        cell.controllerLabel.clipsToBounds = true
         
         return cell
     }

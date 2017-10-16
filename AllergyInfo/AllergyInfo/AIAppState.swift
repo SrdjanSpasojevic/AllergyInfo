@@ -30,7 +30,7 @@ class AIAppState: NSObject {
         
         let frame = CGRect(x: view.bounds.size.width/2, y: view.bounds.size.height/2, width: 80, height: 80)
         self.nvaActivity = NVActivityIndicatorView(frame: frame, type: .ballScaleRippleMultiple, color: UIColor.white, padding: 0)
-        self.nvaActivity.center = view.center
+        self.nvaActivity.center = UIApplication.shared.keyWindow!.center
         //self.progressHUD.showHUD()
         UIApplication.shared.keyWindow?.addSubview(blurEffectView)
         blurEffectView.alpha = 0.7

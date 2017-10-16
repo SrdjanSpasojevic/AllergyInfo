@@ -16,7 +16,7 @@ class AboutViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "About"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 196.0/255.0, green: 241.0/255.0, blue: 190.0/255.0, alpha: 1.0)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
     }
 
     override func didReceiveMemoryWarning() {

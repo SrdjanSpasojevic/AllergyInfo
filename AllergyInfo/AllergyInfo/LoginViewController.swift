@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
         self.singInButton.layer.masksToBounds = true
         self.singInButton.layer.cornerRadius = 20
-        
+        self.navigationController?.isNavigationBarHidden = true
         if let userDict = retrieveDictionary(withKey: "loggedInUser") {
             self.firebaseUserLogin(username: userDict["username"]! as String, password: userDict["password"]! as String)
         }
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+        
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
