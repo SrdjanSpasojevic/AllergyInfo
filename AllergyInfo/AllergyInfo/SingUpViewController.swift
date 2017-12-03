@@ -12,6 +12,7 @@ import TextFieldEffects
 import IHKeyboardAvoiding
 import Firebase
 import Spring
+import MobileCoreServices
 
 class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -53,11 +54,11 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-        self.navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = .clear
+//        self.navigationController?.isNavigationBarHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -88,7 +89,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
     }
     
-    func fireBaseCreateUser(username: String, password: String, location: String){
+    private func fireBaseCreateUser(username: String, password: String, location: String){
         AIAppState.sharedInstance.startActivity(view: self.view)
         
         FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user, error) in
@@ -98,20 +99,38 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                     if error == nil{
                         AIAppState.sharedInstance.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString], withCompletionBlock: { (error, db_ref) in
                                 if error == nil{
-                                    self.performSegue(withIdentifier: "singUpToStart", sender: nil)
-                                    print("Image uploaded")
+                                    
+                                    FIRAuth.auth()?.signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
+                                        if error == nil{
+                                            FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
+                                                AIAppState.sharedInstance.stopActivity()
+                                                if error == nil{
+                                                    self.navigationController?.popToRootViewController(animated: true)
+                                                    AIAppState.sharedInstance.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self.view.window!.rootViewController!)
+                                                    print("Image uploaded")
+                                                }else{
+                                                    FIRAuth.auth()?.currentUser?.delete(completion: { (error) in
+                                                        if error == nil{
+                                                            print("User removed")
+                                                        }
+                                                    })
+                                                    
+                                                    print("Error on sending email: \(error)")
+                                                }
+                                            })
+                                        }
+                                    })
                                 }else{
-                                    print("Error uploading image \(error?.localizedDescription)")
+                                    print("Error uploading image \(String(describing: error?.localizedDescription))")
                                 }
-                                AIAppState.sharedInstance.stopActivity()
                         })
                     }else{
                         AIAppState.sharedInstance.stopActivity()
-                        print("Error uploading to storage \(error?.localizedDescription)")
+                        print("Error uploading to storage \(String(describing: error?.localizedDescription))")
                     }
                 })
             }else{
-                print("Error on creating: \(error)")
+                print("Error on creating: \(String(describing: error))")
                 AIAppState.sharedInstance.displayClassicAlert(message: error!.localizedDescription, viewController: self)
                 AIAppState.sharedInstance.stopActivity()
             }
@@ -119,8 +138,8 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func addPhotoAction(_ sender: Any) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
+        self.imagePicker.allowsEditing = true
+        self.imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true, completion: nil)
     }
     

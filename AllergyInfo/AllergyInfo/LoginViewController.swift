@@ -21,6 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: HoshiTextField!
     @IBOutlet weak var singInButton: UIButton!
     
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Welcome")
@@ -29,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
         self.singInButton.layer.masksToBounds = true
         self.singInButton.layer.cornerRadius = 20
-        self.navigationController?.isNavigationBarHidden = true
+        
         if let userDict = retrieveDictionary(withKey: "loggedInUser") {
             self.firebaseUserLogin(username: userDict["username"]! as String, password: userDict["password"]! as String)
         }
@@ -41,7 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,22 +56,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         AIAppState.sharedInstance.startActivity(view: self.view)
         FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
-                AIAppState.sharedInstance.stopActivity()
-                print("No error on login")
-                let userDict = [
-                    "username" : username,
-                    "password" : password
-                ]
-                let archiver = NSKeyedArchiver.archivedData(withRootObject: userDict)
-                UserDefaults.standard.set(archiver, forKey: "loggedInUser")
-                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                if user!.isEmailVerified{
+                    AIAppState.sharedInstance.stopActivity()
+                    print("No error on login")
+                    let userDict = [
+                        "username" : username,
+                        "password" : password
+                    ]
+                    let archiver = NSKeyedArchiver.archivedData(withRootObject: userDict)
+                    UserDefaults.standard.set(archiver, forKey: "loggedInUser")
+                    self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                }else{
+                    AIAppState.sharedInstance.stopActivity()
+                    if self.counter > 0{
+                        self.displayAlert(message: "Resend you verification email?", viewController: self)
+                        self.counter += 1
+                    }else{
+                        self.displayClassicAlert(message: "Please confirm you email adress", viewController: self)
+                        self.counter += 1
+                    }
+                }
+                
             }else{
-                print("Error on login: \(error)")
-                AIAppState.sharedInstance.stopActivity()
+                print("Error on login: \(String(describing: error))")
                 self.displayClassicAlert(message: "Email or Password do not match to our records\nPlease try again", viewController: self)
+                AIAppState.sharedInstance.stopActivity()
+                
             }
         })
     }
+    
     func retrieveDictionary(withKey key: String) -> [String: String]? {
         
         // Check if data exists
@@ -129,6 +146,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let yesAction: UIAlertAction = UIAlertAction(title: "Yes", style: .default) { action -> Void in
             print("Yes Pressed")
+            if self.counter > 0{
+                AIAppState.sharedInstance.startActivity(view: self.view)
+                FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
+                    if error == nil{
+                        AIAppState.sharedInstance.stopActivity()
+                        self.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self)
+                    }
+                })
+            }
         }
         
         alertController.addAction(yesAction)
