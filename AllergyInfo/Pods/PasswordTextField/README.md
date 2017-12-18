@@ -51,7 +51,7 @@ github "PiXeL16/PasswordTextField"
 ---
 1. Open a storyboard or Xib file.
 2. Drag and drop a `UITextField` to a ViewController.
-3. In Identity Inspector, replace the class from `UITextField` to `PasswordTextField`
+3. In Identity Inspector, replace the class from `UITextField` to `PasswordTextField` and the module to `PasswordTextField`.
 4. Configure your properties in the Attribute Inspector.
 
 ![Screenshot](Web/storyboardScreenshot.png)
@@ -103,6 +103,16 @@ TODO
 :alien: Author
 ------
 Chris Jimenez - http://code.chrisjimenez.net, [@chrisjimeneznat](http://twitter.com/chrisjimeneznat)
+
+:beer: Donate
+------
+If you want to buy me a beer, you can donate to my coin addresses below:
+#### BTC
+1BeGBew4CBdLgUSmvoyiU1LrM99GpkXgkj
+#### ETH
+0xa59a3793E3Cb5f3B1AdE6887783D225EDf67192d
+#### LTC
+Ld6FB3Tqjf6B8iz9Gn9sMr7BnowAjSUXaV
 
 ## License
 `PasswordTextField` is released under the MIT license. See [LICENSE](https://github.com/pixel16/PasswordTextField/blob/master/LICENSE) for details.

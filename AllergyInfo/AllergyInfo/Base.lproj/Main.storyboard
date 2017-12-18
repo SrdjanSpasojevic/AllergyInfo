@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gYr-PU-mX4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gYr-PU-mX4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kohinoor.ttc">
+            <string>KohinoorDevanagari-Regular</string>
+            <string>KohinoorDevanagari-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -264,7 +270,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SelectVC" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HBf-1G-0Y1">
                                                     <rect key="frame" x="15" y="16" width="320" height="39"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -517,13 +523,109 @@
                     <view key="view" contentMode="scaleToFill" id="Nst-BU-zdf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lrr-Di-BBX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCellIdentifier" rowHeight="221" id="Oc3-8k-yBR" customClass="HomeTableViewCell" customModule="AllergyInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="221"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oc3-8k-yBR" id="97H-WC-qY5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="221"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-aD-ncD">
+                                                    <rect key="frame" x="15" y="11" width="345" height="199"/>
+                                                    <subviews>
+                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-ZT-xRK">
+                                                            <rect key="frame" x="0.0" y="29" width="345" height="170"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="4PD-5j-dcJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="170"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today is a rainy day outside, no need to wory about allergy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqd-KF-baa">
+                                                                        <rect key="frame" x="8" y="16" width="241" height="137"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="26"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="CV3-MO-e9b">
+                                                                        <rect key="frame" x="257" y="45" width="80" height="80"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <blurEffect style="light"/>
+                                                        </visualEffectView>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qft-vx-SR2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SA-vK-Ez1">
+                                                                    <rect key="frame" x="8" y="0.0" width="329" height="29"/>
+                                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.86629650039999995" green="0.86499016679999996" blue="0.88780856090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="7SA-vK-Ez1" firstAttribute="top" secondItem="Qft-vx-SR2" secondAttribute="top" id="2zh-2K-3C8"/>
+                                                                <constraint firstAttribute="height" constant="30" id="7sp-JB-2fx"/>
+                                                                <constraint firstAttribute="bottom" secondItem="7SA-vK-Ez1" secondAttribute="bottom" constant="1" id="G5i-a3-cBF"/>
+                                                                <constraint firstAttribute="trailing" secondItem="7SA-vK-Ez1" secondAttribute="trailing" constant="8" id="Ga4-yx-Thf"/>
+                                                                <constraint firstItem="7SA-vK-Ez1" firstAttribute="leading" secondItem="Qft-vx-SR2" secondAttribute="leading" constant="8" id="cgp-Bn-idJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Qft-vx-SR2" firstAttribute="leading" secondItem="f8Z-aD-ncD" secondAttribute="leading" id="C3f-gY-O2q"/>
+                                                        <constraint firstItem="Qft-vx-SR2" firstAttribute="top" secondItem="f8Z-aD-ncD" secondAttribute="top" id="WDV-q7-KEz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qft-vx-SR2" secondAttribute="trailing" id="kCk-5Z-0e8"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="f8Z-aD-ncD" secondAttribute="trailing" constant="15" id="Feq-oh-IkA"/>
+                                                <constraint firstItem="f8Z-aD-ncD" firstAttribute="leading" secondItem="97H-WC-qY5" secondAttribute="leading" constant="15" id="IK6-0X-2LJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="f8Z-aD-ncD" secondAttribute="bottom" constant="10.5" id="PK0-1p-YDe"/>
+                                                <constraint firstItem="f8Z-aD-ncD" firstAttribute="top" secondItem="97H-WC-qY5" secondAttribute="top" constant="11" id="vmB-Z5-OA2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cellBackgroundView" destination="f8Z-aD-ncD" id="foO-UM-pDx"/>
+                                            <outlet property="dateLabel" destination="7SA-vK-Ez1" id="4VL-Ng-Idp"/>
+                                            <outlet property="topView" destination="Qft-vx-SR2" id="yVA-Q1-erJ"/>
+                                            <outlet property="weatherDescriptionLabel" destination="hqd-KF-baa" id="gw3-NH-ElT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AlD-0P-l8Z" id="VcV-dR-cV8"/>
+                                    <outlet property="delegate" destination="AlD-0P-l8Z" id="TvL-xE-EQF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lrr-Di-BBX" secondAttribute="trailing" id="9US-Hv-CAM"/>
+                            <constraint firstItem="Lrr-Di-BBX" firstAttribute="leading" secondItem="Nst-BU-zdf" secondAttribute="leading" id="hcV-6q-AVU"/>
+                            <constraint firstItem="Lrr-Di-BBX" firstAttribute="top" secondItem="EqV-ZB-0lc" secondAttribute="bottom" id="vcL-Ho-vJB"/>
+                            <constraint firstItem="gLb-aQ-ddl" firstAttribute="top" secondItem="Lrr-Di-BBX" secondAttribute="bottom" id="zOq-pJ-a8L"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAo-Xg-gmq"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lrr-Di-BBX" id="yjo-nD-d6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="de2-YE-vMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3055" y="-801"/>
+            <point key="canvasLocation" x="3053.5999999999999" y="-801.0494752623689"/>
         </scene>
         <!--Current Info View Controller-->
         <scene sceneID="i96-nr-hze">
@@ -780,5 +882,6 @@
     <resources>
         <image name="ic_add_a_photo_white" width="24" height="24"/>
         <image name="placeholderImage" width="1500" height="1500"/>
+        <image name="rain" width="240" height="240"/>
     </resources>
 </document>

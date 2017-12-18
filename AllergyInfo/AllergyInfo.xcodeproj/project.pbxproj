@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AFEA45A1FE716C8007DA5EA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA4591FE716C8007DA5EA /* HomeTableViewCell.swift */; };
+		2AFEA45C1FE7177D007DA5EA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA45B1FE7177D007DA5EA /* Global.swift */; };
+		2AFEA4601FE71B82007DA5EA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA45F1FE71B82007DA5EA /* UIView+Extensions.swift */; };
+		2AFEA4621FE72F01007DA5EA /* weatherVideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2AFEA4611FE72EF6007DA5EA /* weatherVideo.m4v */; };
+		2AFEA4641FE7393D007DA5EA /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA4631FE7393D007DA5EA /* WeatherData.swift */; };
 		A20756C61F602DA50064777C /* AIAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C51F602DA50064777C /* AIAppState.swift */; };
 		A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C71F603A4C0064777C /* AIProgressHud.swift */; };
 		A20756CA1F603A5C0064777C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20756C91F603A5C0064777C /* Constants.swift */; };
@@ -52,6 +57,11 @@
 
 /* Begin PBXFileReference section */
 		1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFEA4591FE716C8007DA5EA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		2AFEA45B1FE7177D007DA5EA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		2AFEA45F1FE71B82007DA5EA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2AFEA4611FE72EF6007DA5EA /* weatherVideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = weatherVideo.m4v; sourceTree = "<group>"; };
+		2AFEA4631FE7393D007DA5EA /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		98A1B61493E250074D988018 /* Pods-AllergyInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllergyInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo.debug.xcconfig"; sourceTree = "<group>"; };
 		A20756C51F602DA50064777C /* AIAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIAppState.swift; sourceTree = "<group>"; };
 		A20756C71F603A4C0064777C /* AIProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIProgressHud.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				A28C66B01EB0E2A50070471D /* MenuTableViewCell.swift */,
+				2AFEA4591FE716C8007DA5EA /* HomeTableViewCell.swift */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -235,6 +246,10 @@
 				A20756C51F602DA50064777C /* AIAppState.swift */,
 				A20756C71F603A4C0064777C /* AIProgressHud.swift */,
 				A20756C91F603A5C0064777C /* Constants.swift */,
+				2AFEA45B1FE7177D007DA5EA /* Global.swift */,
+				2AFEA45F1FE71B82007DA5EA /* UIView+Extensions.swift */,
+				2AFEA4611FE72EF6007DA5EA /* weatherVideo.m4v */,
+				2AFEA4631FE7393D007DA5EA /* WeatherData.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -353,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AFEA4621FE72F01007DA5EA /* weatherVideo.m4v in Resources */,
 				A270D9EE1E82D51A007305E3 /* LaunchScreen.storyboard in Resources */,
 				A2BF40951F6028D3002E9E38 /* GoogleService-Info.plist in Resources */,
 				A270D9EB1E82D51A007305E3 /* Assets.xcassets in Resources */,
@@ -398,13 +414,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllergyInfo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97DB1DAA62CDB1A171D59EAA /* [CP] Embed Pods Frameworks */ = {
@@ -413,9 +432,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PasswordTextField/PasswordTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenuController/SideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PasswordTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -431,10 +473,13 @@
 			files = (
 				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
 				A2B011591F94D7BF00B9A447 /* TPKeyboardAvoidingTableView.m in Sources */,
+				2AFEA4601FE71B82007DA5EA /* UIView+Extensions.swift in Sources */,
 				A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */,
 				A2B0115A1F94D7C200B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				2AFEA45C1FE7177D007DA5EA /* Global.swift in Sources */,
 				A20756C61F602DA50064777C /* AIAppState.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
+				2AFEA45A1FE716C8007DA5EA /* HomeTableViewCell.swift in Sources */,
 				A20756C81F603A4C0064777C /* AIProgressHud.swift in Sources */,
 				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
 				A2B011581F94D7BD00B9A447 /* TPKeyboardAvoidingScrollView.m in Sources */,
@@ -442,6 +487,7 @@
 				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
 				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
 				A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */,
+				2AFEA4641FE7393D007DA5EA /* WeatherData.swift in Sources */,
 				A28C66AD1EB0CF5C0070471D /* MenuViewController.swift in Sources */,
 				A28C66B71EB0ED3D0070471D /* AboutViewController.swift in Sources */,
 				A28C66B11EB0E2A50070471D /* MenuTableViewCell.swift in Sources */,
@@ -614,7 +660,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -634,7 +680,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X6VF74TXRK;
 				INFOPLIST_FILE = AllergyInfo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = spasojevic.s.AllergyInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

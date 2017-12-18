@@ -1,5 +1,5 @@
 //
-//  AIAppState.swift
+//  Global.swift
 //  AllergyInfo
 //
 //  Created by Srdjan Spasojevic on 9/6/17.
@@ -13,62 +13,23 @@ import FirebaseDatabase
 class AIAppState: NSObject {
     static let sharedInstance = AIAppState()
     
-    //MARK: Loader
-    var nvaActivity : NVActivityIndicatorView!
-    var progressHUD : AIProgressHud = AIProgressHud()
-    let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-    var blurEffectView : UIVisualEffectView = UIVisualEffectView()
-    var userPhoto = ""
+    var dataSource = [WeatherData]()
     
-    //MARK: Firebase Database
-    var DB_REF_URL = FIRDatabase.database().reference()
-    
-    func startActivity(view: UIView){
-        blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    func fetchData(){
+        let first = WeatherData(dayDescription: "It is rainy day outside, don't worry about the allergy")
+        let second = WeatherData(dayDescription: "It is a hot day outside, be carefull today, high allergy alert!")
+        let third = WeatherData(dayDescription: "It is a hot day outside, it's safe today, but beware")
+        let fourth = WeatherData(dayDescription: "It is rainy day outside, don't worry about the allergy")
+        let fifth = WeatherData(dayDescription: "It is a hot day outside, be carefull today, high allergy alert!")
+        let sixth = WeatherData(dayDescription: "It is a hot day outside, it's safe today, but beware")
+        let seventh = WeatherData(dayDescription: "It is rainy day outside, don't worry about the allergy")
         
-        let frame = CGRect(x: view.bounds.size.width/2, y: view.bounds.size.height/2, width: 80, height: 80)
-        self.nvaActivity = NVActivityIndicatorView(frame: frame, type: .ballScaleRippleMultiple, color: UIColor.white, padding: 0)
-        self.nvaActivity.center = UIApplication.shared.keyWindow!.center
-        UIApplication.shared.keyWindow?.addSubview(blurEffectView)
-        blurEffectView.alpha = 0.7
-        UIApplication.shared.keyWindow?.addSubview(self.nvaActivity)
-        self.nvaActivity.startAnimating()
+        AIAppState.sharedInstance.dataSource.append(first)
+        AIAppState.sharedInstance.dataSource.append(second)
+        AIAppState.sharedInstance.dataSource.append(third)
+        AIAppState.sharedInstance.dataSource.append(fourth)
+        AIAppState.sharedInstance.dataSource.append(fifth)
+        AIAppState.sharedInstance.dataSource.append(sixth)
+        AIAppState.sharedInstance.dataSource.append(seventh)
     }
-    
-    func stopActivity(){
-        //self.progressHUD.hideHUD()
-        self.nvaActivity.stopAnimating()
-        self.blurEffectView.removeFromSuperview()
-    }
-
-    
-    func displayClassicAlert(message: String, viewController: UIViewController){
-        let alertController: UIAlertController = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
-        
-        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .cancel) { action -> Void in
-            
-        }
-        alertController.addAction(okAction)
-        
-        viewController.present(alertController, animated: true) {
-            
-        }
-    }
-    
-    //MARK: Validate email
-    func validateEmailWithString(email: String) -> Bool {
-        let emailRegex = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}" +
-            "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" +
-            "x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-" +
-            "z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5" +
-            "]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-" +
-            "9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" +
-        "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailTest.evaluate(with: email)
-    }
-    
-    
 }

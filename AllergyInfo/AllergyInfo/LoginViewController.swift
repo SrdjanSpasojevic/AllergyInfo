@@ -25,12 +25,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Welcome")
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
-        self.singInButton.layer.masksToBounds = true
-        self.singInButton.layer.cornerRadius = 20
+        self.singInButton.roundCorners(cornerRadius: 20.0)
         
         if let userDict = retrieveDictionary(withKey: "loggedInUser") {
             self.firebaseUserLogin(username: userDict["username"]! as String, password: userDict["password"]! as String)
@@ -45,6 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        UIApplication.shared.statusBarStyle = .default
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,11 +52,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func firebaseUserLogin(username: String, password: String){
-        AIAppState.sharedInstance.startActivity(view: self.view)
-        FIRAuth.auth()?.signIn(withEmail: username, password: password, completion: { (user, error) in
+        Global.startActivity(view: self.view)
+        Auth.auth().signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
                 if user!.isEmailVerified{
-                    AIAppState.sharedInstance.stopActivity()
+                    Global.stopActivity()
                     print("No error on login")
                     let userDict = [
                         "username" : username,
@@ -67,7 +66,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     UserDefaults.standard.set(archiver, forKey: "loggedInUser")
                     self.performSegue(withIdentifier: "showStartViewController", sender: nil)
                 }else{
-                    AIAppState.sharedInstance.stopActivity()
+                    Global.stopActivity()
                     if self.counter > 0{
                         self.displayAlert(message: "Resend you verification email?", viewController: self)
                         self.counter += 1
@@ -80,7 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }else{
                 print("Error on login: \(String(describing: error))")
                 self.displayClassicAlert(message: "Email or Password do not match to our records\nPlease try again", viewController: self)
-                AIAppState.sharedInstance.stopActivity()
+                Global.stopActivity()
                 
             }
         })
@@ -104,6 +103,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func singInAction(_ sender: Any) {
+        self.view.endEditing(true)
         if self.usernameField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
             self.userNameView.animation = "shake"
             self.userNameView.animate()
@@ -111,7 +111,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.passwordView.animation = "shake"
             self.passwordView.animate()
         }else{
-            if AIAppState.sharedInstance.validateEmailWithString(email: self.usernameField.text!) == true{
+            if Global.validateEmailWithString(email: self.usernameField.text!) == true{
                 self.firebaseUserLogin(username: self.usernameField.text!, password: self.passwordField.text!)
             }else{
                self.displayClassicAlert(message: "Please enter valid credentials", viewController: self)
@@ -147,10 +147,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let yesAction: UIAlertAction = UIAlertAction(title: "Yes", style: .default) { action -> Void in
             print("Yes Pressed")
             if self.counter > 0{
-                AIAppState.sharedInstance.startActivity(view: self.view)
-                FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
+                Global.startActivity(view: self.view)
+                Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                     if error == nil{
-                        AIAppState.sharedInstance.stopActivity()
+                        Global.stopActivity()
                         self.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self)
                     }
                 })

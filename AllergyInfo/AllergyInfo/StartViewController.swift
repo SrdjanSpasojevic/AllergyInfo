@@ -21,9 +21,18 @@ class StartViewController: SideMenuController {
         SideMenuController.preferences.animating.statusBarBehaviour = .horizontalPan
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
         
+        
+        
         performSegue(withIdentifier: "showCenterController1", sender: nil)
         
         performSegue(withIdentifier: "containSideMenu", sender: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        AIAppState.sharedInstance.fetchData()
+        
     }
 
     override func didReceiveMemoryWarning() {

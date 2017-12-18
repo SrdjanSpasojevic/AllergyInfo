@@ -25,8 +25,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         self.userProfilePhoto.layer.masksToBounds = true
         self.userProfilePhoto.layer.cornerRadius = self.userProfilePhoto.bounds.size.height / 2
-        let userID = FIRAuth.auth()?.currentUser?.uid
-        AIAppState.sharedInstance.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+        let userID = Auth.auth().currentUser?.uid
+        Global.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             print("Snapshot value: \(snapshot.value!)")
             let userDict = snapshot.value as? NSDictionary
             DispatchQueue.main.async {
@@ -60,11 +60,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexPath.row == 4{
             UserDefaults.standard.removeObject(forKey: "loggedInUser")
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+            self.singOutUser()
             self.present(loginVC!, animated: true, completion: nil)
         }else{
            sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
         }
         
+    }
+    
+    private func singOutUser(){
+        //MARK: Not sure this works
+        try!Auth.auth().signOut()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -34,15 +34,13 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.confirmPasswordTextField.delegate = self
         self.locationTextField.delegate = self
         
-        self.singUpButton.layer.masksToBounds = true
-        self.singUpButton.layer.cornerRadius = 20
+        self.singUpButton.roundCorners(cornerRadius: 20.0)
         let yourBackImage = UIImage(named: "ic_arrow_back_white")
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: yourBackImage, style: .plain, target: self, action: #selector(backTapped))
         self.choosePhotoButton.titleLabel?.text = "\nChose image"
         self.imagePicker.delegate = self
         
-        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width/2
-        self.profileImage.clipsToBounds = true
+        self.profileImage.roundCorners(cornerRadius: self.profileImage.frame.size.width/2)
     }
     
     func backTapped(){
@@ -74,48 +72,48 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBAction func singUpAction(_ sender: Any) {
         if self.emailTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
             //Check if email fields are empty or whitespaced
-            AIAppState.sharedInstance.displayClassicAlert(message: "Please enter email before singing up", viewController: self)
+            Global.displayClassicAlert(message: "Please enter email before singing up", viewController: self)
         }else if self.passwordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty && self.confirmPasswordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
             //Check if password fields are empty or whitespaced
-            AIAppState.sharedInstance.displayClassicAlert(message: "Please enter password before before singing up", viewController: self)
+            Global.displayClassicAlert(message: "Please enter password before before singing up", viewController: self)
         }else if self.passwordTextField.text != self.confirmPasswordTextField.text{
             //Passwords must match
-            AIAppState.sharedInstance.displayClassicAlert(message: "Passwords must match", viewController: self)
+            Global.displayClassicAlert(message: "Passwords must match", viewController: self)
         }else if self.locationTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
             //Check if location fields are empty or whitespaced
-            AIAppState.sharedInstance.displayClassicAlert(message: "Please choose location before singing up", viewController: self)
+            Global.displayClassicAlert(message: "Please choose location before singing up", viewController: self)
         }else{
             self.fireBaseCreateUser(username: self.emailTextField.text!, password: self.confirmPasswordTextField.text!, location: self.locationTextField.text!)
         }
     }
     
     private func fireBaseCreateUser(username: String, password: String, location: String){
-        AIAppState.sharedInstance.startActivity(view: self.view)
+        Global.startActivity(view: self.view)
         
-        FIRAuth.auth()?.createUser(withEmail: username, password: password, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
                 let chosenImage = UIImageJPEGRepresentation(self.profileImage.image!, 0.5)
-                FIRStorage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").put(chosenImage!, metadata: nil, completion: { (metaData, error) in
+                Storage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
                     if error == nil{
-                        AIAppState.sharedInstance.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString], withCompletionBlock: { (error, db_ref) in
+                        Global.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString], withCompletionBlock: { (error, db_ref) in
                                 if error == nil{
                                     
-                                    FIRAuth.auth()?.signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
+                                    Auth.auth().signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
                                         if error == nil{
-                                            FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
-                                                AIAppState.sharedInstance.stopActivity()
+                                            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                                                Global.stopActivity()
                                                 if error == nil{
                                                     self.navigationController?.popToRootViewController(animated: true)
-                                                    AIAppState.sharedInstance.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self.view.window!.rootViewController!)
+                                                    Global.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self.view.window!.rootViewController!)
                                                     print("Image uploaded")
                                                 }else{
-                                                    FIRAuth.auth()?.currentUser?.delete(completion: { (error) in
+                                                    Auth.auth().currentUser?.delete(completion: { (error) in
                                                         if error == nil{
                                                             print("User removed")
                                                         }
                                                     })
                                                     
-                                                    print("Error on sending email: \(error)")
+                                                    print("Error on sending email: \(error?.localizedDescription ?? "Error occured")")
                                                 }
                                             })
                                         }
@@ -125,14 +123,14 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                                 }
                         })
                     }else{
-                        AIAppState.sharedInstance.stopActivity()
+                        Global.stopActivity()
                         print("Error uploading to storage \(String(describing: error?.localizedDescription))")
                     }
                 })
             }else{
                 print("Error on creating: \(String(describing: error))")
-                AIAppState.sharedInstance.displayClassicAlert(message: error!.localizedDescription, viewController: self)
-                AIAppState.sharedInstance.stopActivity()
+                Global.displayClassicAlert(message: error!.localizedDescription, viewController: self)
+                Global.stopActivity()
             }
         })
     }

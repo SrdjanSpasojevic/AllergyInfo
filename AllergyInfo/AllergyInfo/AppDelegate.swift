@@ -17,9 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UIApplication.shared.statusBarStyle = .default
         
-        FIRApp.configure()
+        FirebaseApp.configure()
+        
+        UILabel.appearance().font = UIFont(name: "Kohinoor Devanagari", size: 15.0)
+        UITextView.appearance().font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
+        UIButton.appearance().titleLabel?.font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
         
         return true
     }
