@@ -14,6 +14,14 @@ import NVActivityIndicatorView
 class Global: NSObject
 {
     
+    struct DataKeys{
+        static let dataKey = "AllergyData"
+        static let dayOneKey = "dayOne"
+        static let dayTwoKey = "dayTwo"
+        static let dayDescriptionKey = "dayDescription"
+        static let iconTypeKey = "iconType"
+    }
+    
     //MARK: Loader
     static var nvaActivity : NVActivityIndicatorView!
     static var progressHUD : AIProgressHud = AIProgressHud()
@@ -32,6 +40,20 @@ class Global: NSObject
         
         let frame = CGRect(x: view.bounds.size.width/2, y: view.bounds.size.height/2, width: 80, height: 80)
         self.nvaActivity = NVActivityIndicatorView(frame: frame, type: .ballScaleRippleMultiple, color: UIColor.white, padding: 0)
+        self.nvaActivity.center = UIApplication.shared.keyWindow!.center
+        UIApplication.shared.keyWindow?.addSubview(blurEffectView)
+        blurEffectView.alpha = 0.7
+        UIApplication.shared.keyWindow?.addSubview(self.nvaActivity)
+        self.nvaActivity.startAnimating()
+    }
+    
+    static func startCustomActivity(view: UIView, type: NVActivityIndicatorType){
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        let frame = CGRect(x: view.bounds.size.width/2, y: view.bounds.size.height/2, width: 80, height: 80)
+        self.nvaActivity = NVActivityIndicatorView(frame: frame, type: type, color: UIColor.white, padding: 0)
         self.nvaActivity.center = UIApplication.shared.keyWindow!.center
         UIApplication.shared.keyWindow?.addSubview(blurEffectView)
         blurEffectView.alpha = 0.7
@@ -71,7 +93,5 @@ class Global: NSObject
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: email)
     }
-    
-    
     
 }

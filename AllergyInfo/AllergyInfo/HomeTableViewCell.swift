@@ -14,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
     
 
     override func awakeFromNib() {

@@ -23,15 +23,14 @@ class StartViewController: SideMenuController {
         
         
         
-        performSegue(withIdentifier: "showCenterController1", sender: nil)
+        self.performSegue(withIdentifier: "showCenterController1", sender: nil)
         
-        performSegue(withIdentifier: "containSideMenu", sender: nil)
+        self.performSegue(withIdentifier: "containSideMenu", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        AIAppState.sharedInstance.fetchData()
         
     }
 

@@ -597,8 +597,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="cellBackgroundView" destination="f8Z-aD-ncD" id="foO-UM-pDx"/>
+                                            <outlet property="cellBackgroundView" destination="f8Z-aD-ncD" id="geb-3X-8dm"/>
                                             <outlet property="dateLabel" destination="7SA-vK-Ez1" id="4VL-Ng-Idp"/>
+                                            <outlet property="iconImageView" destination="CV3-MO-e9b" id="07H-jN-CPQ"/>
                                             <outlet property="topView" destination="Qft-vx-SR2" id="yVA-Q1-erJ"/>
                                             <outlet property="weatherDescriptionLabel" destination="hqd-KF-baa" id="gw3-NH-ElT"/>
                                         </connections>

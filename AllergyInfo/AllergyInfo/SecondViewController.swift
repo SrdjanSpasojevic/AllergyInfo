@@ -17,6 +17,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var player : AVPlayer?
     var playerLayer : AVPlayerLayer?
     var displayedCells = [NSIndexPath]()
+    var timer: Timer? = nil
     
     
     override func viewDidLoad() {
@@ -29,9 +30,32 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         UIApplication.shared.statusBarStyle = .lightContent
         
-        
+        Global.progressHUD.showHUD()
+        Global.startCustomActivity(view: self.view, type: .ballPulseSync)
+        AIAppState.sharedInstance.fetchData { (hasData) in
+            if hasData{
+                print("Data loaded")
+                Global.progressHUD.hideHUD()
+                Global.stopActivity()
+                self.tableView.reloadData()
+                self.timer = Timer.scheduledTimer(timeInterval: 59.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            }else{
+                print("Error occured")
+                Global.progressHUD.hideHUD()
+                Global.stopActivity()
+                self.tableView.reloadData()
+            }
+            
+        }
     }
-
+    
+    func updateTime() -> String{
+        var toReturn = ""
+            toReturn = self.formatDate()
+            print("Date: \(toReturn)")
+        return toReturn
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,8 +73,13 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: Global.homeCellIdentifier) as! HomeTableViewCell
         
-        cell.dateLabel.text = formatDate()
+        cell.dateLabel.text = updateTime()
         cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
+        
+        if let icon = AIAppState.sharedInstance.dataSource[indexPath.row].iconType{
+            cell.iconImageView.image = UIImage(named: icon)
+        }
+        
         
         return cell
     }
@@ -60,18 +89,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-//        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-//        UIView.animate(withDuration: 0.4, animations: {
-//            cell.layer.transform = CATransform3DMakeScale(1,1,1)
-//        },completion: { finished in
-//            UIView.animate(withDuration: 0.2, animations: {
-//                cell.layer.transform = CATransform3DMakeScale(1,1,1)
-//            })
-//        })
         cell.contentView.animateCell(cell: cell)
-        
     }
+    
+    
     
     private func formatDate() -> String{
         let formatter = DateFormatter()
