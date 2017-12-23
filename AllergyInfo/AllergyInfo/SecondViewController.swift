@@ -38,7 +38,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 Global.progressHUD.hideHUD()
                 Global.stopActivity()
                 self.tableView.reloadData()
-                self.timer = Timer.scheduledTimer(timeInterval: 59.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+                self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
             }else{
                 print("Error occured")
                 Global.progressHUD.hideHUD()
