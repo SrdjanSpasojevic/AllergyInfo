@@ -25,6 +25,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         self.userProfilePhoto.layer.masksToBounds = true
         self.userProfilePhoto.layer.cornerRadius = self.userProfilePhoto.bounds.size.height / 2
+        self.userProfilePhoto.layer.borderWidth = 3.0
+        self.userProfilePhoto.layer.borderColor = UIColor.lightGray.cgColor
+        
         let userID = Auth.auth().currentUser?.uid
         Global.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             print("Snapshot value: \(snapshot.value!)")
@@ -42,8 +45,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     activity.stopAnimating()
                 })
             }
-            
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,7 +69,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.singOutUser()
             self.present(loginVC!, animated: true, completion: nil)
         }else{
-           sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+            sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
         }
         
     }
@@ -82,7 +88,4 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-    
-    
-    
 }

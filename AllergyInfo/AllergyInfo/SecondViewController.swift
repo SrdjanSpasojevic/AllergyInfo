@@ -30,23 +30,31 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         UIApplication.shared.statusBarStyle = .lightContent
         
-        Global.progressHUD.showHUD()
-        Global.startCustomActivity(view: self.view, type: .ballPulseSync)
+        if !AIAppState.sharedInstance.dataLoaded{
+            self.getData()
+        }
+    }
+    
+    private func getData(){
+        Global.startCustomActivity(view: self.view, type: .ballScaleMultiple)
         AIAppState.sharedInstance.fetchData { (hasData) in
             if hasData{
                 print("Data loaded")
-                Global.progressHUD.hideHUD()
-                Global.stopActivity()
+                self.tableView.backgroundView?.isHidden = true
                 self.tableView.reloadData()
-                self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+                //self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
             }else{
                 print("Error occured")
-                Global.progressHUD.hideHUD()
-                Global.stopActivity()
                 self.tableView.reloadData()
+                self.handleEmptyTableView()
             }
-            
+            Global.stopActivity()
+            AIAppState.sharedInstance.dataLoaded = hasData
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func updateTime() -> String{
@@ -61,13 +69,28 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    private func handleEmptyTableView(){
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        messageLabel.text = ":(\nNow info right now, check back later..."
+        messageLabel.textColor = UIColor.white
+        messageLabel.numberOfLines = 0;
+        messageLabel.font = UIFont(name: "Kohinoor Devanagari", size: 35.0)
+        messageLabel.textAlignment = .center;
+        messageLabel.sizeToFit()
+        
+        self.tableView.backgroundView = messageLabel;
+    }
+    
     //MARK: TableView delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AIAppState.sharedInstance.dataSource.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if !AIAppState.sharedInstance.dataSource.isEmpty{
+            return 1
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,8 +102,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let icon = AIAppState.sharedInstance.dataSource[indexPath.row].iconType{
             cell.iconImageView.image = UIImage(named: icon)
         }
-        
-        
         return cell
     }
 
@@ -99,7 +120,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // initially set the format based on your datepicker date
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        let myString = formatter.string(from: Date()+1)
+        let myString = formatter.string(from: Date())
         // convert your string to date
         let yourDate = formatter.date(from: myString)
         //then again set the date format whhich type of output you need
@@ -109,40 +130,31 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return myStringafd
     }
-    
-    func playerDidReachEnd(){
-        self.playVideo()
-    }
-    
-    
-    private func playVideo() {
-        guard let path = Bundle.main.path(forResource: "weatherVideo", ofType:"m4v") else {
-            debugPrint("video.m4v not found")
-            return
-        }
-        self.player = AVPlayer(url: URL(fileURLWithPath: path))
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
-        playerLayer!.frame = self.tableView.frame
-        self.view!.layer.addSublayer(playerLayer!)
-        
-        
-        self.view.bringSubview(toFront: self.tableView)
-        let seekToTime = CMTime(seconds: 10, preferredTimescale: 1)
-        self.player?.currentItem?.seek(to: seekToTime)
-        self.player?.volume = 0.0
-        self.player?.play()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-    }
-    
+    //MARK: Maybe not the best idea to add video in background
+    //TIP: Add it to the splash screen
+//    func playerDidReachEnd(){
+//        self.playVideo()
+//    }
+//
+//
+//    private func playVideo() {
+//        guard let path = Bundle.main.path(forResource: "weatherVideo", ofType:"m4v") else {
+//            debugPrint("video.m4v not found")
+//            return
+//        }
+//        self.player = AVPlayer(url: URL(fileURLWithPath: path))
+//        playerLayer = AVPlayerLayer(player: player)
+//        playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+//        playerLayer!.frame = self.tableView.frame
+//        self.view!.layer.addSublayer(playerLayer!)
+//
+//
+//        self.view.bringSubview(toFront: self.tableView)
+//        let seekToTime = CMTime(seconds: 10, preferredTimescale: 1)
+//        self.player?.currentItem?.seek(to: seekToTime)
+//        self.player?.volume = 0.0
+//        self.player?.play()
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+//    }
 }
-
-
-
-
-
-
-
-
-

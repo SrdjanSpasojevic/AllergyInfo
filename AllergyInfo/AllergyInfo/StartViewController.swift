@@ -20,18 +20,12 @@ class StartViewController: SideMenuController {
         SideMenuController.preferences.drawing.centerPanelShadow = true
         SideMenuController.preferences.animating.statusBarBehaviour = .horizontalPan
         SideMenuController.preferences.animating.transitionAnimator = FadeAnimator.self
-        
-        
+        SideMenuController.preferences.interaction.menuButtonAccessibilityIdentifier = ""
+
         
         self.performSegue(withIdentifier: "showCenterController1", sender: nil)
         
         self.performSegue(withIdentifier: "containSideMenu", sender: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

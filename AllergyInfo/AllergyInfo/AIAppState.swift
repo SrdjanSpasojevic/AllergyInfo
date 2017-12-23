@@ -14,7 +14,7 @@ class AIAppState: NSObject {
     static let sharedInstance = AIAppState()
     
     var dataSource = [WeatherData]()
-    
+    var dataLoaded = false
         
 //    func fetchData(){
 //        let first = WeatherData(dayDescription: "It is rainy day outside, don't worry about the allergy")
@@ -35,15 +35,15 @@ class AIAppState: NSObject {
 //    }
     
     func fetchData(completion: @escaping (_ dataLoaded: Bool) -> Void){
-        Global.DB_REF_URL.child(Global.DataKeys.dataKey).observe(.value, with: { snapshot in
+        Global.DB_REF_URL.child(dataKey).observe(.value, with: { snapshot in
             if snapshot.exists(){
                 guard let dict = snapshot.value! as? NSDictionary else {
                     completion(false)
                     return
                 }
                 
-                self.dataSource.append(WeatherData.init(dict: dict[Global.DataKeys.dayOneKey] as! NSDictionary))
-                self.dataSource.append(WeatherData.init(dict: dict[Global.DataKeys.dayTwoKey] as! NSDictionary))
+                self.dataSource.append(WeatherData.init(dict: dict[dayOneKey] as! NSDictionary))
+                self.dataSource.append(WeatherData.init(dict: dict[dayTwoKey] as! NSDictionary))
                 
                 if self.dataSource.isEmpty{
                     completion(false)

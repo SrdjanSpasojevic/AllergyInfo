@@ -8,4 +8,12 @@
 
 import Foundation
 
+//Cell animation duration
 let AIProgressDuration = 0.2
+
+//Dictionary keys
+let dataKey = "AllergyData"
+let dayOneKey = "dayOne"
+let dayTwoKey = "dayTwo"
+let dayDescriptionKey = "dayDescription"
+let iconTypeKey = "iconType"

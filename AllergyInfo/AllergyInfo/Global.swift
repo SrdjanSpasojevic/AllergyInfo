@@ -14,14 +14,6 @@ import NVActivityIndicatorView
 class Global: NSObject
 {
     
-    struct DataKeys{
-        static let dataKey = "AllergyData"
-        static let dayOneKey = "dayOne"
-        static let dayTwoKey = "dayTwo"
-        static let dayDescriptionKey = "dayDescription"
-        static let iconTypeKey = "iconType"
-    }
-    
     //MARK: Loader
     static var nvaActivity : NVActivityIndicatorView!
     static var progressHUD : AIProgressHud = AIProgressHud()
@@ -93,5 +85,6 @@ class Global: NSObject
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailTest.evaluate(with: email)
     }
+    
     
 }

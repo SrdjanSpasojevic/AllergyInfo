@@ -14,7 +14,7 @@ class WeatherData: NSObject {
     var iconType: String?
     
     init(dict: NSDictionary) {
-        self.dayDescription = dict[Global.DataKeys.dayDescriptionKey] as? String
-        self.iconType = dict[Global.DataKeys.iconTypeKey] as? String
+        self.dayDescription = dict[dayDescriptionKey] as? String
+        self.iconType = dict[iconTypeKey] as? String
     }
 }
