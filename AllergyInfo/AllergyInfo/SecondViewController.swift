@@ -18,6 +18,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var playerLayer : AVPlayerLayer?
     var displayedCells = [NSIndexPath]()
     var timer: Timer? = nil
+    var indexToPass: IndexPath?
     
     
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print("Data loaded")
                 self.tableView.backgroundView?.isHidden = true
                 self.tableView.reloadData()
+                self.addDaysInAdvance()
                 //self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
             }else{
                 print("Error occured")
@@ -57,16 +59,21 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewWillAppear(animated)
     }
     
-    func updateTime() -> String{
-        var toReturn = ""
-            toReturn = self.formatDate()
-            print("Date: \(toReturn)")
-        return toReturn
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func addDaysInAdvance(){
+        for i in 0...AIAppState.sharedInstance.dataSource.count-1{
+            if i == 0{
+                AIAppState.sharedInstance.dataSource[i].date = self.formatDate(date: Date())
+            }else{
+                let addDate = (Calendar.current as NSCalendar).date(byAdding: .day, value: i, to: Date(), options: [])!
+                AIAppState.sharedInstance.dataSource[i].date = self.formatDate(date: addDate)
+            }
+        }
     }
     
     private func handleEmptyTableView(){
@@ -96,7 +103,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: Global.homeCellIdentifier) as! HomeTableViewCell
         
-        cell.dateLabel.text = updateTime()
+        cell.dateLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].date
+        
         cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
         
         if let icon = AIAppState.sharedInstance.dataSource[indexPath.row].iconType{
@@ -113,23 +121,50 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.contentView.animateCell(cell: cell)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexToPass = indexPath
+        self.performSegue(withIdentifier: "cellToDetailSegue", sender: nil)
+        let cell = tableView.cellForRow(at: indexPath) as? HomeTableViewCell
+        cell?.isSelected = false
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cellToDetailSegue"{
+            if let infoVC = segue.destination as? CurrentInfoViewController{
+                if let index = self.indexToPass{
+                    let dataObject = AIAppState.sharedInstance.dataSource[index.row]
+                    infoVC.dataObject = dataObject
+                }
+            }
+        }
+    }
     
-    private func formatDate() -> String{
+    private func formatDate(date: Date) -> String{
         let formatter = DateFormatter()
+        
         // initially set the format based on your datepicker date
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        let myString = formatter.string(from: Date())
+        let myString = formatter.string(from: date)
+        
         // convert your string to date
         let yourDate = formatter.date(from: myString)
-        //then again set the date format whhich type of output you need
-        formatter.dateFormat = "dd/MMM/yyyy HH:mm"
-        // again convert your date to string
-        let myStringafd = formatter.string(from: yourDate!)
         
-        return myStringafd
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "EEEE"
+        
+        // again convert your date to string
+        var myStringFormated = ""
+        if Calendar.current.isDateInToday(date){
+            myStringFormated = "Today"
+        }else{
+            myStringFormated = formatter.string(from: yourDate!)
+        }
+            
+        return myStringFormated
     }
+    
+    
     //MARK: Maybe not the best idea to add video in background
     //TIP: Add it to the splash screen
 //    func playerDidReachEnd(){

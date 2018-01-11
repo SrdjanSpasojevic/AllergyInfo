@@ -12,9 +12,11 @@ class WeatherData: NSObject {
 
     var dayDescription: String?
     var iconType: String?
+    var date: String?
     
     init(dict: NSDictionary) {
         self.dayDescription = dict[dayDescriptionKey] as? String
         self.iconType = dict[iconTypeKey] as? String
+        self.date = dict[dayDateKey] as? String
     }
 }

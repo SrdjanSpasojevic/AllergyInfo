@@ -13,8 +13,8 @@ import Firebase
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let segues = ["showCenterController1", "showCenterController2", "showCenterController3", "showCenterController4", "logOutSegue"]
-    let controllerNames = ["Home", "Current info about allergy", "Settings", "About", "Log out"]
+    let segues = ["showCenterController1", "showCenterController3", "showCenterController4", "logOutSegue"]
+    let controllerNames = ["Home", "Settings", "About", "Log out"]
     var selectedIndexPath : NSIndexPath?
     
     
