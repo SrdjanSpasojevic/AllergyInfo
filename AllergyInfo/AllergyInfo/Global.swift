@@ -73,6 +73,41 @@ class Global: NSObject
         }
     }
     
+    static func retrieveDictionary(withKey key: String) -> [String: String]? {
+        
+        // Check if data exists
+        guard let data = UserDefaults.standard.object(forKey: key) else {
+            return nil
+        }
+        
+        // Check if retrieved data has correct type
+        guard let retrievedData = data as? Data else {
+            return nil
+        }
+        
+        // Unarchive data
+        let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
+        return unarchivedObject as? [String: String]
+    }
+    
+    static func deleteDictionary(withKey key: String, completion: @escaping (_ dataLoaded: Bool) -> Void){
+        if UserDefaults.standard.object(forKey: key) != nil{
+            UserDefaults.standard.removeObject(forKey: key)
+            completion(true)
+        }else{
+            completion(false)
+        }
+    }
+    
+    private static func setSingOutData(){
+        let userDict = [
+            "username" : "",
+            "password" : ""
+        ]
+        let archiver = NSKeyedArchiver.archivedData(withRootObject: userDict)
+        UserDefaults.standard.set(archiver, forKey: "loggedInUser")
+    }
+    
     //MARK: Validate email
     static func validateEmailWithString(email: String) -> Bool {
         let emailRegex = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}" +

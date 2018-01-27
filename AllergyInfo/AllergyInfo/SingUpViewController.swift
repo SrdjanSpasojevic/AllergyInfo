@@ -103,7 +103,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
                                             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                                                 Global.stopActivity()
                                                 if error == nil{
-                                                    self.navigationController?.popToRootViewController(animated: true)
+                                                    self.performSegue(withIdentifier: "singUpToQuestions", sender: self)
                                                     Global.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self.view.window!.rootViewController!)
                                                     print("Image uploaded")
                                                 }else{

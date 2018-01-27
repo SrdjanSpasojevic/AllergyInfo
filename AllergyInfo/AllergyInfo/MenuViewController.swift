@@ -63,11 +63,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath as NSIndexPath?
-        if indexPath.row == 4{
-            UserDefaults.standard.removeObject(forKey: "loggedInUser")
-            let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+        if indexPath.row == 3{
             self.singOutUser()
-            self.present(loginVC!, animated: true, completion: nil)
         }else{
             sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
         }
@@ -76,7 +73,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func singOutUser(){
         //MARK: Not sure this works
-        try!Auth.auth().signOut()
+        Global.deleteDictionary(withKey: "loggedInUser") { (finishedWithSuccess) in
+            if finishedWithSuccess{
+                try!Auth.auth().signOut()
+                let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+                self.present(loginVC!, animated: true, completion: nil)
+            }else{
+                Global.displayClassicAlert(message: "There is an error with sing out\nPlease try later", viewController: self)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

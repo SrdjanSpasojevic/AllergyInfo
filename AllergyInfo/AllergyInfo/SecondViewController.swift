@@ -19,6 +19,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var displayedCells = [NSIndexPath]()
     var timer: Timer? = nil
     var indexToPass: IndexPath?
+    let refreshControl = UIRefreshControl()
     
     
     override func viewDidLoad() {
@@ -26,6 +27,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.navigationItem.title = "Home"
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Reloading...")
+        self.refreshControl.tintColor = UIColor.gray
+        
+        if #available(iOS 10.0, *) {
+            self.tableView.refreshControl = refreshControl
+        } else {
+            self.tableView.addSubview(refreshControl)
+        }
+        
+        self.refreshControl.addTarget(self, action: #selector(self.getData), for: .valueChanged)
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -36,17 +48,19 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    private func getData(){
+    @objc private func getData(){
         Global.startCustomActivity(view: self.view, type: .ballScaleMultiple)
         AIAppState.sharedInstance.fetchData { (hasData) in
             if hasData{
                 print("Data loaded")
+                self.refreshControl.endRefreshing()
                 self.tableView.backgroundView?.isHidden = true
                 self.tableView.reloadData()
                 self.addDaysInAdvance()
                 //self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
             }else{
                 print("Error occured")
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
                 self.handleEmptyTableView()
             }
@@ -115,10 +129,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 211
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.animateCell(cell: cell)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

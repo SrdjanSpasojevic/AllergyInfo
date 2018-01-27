@@ -17,6 +17,11 @@ class AIAppState: NSObject {
     var dataLoaded = false
     
     func fetchData(completion: @escaping (_ dataLoaded: Bool) -> Void){
+
+        if self.dataSource.count > 0{
+            self.dataSource.removeAll()
+        }
+        
         Global.DB_REF_URL.child(dataKey).observe(.value, with: { snapshot in
             if snapshot.exists(){
                 guard let dict = snapshot.value! as? NSDictionary else {

@@ -30,8 +30,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
         self.singInButton.roundCorners(cornerRadius: 20.0)
         
-        if let userDict = retrieveDictionary(withKey: "loggedInUser") {
-            self.firebaseUserLogin(username: userDict["username"]! as String, password: userDict["password"]! as String)
+        if let userDict = Global.retrieveDictionary(withKey: "loggedInUser"),
+            let username = userDict["username"],
+            let password = userDict["password"]{
+            self.firebaseUserLogin(username: username, password: password)
         }
     }
 
@@ -85,22 +87,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    func retrieveDictionary(withKey key: String) -> [String: String]? {
-        
-        // Check if data exists
-        guard let data = UserDefaults.standard.object(forKey: key) else {
-            return nil
-        }
-        
-        // Check if retrieved data has correct type
-        guard let retrievedData = data as? Data else {
-            return nil
-        }
-        
-        // Unarchive data
-        let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
-        return unarchivedObject as? [String: String]
-    }
+    
 
     @IBAction func singInAction(_ sender: Any) {
         self.view.endEditing(true)
