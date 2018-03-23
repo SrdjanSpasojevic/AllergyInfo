@@ -73,7 +73,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func singOutUser(){
         //MARK: Not sure this works
-        Global.deleteDictionary(withKey: "loggedInUser") { (finishedWithSuccess) in
+        Global.deleteDictionaryFromDisk(withKey: "loggedInUser") { (finishedWithSuccess) in
             if finishedWithSuccess{
                 try!Auth.auth().signOut()
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController")

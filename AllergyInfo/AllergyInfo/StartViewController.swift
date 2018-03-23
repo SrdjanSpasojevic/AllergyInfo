@@ -14,6 +14,10 @@ class StartViewController: SideMenuController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = ColorsPallete.startVCColor
+        
+        
         SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu_icon")
         SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft
         SideMenuController.preferences.drawing.sidePanelWidth = UIScreen.main.bounds.width - 100

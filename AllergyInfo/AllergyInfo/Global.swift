@@ -73,7 +73,14 @@ class Global: NSObject
         }
     }
     
-    static func retrieveDictionary(withKey key: String) -> [String: String]? {
+    static func writeArchiveToDisk(withDict dict: [String : Any], withKey key: String) {
+        
+        let archiver = NSKeyedArchiver.archivedData(withRootObject: dict)
+        UserDefaults.standard.set(archiver, forKey: key)
+        
+    }
+    
+    static func retrieveDictionaryFromDisk(withKey key: String) -> [String: Any]? {
         
         // Check if data exists
         guard let data = UserDefaults.standard.object(forKey: key) else {
@@ -87,15 +94,20 @@ class Global: NSObject
         
         // Unarchive data
         let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
-        return unarchivedObject as? [String: String]
+        return unarchivedObject as? [String: Any]
     }
     
-    static func deleteDictionary(withKey key: String, completion: @escaping (_ dataLoaded: Bool) -> Void){
+    static func deleteDictionaryFromDisk(withKey key: String, completion: @escaping (_ dataLoaded: Bool) -> Void){
+        
         if UserDefaults.standard.object(forKey: key) != nil{
+            
             UserDefaults.standard.removeObject(forKey: key)
             completion(true)
+            
         }else{
+            
             completion(false)
+            
         }
     }
     

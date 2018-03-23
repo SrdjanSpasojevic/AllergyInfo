@@ -49,7 +49,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @objc private func getData(){
-        Global.startCustomActivity(view: self.view, type: .ballScaleMultiple)
+        //Global.startCustomActivity(view: self.view, type: .ballScaleMultiple)
         AIAppState.sharedInstance.fetchData { (hasData) in
             if hasData{
                 print("Data loaded")

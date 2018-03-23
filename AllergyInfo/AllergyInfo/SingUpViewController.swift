@@ -29,12 +29,20 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = ColorsPallete.navigationBarColor
+        
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
         self.locationTextField.delegate = self
         
+        self.singUpButton.backgroundColor = ColorsPallete.navigationBarLabelColor
+        self.singUpButton.setTitleColor(ColorsPallete.labelColor, for: .normal)
         self.singUpButton.roundCorners(cornerRadius: 20.0)
+        
+        ColorsPallete.setColors(to: [emailTextField, passwordTextField, confirmPasswordTextField, locationTextField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
+        
         let yourBackImage = UIImage(named: "ic_arrow_back_white")
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: yourBackImage, style: .plain, target: self, action: #selector(backTapped))
         self.choosePhotoButton.titleLabel?.text = "\nChose image"
@@ -70,21 +78,32 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func singUpAction(_ sender: Any) {
-        if self.emailTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
+        
+        if self.emailTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+            
             //Check if email fields are empty or whitespaced
             Global.displayClassicAlert(message: "Please enter email before singing up", viewController: self)
-        }else if self.passwordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty && self.confirmPasswordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
+            
+        }else if self.passwordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty && self.confirmPasswordTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+            
             //Check if password fields are empty or whitespaced
             Global.displayClassicAlert(message: "Please enter password before before singing up", viewController: self)
-        }else if self.passwordTextField.text != self.confirmPasswordTextField.text{
+            
+        }else if self.passwordTextField.text != self.confirmPasswordTextField.text {
+            
             //Passwords must match
             Global.displayClassicAlert(message: "Passwords must match", viewController: self)
-        }else if self.locationTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
+            
+        }else if self.locationTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+            
             //Check if location fields are empty or whitespaced
             Global.displayClassicAlert(message: "Please choose location before singing up", viewController: self)
-        }else{
+            
+        }else {
+            
             self.fireBaseCreateUser(username: self.emailTextField.text!, password: self.confirmPasswordTextField.text!, location: self.locationTextField.text!)
         }
+        
     }
     
     private func fireBaseCreateUser(username: String, password: String, location: String){
@@ -93,12 +112,16 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         Auth.auth().createUser(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
                 let chosenImage = UIImageJPEGRepresentation(self.profileImage.image!, 0.5)
+                
                 Storage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
+                    
                     if error == nil{
                         Global.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString], withCompletionBlock: { (error, db_ref) in
+                            
                                 if error == nil{
                                     
                                     Auth.auth().signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
+                                        
                                         if error == nil{
                                             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                                                 Global.stopActivity()

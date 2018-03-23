@@ -12,6 +12,7 @@ import TextFieldEffects
 import IHKeyboardAvoiding
 import Firebase
 import Spring
+import SDWebImage
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -20,20 +21,51 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameField: HoshiTextField!
     @IBOutlet weak var passwordField: HoshiTextField!
     @IBOutlet weak var singInButton: UIButton!
+    @IBOutlet weak var dontHaveAccountLabel: UILabel!
+    @IBOutlet weak var singUpButton: UIButton!
+    
+    // FastLogin
+    @IBOutlet weak var fastLoginImageView: UIImageView!
+    @IBOutlet weak var fastLoginUserLabel: UILabel!
+
+    
     
     var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = ColorsPallete.navigationBarColor
+        
+        ColorsPallete.setColors(to: [self.usernameField, self.passwordField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
+        
+        ColorsPallete.setColors(to: [self.usernameField, self.passwordField, self.dontHaveAccountLabel, self.singUpButton], color: ColorsPallete.labelColor, withOption: .titleColor)
+        
         self.usernameField.delegate = self
         self.passwordField.delegate = self
+        
+
+        
+        self.fastLoginImageView.roundCorners(cornerRadius: self.fastLoginImageView.bounds.size.width / 2)
+        self.fastLoginUserLabel.text = ""
+        
+        self.singInButton.backgroundColor = ColorsPallete.navigationBarLabelColor
+        self.singInButton.setTitleColor(ColorsPallete.labelColor, for: .normal)
         self.singInButton.roundCorners(cornerRadius: 20.0)
         
-        if let userDict = Global.retrieveDictionary(withKey: "loggedInUser"),
-            let username = userDict["username"],
-            let password = userDict["password"]{
+        if let userDict = Global.retrieveDictionaryFromDisk(withKey: "loggedInUser"),
+            let username = userDict["username"] as? String,
+            let password = userDict["password"] as? String{
+            
             self.firebaseUserLogin(username: username, password: password)
+            
+        } else if let fastLogin = Global.retrieveDictionaryFromDisk(withKey: "fastLogin"),
+            let username = fastLogin["username"] as? String,
+            let userPhoto = fastLogin["profileImage"] as? UIImage{
+            
+            self.fastLoginImageView.image = userPhoto
+            self.fastLoginUserLabel.text = "\(username) Fast Sing In?"
+            
         }
     }
 
@@ -45,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
-        UIApplication.shared.statusBarStyle = .default
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,20 +85,69 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func firebaseUserLogin(username: String, password: String){
+    @IBAction func fastLoginAction(_ sender: Any) {
+        
+        if let fastLogin = Global.retrieveDictionaryFromDisk(withKey: "fastLogin"),
+            let username = fastLogin["username"] as? String,
+            let password = fastLogin["password"] as? String{
+            
+            self.firebaseUserLogin(username: username, password: password)
+            
+        }
+        
+    }
+    
+    
+    private func firebaseUserLogin(username: String, password: String){
         Global.startActivity(view: self.view)
         Auth.auth().signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
                 if user!.isEmailVerified{
-                    Global.stopActivity()
+                    
                     print("No error on login")
-                    let userDict = [
+                    
+                    let userDict: [String : Any] = [
                         "username" : username,
                         "password" : password
                     ]
-                    let archiver = NSKeyedArchiver.archivedData(withRootObject: userDict)
-                    UserDefaults.standard.set(archiver, forKey: "loggedInUser")
-                    self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                    
+                    Global.writeArchiveToDisk(withDict: userDict, withKey: "loggedInUser")
+                    
+                    var profilePhotoUrl = ""
+                    Global.DB_REF_URL.child("Users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                        
+                        let userDict = snapshot.value as? NSDictionary
+                        
+                        profilePhotoUrl = userDict?["profileImageUrl"] as! String
+                        
+                        let imageView = UIImageView()
+                        var userPhoto: UIImage!
+                        self.fastLoginImageView.sd_setImage(with: URL(string: profilePhotoUrl), completed: { (image, error, cache, url) in
+                            
+                            if error == nil {
+                                
+                                userPhoto = image
+                                
+                                let fastLoginDict: [String : Any] = [
+                                    
+                                    "username" : username,
+                                    "password" : password,
+                                    "profileImage" : userPhoto
+                                ]
+                                
+                                Global.writeArchiveToDisk(withDict: fastLoginDict, withKey: "fastLogin")
+                                
+                                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                                
+                            } else {
+                                
+                                print(error)
+                                Global.stopActivity()
+                            }
+                            
+                        })
+                    })
+                    
                 }else{
                     Global.stopActivity()
                     if self.counter > 0{
