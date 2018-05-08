@@ -16,6 +16,7 @@ import MobileCoreServices
 
 class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailTextField: HoshiTextField!
     @IBOutlet weak var passwordTextField: HoshiTextField!
@@ -26,7 +27,6 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var backButton: UIButton!
     
     let imagePicker = UIImagePickerController()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,71 +110,67 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             
         }else {
             
-            self.fireBaseCreateUser(username: self.emailTextField.text!, password: self.confirmPasswordTextField.text!, location: self.locationTextField.text!)
+            UserData.shared.username = self.emailTextField.text ?? ""
+            UserData.shared.password = self.confirmPasswordTextField.text ?? ""
+            UserData.shared.location = self.locationTextField.text ?? ""
+            UserData.shared.profileImage = self.profileImage.image
+            
+            self.performSegue(withIdentifier: "singUpToQuestion", sender: nil)
         }
         
     }
     
-    private func fireBaseCreateUser(username: String, password: String, location: String){
-        Global.startActivity(view: self.view)
-        
-        Auth.auth().createUser(withEmail: username, password: password, completion: { (user, error) in
-            if error == nil{
-                let chosenImage = UIImageJPEGRepresentation(self.profileImage.image!, 0.5)
-                
-                Storage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
-                    
-                    if error == nil{
-                        Global.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString], withCompletionBlock: { (error, db_ref) in
-                            
-                                if error == nil{
-                                    
-                                    Auth.auth().signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
-                                        
-                                        if error == nil{
-                                            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                                                Global.stopActivity()
-                                                if error == nil{
-                                                    self.performSegue(withIdentifier: "singUpToQuestions", sender: self)
-                                                    Global.displayClassicAlert(message: "Email has been sent to your adress, please confirm your account", viewController: self.view.window!.rootViewController!)
-                                                    print("Image uploaded")
-                                                }else{
-                                                    Auth.auth().currentUser?.delete(completion: { (error) in
-                                                        if error == nil{
-                                                            print("User removed")
-                                                        }
-                                                    })
-                                                    
-                                                    print("Error on sending email: \(error?.localizedDescription ?? "Error occured")")
-                                                }
-                                            })
-                                        }
-                                    })
-                                }else{
-                                    print("Error uploading image \(String(describing: error?.localizedDescription))")
-                                }
-                        })
-                    }else{
-                        Global.stopActivity()
-                        print("Error uploading to storage \(String(describing: error?.localizedDescription))")
-                    }
-                })
-            }else{
-                print("Error on creating: \(String(describing: error))")
-                Global.displayClassicAlert(message: error!.localizedDescription, viewController: self)
-                Global.stopActivity()
-            }
-        })
+    @IBAction func addPhotoAction(_ sender: Any)
+    {
+        self.showImageSourcetypeAlertVC()
     }
     
-    @IBAction func addPhotoAction(_ sender: Any) {
-        self.imagePicker.allowsEditing = true
-        self.imagePicker.sourceType = .photoLibrary
-        self.present(imagePicker, animated: true, completion: nil)
+    private func showImageSourcetypeAlertVC()
+    {
+        
+        
+        let alertVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+            
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .camera
+            self.imagePicker.cameraFlashMode = .off
+            self.imagePicker.cameraCaptureMode = .photo
+            
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+            
+            self.imagePicker.allowsEditing = false
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.navigationBar.isTranslucent = false
+            self.imagePicker.navigationBar.barTintColor = ColorsPallete.navigationBarColor
+            self.imagePicker.navigationBar.tintColor =  .white
+            self.imagePicker.navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white
+            ]
+            
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            
+            alertVC.dismiss(animated: true, completion: nil)
+        }
+        
+        alertVC.addAction(cameraAction)
+        alertVC.addAction(photoLibraryAction)
+        alertVC.addAction(cancelAction)
+        
+        self.present(alertVC, animated: true, completion: nil)
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
         self.profileImage.image = chosenImage
         
         dismiss(animated: true, completion: nil)
@@ -184,14 +180,15 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

@@ -120,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         profilePhotoUrl = userDict?["profileImageUrl"] as! String
                         
-                        let imageView = UIImageView()
+                        
                         var userPhoto: UIImage!
                         self.fastLoginImageView.sd_setImage(with: URL(string: profilePhotoUrl), completed: { (image, error, cache, url) in
                             
@@ -187,8 +187,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     @IBAction func singUpAction(_ sender: Any) {
+        
         self.navigationController?.isNavigationBarHidden = false
         self.performSegue(withIdentifier: "loginToRegister", sender: nil)
+        
     }
     
     

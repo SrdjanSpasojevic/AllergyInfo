@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2DD17020A234F000874D37 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD16F20A234F000874D37 /* UserData.swift */; };
 		2AB61DC42065A328009832F3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC32065A328009832F3 /* Color+Extensions.swift */; };
 		2AB61DC62065A4D6009832F3 /* ColorsPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */; };
 		2AF21A73201CF957008BA316 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF21A72201CF957008BA316 /* QuestionsViewController.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2DD16F20A234F000874D37 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		2AB61DC32065A328009832F3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPallete.swift; sourceTree = "<group>"; };
 		2AF21A72201CF957008BA316 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				2AFEA45B1FE7177D007DA5EA /* Global.swift */,
 				2AFEA4631FE7393D007DA5EA /* WeatherData.swift */,
 				2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */,
+				2A2DD16F20A234F000874D37 /* UserData.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				2AF21A73201CF957008BA316 /* QuestionsViewController.swift in Sources */,
 				A2D764431EB20502000FB20D /* LoginViewController.swift in Sources */,
 				A2B011591F94D7BF00B9A447 /* TPKeyboardAvoidingTableView.m in Sources */,
+				2A2DD17020A234F000874D37 /* UserData.swift in Sources */,
 				2AFEA4601FE71B82007DA5EA /* UIView+Extensions.swift in Sources */,
 				2AB61DC42065A328009832F3 /* Color+Extensions.swift in Sources */,
 				A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */,

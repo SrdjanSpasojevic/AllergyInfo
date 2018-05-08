@@ -43,10 +43,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APL-Ds-qHv" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-87-i1L">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-nS-VbN">
                                                 <rect key="frame" x="16" y="8" width="343" height="462"/>
@@ -273,7 +273,7 @@
                         <outlet property="passwordTextField" destination="dKH-Nu-mh8" id="BpL-TY-Hwj"/>
                         <outlet property="profileImage" destination="JN2-7j-zLP" id="Hx6-aY-BUq"/>
                         <outlet property="singUpButton" destination="nCU-tc-KpE" id="Egd-Gr-VAL"/>
-                        <segue destination="YtY-cR-GF2" kind="show" identifier="singUpToQuestions" id="ozM-d5-32v"/>
+                        <segue destination="YtY-cR-GF2" kind="show" identifier="singUpToQuestion" id="2qd-MK-MbF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfT-r9-Vxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,17 +288,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-a6-aPo">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-a6-aPo" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us bit something about yourself" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-v9-GGo">
-                                        <rect key="frame" x="20" y="50" width="335" height="73"/>
-                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="20" y="50.000000000000007" width="335" height="92.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywd-R1-ROX">
-                                        <rect key="frame" x="20" y="166" width="335" height="335"/>
+                                        <rect key="frame" x="20" y="185.66666666666663" width="335" height="335"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Do they occur somethis or all the time?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10p-79-O8w" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                 <rect key="frame" x="24" y="260" width="282" height="55"/>
@@ -329,7 +329,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="If Yes, which?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH4-Eo-ICj" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="24" y="140" width="282" height="55"/>
+                                                <rect key="frame" x="24" y="140.00000000000003" width="282" height="55"/>
                                                 <color key="backgroundColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -385,7 +385,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="10p-79-O8w" secondAttribute="trailing" constant="29" id="3G0-hi-1WI"/>
                                             <constraint firstItem="uH4-Eo-ICj" firstAttribute="leading" secondItem="ywd-R1-ROX" secondAttribute="leading" constant="24" id="90n-ri-n6u"/>
@@ -399,13 +399,29 @@
                                             <constraint firstItem="sZO-AO-vbs" firstAttribute="top" secondItem="ywd-R1-ROX" secondAttribute="top" constant="25" id="xzl-aI-h18"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-Cc-O2B">
+                                        <rect key="frame" x="147" y="563.66666666666663" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.29411764709999999" green="0.1647058824" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="boK-F4-eIg"/>
+                                            <constraint firstAttribute="height" constant="80" id="k3g-WM-q30"/>
+                                        </constraints>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="finishSingUpAction:" destination="YtY-cR-GF2" eventType="touchUpInside" id="NKv-6c-tA0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vy9-v9-GGo" secondAttribute="trailing" constant="20" id="8VN-bE-OsQ"/>
                                     <constraint firstAttribute="trailing" secondItem="ywd-R1-ROX" secondAttribute="trailing" constant="20" id="BcW-yj-0Tn"/>
+                                    <constraint firstItem="CWs-Cc-O2B" firstAttribute="centerX" secondItem="DCb-a6-aPo" secondAttribute="centerX" id="Bpz-xr-B6R"/>
                                     <constraint firstItem="vy9-v9-GGo" firstAttribute="top" secondItem="DCb-a6-aPo" secondAttribute="top" constant="50" id="GtC-3N-ZTV"/>
                                     <constraint firstAttribute="bottom" secondItem="ywd-R1-ROX" secondAttribute="bottom" constant="223" id="Hvo-L5-EXn"/>
                                     <constraint firstItem="ywd-R1-ROX" firstAttribute="top" secondItem="vy9-v9-GGo" secondAttribute="bottom" constant="43" id="Stq-41-glx"/>
+                                    <constraint firstAttribute="bottom" secondItem="CWs-Cc-O2B" secondAttribute="bottom" constant="100" id="V9r-jl-94H"/>
                                     <constraint firstItem="vy9-v9-GGo" firstAttribute="centerX" secondItem="DCb-a6-aPo" secondAttribute="centerX" id="eFr-XU-fNe"/>
                                     <constraint firstItem="vy9-v9-GGo" firstAttribute="leading" secondItem="DCb-a6-aPo" secondAttribute="leading" constant="20" id="iAS-21-w1i"/>
                                     <constraint firstItem="ywd-R1-ROX" firstAttribute="leading" secondItem="DCb-a6-aPo" secondAttribute="leading" constant="20" id="xJm-z7-x3H"/>
@@ -422,7 +438,12 @@
                         <viewLayoutGuide key="safeArea" id="3KP-PR-vgo"/>
                     </view>
                     <connections>
+                        <outlet property="finishButton" destination="CWs-Cc-O2B" id="QhP-9T-yIS"/>
                         <outlet property="tellUsInfoLabel" destination="vy9-v9-GGo" id="feG-gm-DAN"/>
+                        <outletCollection property="questionsLabels" destination="sZO-AO-vbs" collectionClass="NSMutableArray" id="Ay8-DR-iNf"/>
+                        <outletCollection property="questionsLabels" destination="uH4-Eo-ICj" collectionClass="NSMutableArray" id="xQk-T2-2ve"/>
+                        <outletCollection property="questionsLabels" destination="10p-79-O8w" collectionClass="NSMutableArray" id="vdo-hE-HMB"/>
+                        <segue destination="1Er-de-bnf" kind="presentation" identifier="questionsToLogin" id="BXA-Ap-sSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78Z-nC-11p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -438,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-ll-iKj">
-                                <rect key="frame" x="0.0" y="276" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="276" width="375" height="536"/>
                                 <color key="backgroundColor" red="0.12941176470588237" green="0.0078431372549019607" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -501,7 +522,7 @@
                         <constraints>
                             <constraint firstItem="yUh-ll-iKj" firstAttribute="top" secondItem="TOm-31-QUO" secondAttribute="bottom" constant="8" id="Aob-3L-2Jm"/>
                             <constraint firstItem="yUh-ll-iKj" firstAttribute="leading" secondItem="he6-Bi-OvN" secondAttribute="leading" id="BW1-RG-J67"/>
-                            <constraint firstItem="he6-Bi-OvN" firstAttribute="bottom" secondItem="yUh-ll-iKj" secondAttribute="bottom" id="Qyy-Oy-jcK"/>
+                            <constraint firstItem="he6-Bi-OvN" firstAttribute="bottom" secondItem="yUh-ll-iKj" secondAttribute="bottom" constant="-34" id="Qyy-Oy-jcK"/>
                             <constraint firstItem="9pH-cz-dyd" firstAttribute="centerX" secondItem="he6-Bi-OvN" secondAttribute="centerX" id="SRd-SH-gsU"/>
                             <constraint firstItem="yUh-ll-iKj" firstAttribute="top" secondItem="he6-Bi-OvN" secondAttribute="top" constant="232" id="bCV-Jg-F3X"/>
                             <constraint firstItem="he6-Bi-OvN" firstAttribute="trailing" secondItem="yUh-ll-iKj" secondAttribute="trailing" id="cEc-rO-tJJ"/>
@@ -528,7 +549,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq4-ar-nKw" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To0-WL-IqW">
                                         <rect key="frame" x="57" y="247" width="260" height="236"/>
@@ -1036,7 +1057,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1l5-xT-r8H" customClass="SpringTextView" customModule="Spring">
                                 <rect key="frame" x="16" y="8" width="343" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.29411764709999999" green="0.1647058824" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1211,5 +1232,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="n71-yW-86b"/>
+        <segue reference="BXA-Ap-sSK"/>
     </inferredMetricsTieBreakers>
 </document>
