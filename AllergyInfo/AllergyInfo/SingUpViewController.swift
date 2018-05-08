@@ -23,6 +23,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var locationTextField: HoshiTextField!
     @IBOutlet weak var singUpButton: UIButton!
     @IBOutlet weak var choosePhotoButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     let imagePicker = UIImagePickerController()
     
@@ -44,15 +45,23 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         ColorsPallete.setColors(to: [emailTextField, passwordTextField, confirmPasswordTextField, locationTextField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
         
         let yourBackImage = UIImage(named: "ic_arrow_back_white")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: yourBackImage, style: .plain, target: self, action: #selector(backTapped))
+        self.backButton.setImage(yourBackImage, for: .normal)
+        backButton.setTitle("", for: .normal)
+        
+        self.view.addSubview(backButton)
+        
+        
         self.choosePhotoButton.titleLabel?.text = "\nChose image"
         self.imagePicker.delegate = self
         
         self.profileImage.roundCorners(cornerRadius: self.profileImage.frame.size.width/2)
     }
     
-    func backTapped(){
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        
         self.navigationController?.popViewController(animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +73,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.isTranslucent = true
 //        self.navigationController?.view.backgroundColor = .clear
-//        self.navigationController?.isNavigationBarHidden = false
+       self.navigationController?.isNavigationBarHidden = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

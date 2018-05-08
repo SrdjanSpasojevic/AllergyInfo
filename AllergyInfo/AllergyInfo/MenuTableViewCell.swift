@@ -16,6 +16,8 @@ class MenuTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.controllerLabel.roundCorners(cornerRadius: 8)
+        
+        self.controllerLabel.backgroundColor = ColorsPallete.navigationBarLabelColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -26,7 +26,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.userProfilePhoto.layer.masksToBounds = true
         self.userProfilePhoto.layer.cornerRadius = self.userProfilePhoto.bounds.size.height / 2
         self.userProfilePhoto.layer.borderWidth = 3.0
-        self.userProfilePhoto.layer.borderColor = UIColor.lightGray.cgColor
+        self.userProfilePhoto.layer.borderColor = ColorsPallete.navigationBarLabelColor.cgColor
+        
+        self.view.backgroundColor = ColorsPallete.navigationBarColor
+        
         
         let userID = Auth.auth().currentUser?.uid
         Global.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -64,9 +67,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath as NSIndexPath?
         if indexPath.row == 3{
+            
             self.singOutUser()
+            
         }else{
+            
             sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+            
         }
         
     }
