@@ -64,6 +64,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.tableView.reloadData()
                 self.handleEmptyTableView()
             }
+            
             Global.stopActivity()
             AIAppState.sharedInstance.dataLoaded = hasData
         }

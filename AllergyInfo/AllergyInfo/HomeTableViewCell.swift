@@ -23,6 +23,8 @@ class HomeTableViewCell: UITableViewCell {
         self.cellBackgroundView.roundCorners(cornerRadius: 8.0)
         self.topView.clipsToBounds = true
         
+        self.topView.backgroundColor = ColorsPallete.navigationBarLabelColor
+        
         if #available(iOS 10.0, *) {
             
         } else {
