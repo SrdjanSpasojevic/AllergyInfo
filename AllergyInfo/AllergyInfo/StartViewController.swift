@@ -15,7 +15,7 @@ class StartViewController: SideMenuController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = ColorsPallete.startVCColor
+        self.view.backgroundColor = ColorsPallete.navigationBarColor
         
         
         SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu_icon")

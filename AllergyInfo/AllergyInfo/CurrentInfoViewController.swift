@@ -10,6 +10,7 @@ import UIKit
 
 class CurrentInfoViewController: UIViewController {
 
+    @IBOutlet weak var backgroundBlurView: UIVisualEffectView!
     @IBOutlet weak var backgroundHolderView: UIView!
     @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var weatherIcon: UIImageView!
@@ -21,16 +22,26 @@ class CurrentInfoViewController: UIViewController {
         self.backgroundHolderView.addDropShadow(color: UIColor.black, opacity: 1.0, offSet: CGSize(width: 1, height: 1), radius: 10, scale: true)
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dissmissVC))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.backgroundBlurView.addGestureRecognizer(tapGesture)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let dataObject = self.dataObject{
+        if let dataObject = self.dataObject
+        {
             self.navigationItem.title = dataObject.date
-            if let icon = dataObject.iconType{
+            
+            if let icon = dataObject.iconType
+            {
                 self.weatherIcon.image = UIImage(named: icon)
             }
+            
             self.todayLabel.text = dataObject.dayDescription
         }
         
@@ -40,7 +51,16 @@ class CurrentInfoViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func dissmissAction(_ sender: Any)
+    {
+        self.dissmissVC()
+    }
+    
+    @objc private func dissmissVC()
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

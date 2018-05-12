@@ -15,7 +15,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     let segues = ["showCenterController1", "showCenterController3", "showCenterController4", "logOutSegue"]
     let controllerNames = ["Home", "Settings", "About", "Log out"]
-    var selectedIndexPath : NSIndexPath?
+    var selectedIndexPath : IndexPath?
     
     
     @IBOutlet weak var userProfilePhoto: UIImageView!
@@ -30,6 +30,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.view.backgroundColor = ColorsPallete.navigationBarColor
         
+        self.selectedIndexPath = IndexPath(row: 0, section: 0)
         
         let userID = Auth.auth().currentUser?.uid
         Global.DB_REF_URL.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -65,30 +66,59 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedIndexPath = indexPath as NSIndexPath?
-        if indexPath.row == 3{
-            
-            self.singOutUser()
-            
-        }else{
-            
-            sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
-            
+        
+        if self.selectedIndexPath != nil
+        {
+            if self.selectedIndexPath?.row != indexPath.row
+            {
+                if indexPath.row == 3
+                {
+                    self.singOutUser()
+                }
+                else
+                {
+                    self.sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
+                }
+                
+                self.selectedIndexPath = indexPath
+            }
         }
         
     }
     
     private func singOutUser(){
         //MARK: Not sure this works
-        Global.deleteDictionaryFromDisk(withKey: "loggedInUser") { (finishedWithSuccess) in
-            if finishedWithSuccess{
-                try!Auth.auth().signOut()
-                let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController")
-                self.present(loginVC!, animated: true, completion: nil)
-            }else{
-                Global.displayClassicAlert(message: "There is an error with sing out\nPlease try later", viewController: self)
+        
+        let alertVC = UIAlertController(title: nil, message: "Are you sure you want to Log out?", preferredStyle: .alert)
+        
+        let actionYES = UIAlertAction(title: "YES", style: .default) { (action) in
+            
+            Global.deleteDictionaryFromDisk(withKey: "loggedInUser") { (finishedWithSuccess) in
+                if finishedWithSuccess
+                {
+                    try!Auth.auth().signOut()
+                    let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+                    self.present(loginVC!, animated: true, completion: nil)
+                }
+                else
+                {
+                    Global.displayClassicAlert(message: "There is an error with sing out\nPlease try later", viewController: self)
+                }
             }
+            
         }
+        
+        let actionNO = UIAlertAction(title: "NO", style: .destructive) { (action) in
+            
+            alertVC.dismiss(animated: true, completion: nil)
+            
+        }
+        
+        alertVC.addAction(actionYES)
+        alertVC.addAction(actionNO)
+        
+       // self.present(alertVC, animated: true, completion: nil)
+        self.view.window?.rootViewController?.present(alertVC, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
