@@ -67,20 +67,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == 3
+        {
+            self.singOutUser()
+            return
+        }
+        
         if self.selectedIndexPath != nil
         {
             if self.selectedIndexPath?.row != indexPath.row
             {
-                if indexPath.row == 3
-                {
-                    self.singOutUser()
-                }
-                else
-                {
-                    self.sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
-                }
-                
+                self.sideMenuController?.performSegue(withIdentifier: self.segues[indexPath.row], sender: nil)
                 self.selectedIndexPath = indexPath
+            }
+            else
+            {
+                self.sideMenuController?.toggle()
             }
         }
         
@@ -89,9 +91,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func singOutUser(){
         //MARK: Not sure this works
         
-        let alertVC = UIAlertController(title: nil, message: "Are you sure you want to Log out?", preferredStyle: .alert)
+        let alertVC = UIAlertController(title: nil, message: "Are you sure you want to Log out?", preferredStyle: .actionSheet)
         
-        let actionYES = UIAlertAction(title: "YES", style: .default) { (action) in
+        let actionYES = UIAlertAction(title: "Yes", style: .default) { (action) in
             
             Global.deleteDictionaryFromDisk(withKey: "loggedInUser") { (finishedWithSuccess) in
                 if finishedWithSuccess
@@ -108,7 +110,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
-        let actionNO = UIAlertAction(title: "NO", style: .destructive) { (action) in
+        let actionNO = UIAlertAction(title: "No", style: .destructive) { (action) in
             
             alertVC.dismiss(animated: true, completion: nil)
             
@@ -117,8 +119,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         alertVC.addAction(actionYES)
         alertVC.addAction(actionNO)
         
-       // self.present(alertVC, animated: true, completion: nil)
-        self.view.window?.rootViewController?.present(alertVC, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alertVC, animated: true, completion: nil)
+        }
+        
+        // animation is too slow
+        //self.view.window?.rootViewController?.present(alertVC, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
