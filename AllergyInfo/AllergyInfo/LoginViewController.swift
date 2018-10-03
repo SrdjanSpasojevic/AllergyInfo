@@ -55,18 +55,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if let userDict = Global.retrieveDictionaryFromDisk(withKey: "loggedInUser"),
             let username = userDict["username"] as? String,
-            let password = userDict["password"] as? String{
+            let password = userDict["password"] as? String
+        {
             
             self.firebaseUserLogin(username: username, password: password)
             
         } else if let fastLogin = Global.retrieveDictionaryFromDisk(withKey: "fastLogin"),
             let username = fastLogin["username"] as? String,
-            let userPhoto = fastLogin["profileImage"] as? UIImage{
+            let userPhoto = fastLogin["profileImage"] as? UIImage
+        {
             
             self.fastLoginImageView.image = userPhoto
             self.fastLoginUserLabel.text = "\(username) Fast Sign In?"
             
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,7 +149,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 
                             } else {
                                 
-                                print(error)
+                                print(error?.localizedDescription)
                                 Global.stopActivity()
                             }
                             

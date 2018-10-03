@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F09A0072165529F00925DE4 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F09A0062165529F00925DE4 /* LocalNotificationManager.swift */; };
 		2A2DD17020A234F000874D37 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD16F20A234F000874D37 /* UserData.swift */; };
 		2AB61DC42065A328009832F3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC32065A328009832F3 /* Color+Extensions.swift */; };
 		2AB61DC62065A4D6009832F3 /* ColorsPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F09A0062165529F00925DE4 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		1E57F4E27DD9171446C8CC79 /* Pods_AllergyInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllergyInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2DD16F20A234F000874D37 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		2AB61DC32065A328009832F3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F09A0052165527C00925DE4 /* Local Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				0F09A0062165529F00925DE4 /* LocalNotificationManager.swift */,
+			);
+			name = "Local Notifications";
+			sourceTree = "<group>";
+		};
 		2AB61DC72065A75C009832F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 		A2BF40931F6028C1002E9E38 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				0F09A0052165527C00925DE4 /* Local Notifications */,
 				2AB61DC72065A75C009832F3 /* Extensions */,
 				A2B0114D1F94D5ED00B9A447 /* TPKeyboardAvoiding */,
 				A270D9EA1E82D51A007305E3 /* Assets.xcassets */,
@@ -503,6 +514,7 @@
 				A28C66AA1EB0C7650070471D /* SecondViewController.swift in Sources */,
 				A2B011581F94D7BD00B9A447 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				A2B011571F94D7BA00B9A447 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				0F09A0072165529F00925DE4 /* LocalNotificationManager.swift in Sources */,
 				A28C66B51EB0ED0F0070471D /* SettingsViewController.swift in Sources */,
 				A270D9E61E82D51A007305E3 /* StartViewController.swift in Sources */,
 				A270D9E41E82D51A007305E3 /* AppDelegate.swift in Sources */,

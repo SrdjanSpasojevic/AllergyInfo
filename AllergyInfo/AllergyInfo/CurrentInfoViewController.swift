@@ -28,6 +28,7 @@ class CurrentInfoViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         self.backgroundBlurView.addGestureRecognizer(tapGesture)
         
+        LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 60)
     }
     
     override func viewWillAppear(_ animated: Bool) {

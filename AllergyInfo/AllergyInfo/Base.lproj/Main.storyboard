@@ -1122,10 +1122,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1l5-xT-r8H" customClass="SpringTextView" customModule="Spring">
-                                <rect key="frame" x="16" y="8" width="343" height="216"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1l5-xT-r8H" customClass="SpringTextView" customModule="Spring">
+                                <rect key="frame" x="16" y="8" width="343" height="87.666666666666671"/>
+                                <string key="text">Allergy Info is a faculty project created by Srdjan Spasojevic. The purpose of the app is to help people with machine learning by updating, informing and advising. </string>
                                 <color key="textColor" red="0.29411764709999999" green="0.1647058824" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1150,11 +1149,10 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="88X-re-Acb" customClass="SpringTextView" customModule="Spring">
-                                <rect key="frame" x="16" y="237" width="343" height="346"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="88X-re-Acb" customClass="SpringTextView" customModule="Spring">
+                                <rect key="frame" x="16" y="111.66666666666664" width="343" height="177.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Application will be interacting with the Users constantly so the Users can adapt to the App. App will give predictions based on previous results and try to give the best result possible. Note that answers (which includes tips, advices, alerts) will sometimes be possibly unhandled the right way. That's why the system needs Users to interact with it so the system can provide the best result possible back to the Users.</string>
                                 <color key="textColor" red="0.29411764709999999" green="0.1647058824" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1181,6 +1179,14 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="88X-re-Acb" firstAttribute="top" secondItem="1l5-xT-r8H" secondAttribute="bottom" constant="16" id="4Rk-ps-GeE"/>
+                            <constraint firstItem="88X-re-Acb" firstAttribute="leading" secondItem="fF8-20-rhn" secondAttribute="leading" constant="16" id="KTX-3G-xGV"/>
+                            <constraint firstAttribute="trailing" secondItem="88X-re-Acb" secondAttribute="trailing" constant="16" id="P1k-RL-F5V"/>
+                            <constraint firstItem="1l5-xT-r8H" firstAttribute="top" secondItem="AE3-sj-xAg" secondAttribute="bottom" constant="8" id="aAu-Al-zlw"/>
+                            <constraint firstAttribute="trailing" secondItem="1l5-xT-r8H" secondAttribute="trailing" constant="16" id="gDL-B6-wCH"/>
+                            <constraint firstItem="1l5-xT-r8H" firstAttribute="leading" secondItem="fF8-20-rhn" secondAttribute="leading" constant="16" id="q9e-AM-zrB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BIz-ml-9Yq"/>
                 </viewController>
@@ -1299,7 +1305,6 @@
         <image name="rain" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LyK-xb-zRT"/>
         <segue reference="BvE-BQ-lmc"/>
         <segue reference="BXA-Ap-sSK"/>
     </inferredMetricsTieBreakers>

@@ -8,9 +8,10 @@
 
 import UIKit
 import SideMenuController
+import UserNotifications
 
 
-class StartViewController: SideMenuController {
+class StartViewController: SideMenuController, UNUserNotificationCenterDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,25 @@ class StartViewController: SideMenuController {
         self.performSegue(withIdentifier: "showCenterController1", sender: nil)
         
         self.performSegue(withIdentifier: "containSideMenu", sender: nil)
+        
+        if #available(iOS 10.0, *) {
+            //Seeking permission of the user to display app notifications
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge], completionHandler: {didAllow,Error in })
+            UNUserNotificationCenter.current().delegate = self
+            
+        }
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        completionHandler([.alert, .sound, .badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    {
+        completionHandler()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -31,9 +31,12 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.refreshControl.attributedTitle = NSAttributedString(string: "Reloading...")
         self.refreshControl.tintColor = UIColor.gray
         
-        if #available(iOS 10.0, *) {
+        if #available(iOS 10.0, *)
+        {
             self.tableView.refreshControl = refreshControl
-        } else {
+        }
+        else
+        {
             self.tableView.addSubview(refreshControl)
         }
         
@@ -43,22 +46,28 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         UIApplication.shared.statusBarStyle = .lightContent
         
-        if !AIAppState.sharedInstance.dataLoaded{
+        
+        if !AIAppState.sharedInstance.dataLoaded
+        {
             self.getData()
         }
+        
+        LocalNotificationManager.engine.createNotification(title: "Hello", body: "Welcome to Allergy Info System. System that will help you overcome allergies. Enjoy!", categoryID: .welcome, fireIn: 5)
     }
     
-    @objc private func getData(){
-        //Global.startCustomActivity(view: self.view, type: .ballScaleMultiple)
+    @objc private func getData()
+    {
         AIAppState.sharedInstance.fetchData { (hasData) in
-            if hasData{
+            if hasData
+            {
                 print("Data loaded")
                 self.refreshControl.endRefreshing()
                 self.tableView.backgroundView?.isHidden = true
                 self.tableView.reloadData()
                 self.addDaysInAdvance()
-                //self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
-            }else{
+            }
+            else
+            {
                 print("Error occured")
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
@@ -117,6 +126,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: Global.homeCellIdentifier) as! HomeTableViewCell
+        
+        cell.selectionStyle = .none
         
         cell.dateLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].date
         
