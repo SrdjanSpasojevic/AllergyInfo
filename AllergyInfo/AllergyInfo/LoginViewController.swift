@@ -64,7 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let userPhoto = fastLogin["profileImage"] as? UIImage{
             
             self.fastLoginImageView.image = userPhoto
-            self.fastLoginUserLabel.text = "\(username) Fast Sing In?"
+            self.fastLoginUserLabel.text = "\(username) Fast Sign In?"
             
         }
     }
@@ -122,6 +122,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         
                         var userPhoto: UIImage!
+                        
+                        self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                        Global.stopActivity()
+                        
                         self.fastLoginImageView.sd_setImage(with: URL(string: profilePhotoUrl), completed: { (image, error, cache, url) in
                             
                             if error == nil {
@@ -137,7 +141,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 
                                 Global.writeArchiveToDisk(withDict: fastLoginDict, withKey: "fastLogin")
                                 
-                                self.performSegue(withIdentifier: "showStartViewController", sender: nil)
+                               
                                 
                             } else {
                                 
@@ -172,23 +176,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func singInAction(_ sender: Any) {
         self.view.endEditing(true)
-        if self.usernameField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
+        
+        if self.usernameField.text!.trimmingCharacters(in: .whitespaces).isEmpty && self.passwordField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        {
             self.userNameView.animation = "shake"
             self.userNameView.animate()
-        }else if self.passwordField.text!.trimmingCharacters(in: .whitespaces).isEmpty{
             self.passwordView.animation = "shake"
             self.passwordView.animate()
-        }else{
-            if Global.validateEmailWithString(email: self.usernameField.text!) == true{
+        }
+        
+        if self.usernameField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        {
+            self.userNameView.animation = "shake"
+            self.userNameView.animate()
+        }
+        else if self.passwordField.text!.trimmingCharacters(in: .whitespaces).isEmpty
+        {
+            self.passwordView.animation = "shake"
+            self.passwordView.animate()
+        }else
+        {
+            if Global.validateEmailWithString(email: self.usernameField.text!) == true
+            {
                 self.firebaseUserLogin(username: self.usernameField.text!, password: self.passwordField.text!)
-            }else{
+            }
+            else
+            {
                self.displayClassicAlert(message: "Please enter valid credentials", viewController: self)
             }
         }
     }
     @IBAction func singUpAction(_ sender: Any) {
         
-        self.navigationController?.isNavigationBarHidden = false
         self.performSegue(withIdentifier: "loginToRegister", sender: nil)
         
     }

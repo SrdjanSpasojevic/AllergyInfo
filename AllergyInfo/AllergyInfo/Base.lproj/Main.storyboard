@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gYr-PU-mX4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gYr-PU-mX4">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="1996" y="123.68815592203899"/>
         </scene>
-        <!--Sing up-->
+        <!--Sign up-->
         <scene sceneID="IDU-3i-lop">
             <objects>
-                <viewController title="Sing up" id="j4I-JR-dFa" customClass="SingUpViewController" customModule="AllergyInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign up" id="j4I-JR-dFa" customClass="SingUpViewController" customModule="AllergyInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fdY-22-XUY"/>
                         <viewControllerLayoutGuide type="bottom" id="IKI-3D-rMO"/>
@@ -95,7 +93,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4x6-2n-LS2">
-                                                        <rect key="frame" x="95" y="93" width="152" height="121"/>
+                                                        <rect key="frame" x="95.666666666666686" y="93" width="152" height="121"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="152" id="74j-k0-8ju"/>
                                                             <constraint firstAttribute="height" constant="121" id="ICj-1i-UbU"/>
@@ -219,20 +217,21 @@
                                                     <constraint firstItem="dKH-Nu-mh8" firstAttribute="leading" secondItem="PJe-Q8-mDA" secondAttribute="leading" id="dnl-wC-ISa"/>
                                                     <constraint firstItem="hui-xJ-vTK" firstAttribute="leading" secondItem="dh0-uC-dlv" secondAttribute="leading" id="fZk-3V-lZ7"/>
                                                     <constraint firstItem="dKH-Nu-mh8" firstAttribute="trailing" secondItem="PJe-Q8-mDA" secondAttribute="trailing" id="oht-DK-dQO"/>
+                                                    <constraint firstItem="KU0-tj-rGM" firstAttribute="top" secondItem="BgW-nS-VbN" secondAttribute="topMargin" id="uZX-dI-YAN"/>
                                                     <constraint firstItem="PJe-Q8-mDA" firstAttribute="top" secondItem="4x6-2n-LS2" secondAttribute="bottom" constant="-10" id="vVZ-oR-ufS"/>
                                                     <constraint firstItem="dh0-uC-dlv" firstAttribute="top" secondItem="dKH-Nu-mh8" secondAttribute="bottom" constant="8" id="xJJ-c2-9vO"/>
                                                     <constraint firstItem="hui-xJ-vTK" firstAttribute="top" secondItem="dh0-uC-dlv" secondAttribute="bottom" constant="8" id="yPu-sR-ztI"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCU-tc-KpE">
-                                                <rect key="frame" x="62" y="520" width="250" height="40"/>
+                                                <rect key="frame" x="62.666666666666657" y="520" width="249.99999999999997" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.98437532849999998" blue="0.99914049429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="hsK-yD-J8r"/>
                                                     <constraint firstAttribute="height" constant="40" id="vql-1X-v4H"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Sing Up">
+                                                <state key="normal" title="Sign up">
                                                     <color key="titleColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -271,6 +270,7 @@
                             <constraint firstItem="KU0-tj-rGM" firstAttribute="top" secondItem="fdY-22-XUY" secondAttribute="bottom" constant="16" id="wAl-Ee-mAu"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="KU0-tj-rGM" id="aZe-Wl-o82"/>
                         <outlet property="choosePhotoButton" destination="4x6-2n-LS2" id="VK4-yE-QF2"/>
@@ -411,7 +411,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-Cc-O2B">
-                                        <rect key="frame" x="147" y="563.66666666666663" width="80" height="80"/>
+                                        <rect key="frame" x="147.66666666666666" y="563.66666666666663" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.29411764709999999" green="0.1647058824" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="boK-F4-eIg"/>
@@ -569,7 +569,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To0-WL-IqW">
-                                        <rect key="frame" x="57" y="247" width="260" height="236"/>
+                                        <rect key="frame" x="57.666666666666657" y="247" width="260" height="236"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwd-B6-wSt" customClass="SpringView" customModule="Spring">
                                                 <rect key="frame" x="0.0" y="-2" width="260" height="65"/>
@@ -652,7 +652,7 @@
                                                 <rect key="frame" x="8" y="196" width="244" height="40"/>
                                                 <color key="backgroundColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="Sing In">
+                                                <state key="normal" title="Sign In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -676,7 +676,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orO-1N-WyJ">
-                                        <rect key="frame" x="57" y="491" width="260" height="103"/>
+                                        <rect key="frame" x="57.666666666666657" y="491" width="260" height="103"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-Yj-yQf">
                                                 <rect key="frame" x="21" y="41" width="154" height="21"/>
@@ -689,7 +689,7 @@
                                                 <rect key="frame" x="177" y="36" width="62" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="Sing up">
+                                                <state key="normal" title="Sign up">
                                                     <color key="titleColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -709,8 +709,8 @@
                                             <constraint firstAttribute="width" constant="129" id="Kfd-r3-3Tj"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Sing In? Just tap to Sing In.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-th-Oha">
-                                        <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Sign In? Just tap to Sign In..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-th-Oha">
+                                        <rect key="frame" x="8" y="8" width="359.66666666666669" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Gx7-zn-MsV"/>
                                         </constraints>
@@ -719,7 +719,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24T-kJ-fCG">
-                                        <rect key="frame" x="8" y="173" width="359" height="21"/>
+                                        <rect key="frame" x="8" y="173" width="359.66666666666669" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="6zU-3W-9YC"/>
                                         </constraints>
@@ -728,7 +728,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVI-8k-sil">
-                                        <rect key="frame" x="8" y="8" width="359" height="181"/>
+                                        <rect key="frame" x="8" y="8" width="359.66666666666669" height="181"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="181" id="WtR-fP-NkA"/>
                                         </constraints>
@@ -779,7 +779,7 @@
                         <outlet property="userNameView" destination="Mwd-B6-wSt" id="gVy-gK-mcf"/>
                         <outlet property="usernameField" destination="HEf-aI-ZmH" id="i2I-9j-Boz"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showStartViewController" id="XRB-g8-onA"/>
-                        <segue destination="j4I-JR-dFa" kind="show" identifier="loginToRegister" id="LyK-xb-zRT"/>
+                        <segue destination="j4I-JR-dFa" kind="presentation" identifier="loginToRegister" id="LyK-xb-zRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PK-Iq-s7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -811,16 +811,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-aD-ncD">
-                                                    <rect key="frame" x="15" y="11" width="345" height="199"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="199.66666666666666"/>
                                                     <subviews>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-ZT-xRK">
-                                                            <rect key="frame" x="0.0" y="29" width="345" height="170"/>
+                                                            <rect key="frame" x="0.0" y="29" width="345" height="170.66666666666666"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4PD-5j-dcJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="170"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="170.66666666666666"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today is a rainy day outside, no need to wory about allergy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqd-KF-baa">
-                                                                        <rect key="frame" x="8" y="16" width="241" height="137"/>
+                                                                        <rect key="frame" x="8" y="16" width="241" height="138"/>
                                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="26"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1299,6 +1299,7 @@
         <image name="rain" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="LyK-xb-zRT"/>
         <segue reference="BvE-BQ-lmc"/>
         <segue reference="BXA-Ap-sSK"/>
     </inferredMetricsTieBreakers>

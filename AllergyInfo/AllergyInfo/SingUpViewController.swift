@@ -44,7 +44,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         ColorsPallete.setColors(to: [emailTextField, passwordTextField, confirmPasswordTextField, locationTextField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
         
-        let yourBackImage = UIImage(named: "ic_arrow_back_white")
+        let yourBackImage = UIImage(named: "icn_m_arrowdown_white")
         self.backButton.setImage(yourBackImage, for: .normal)
         backButton.setTitle("", for: .normal)
         
@@ -60,8 +60,8 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBAction func backButtonAction(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
-        
+        //self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

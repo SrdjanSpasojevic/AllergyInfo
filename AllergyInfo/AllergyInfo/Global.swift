@@ -99,15 +99,14 @@ class Global: NSObject
     
     static func deleteDictionaryFromDisk(withKey key: String, completion: @escaping (_ dataLoaded: Bool) -> Void){
         
-        if UserDefaults.standard.object(forKey: key) != nil{
-            
+        if UserDefaults.standard.object(forKey: key) != nil
+        {
             UserDefaults.standard.removeObject(forKey: key)
             completion(true)
-            
-        }else{
-            
+        }
+        else
+        {
             completion(false)
-            
         }
     }
     
