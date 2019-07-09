@@ -109,24 +109,19 @@ extension UIWindow {
 
 public extension UIViewController {
     
-    public var sideMenuController: SideMenuController?
-    {
+    public var sideMenuController: SideMenuController? {
         return sideMenuControllerForViewController(self)
     }
     
     fileprivate func sideMenuControllerForViewController(_ controller : UIViewController) -> SideMenuController?
     {
-        if let sideController = controller as? SideMenuController
-        {
+        if let sideController = controller as? SideMenuController {
             return sideController
         }
         
-        if let parent = controller.parent
-        {
+        if let parent = controller.parent {
             return sideMenuControllerForViewController(parent)
-        }
-        else
-        {
+        } else {
             return nil
         }
     }

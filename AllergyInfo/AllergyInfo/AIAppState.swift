@@ -52,50 +52,54 @@ class AIAppState: NSObject {
         Global.startActivity(view: activityView)
         
         Auth.auth().createUser(withEmail: username, password: password, completion: { (user, error) in
-            if error == nil{
+            if error == nil {
                 let chosenImage = UIImageJPEGRepresentation(userImage, 0.5)
-                
-                Storage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
+                Storage.storage().reference().child("profilePhotos").child("\(user!.user.uid).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
                     
-                    if error == nil{
-                        let userDict: [String : Any] = ["username" : username, "password" : password, "location" : location, "profileImageUrl" : "", "questions" : questions]
-                        Global.DB_REF_URL.child("Users").child(user!.user.uid).setValue(userDict, withCompletionBlock: { (error, db_ref) in
-                            
-                            if error == nil{
-                                
-                                Auth.auth().signIn(withEmail: user!.user.email!, password: password, completion: { (user, error) in
+                    if error == nil {
+                        Storage.storage().reference().child("profilePhotos").child("\(user!.user.uid).jpg").downloadURL(completion: { (urlRaw, error) in
+                            if let url = urlRaw {
+                                let profileImageURLString = url.absoluteString
+                                let userDict: [String : Any] = ["username" : username, "password" : password, "location" : location, "profileImageUrl" : profileImageURLString, "questions" : questions]
+                                Global.DB_REF_URL.child("Users").child(user!.user.uid).setValue(userDict, withCompletionBlock: { (error, db_ref) in
                                     
                                     if error == nil{
-                                        Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                                            Global.stopActivity()
-                                            if error == nil
-                                            {
-                                                completion(true, nil)
-                                                print("Image uploaded")
-                                                
-                                            }
-                                            else
-                                            {
-                                                Auth.auth().currentUser?.delete(completion: { (error) in
+                                        
+                                        Auth.auth().signIn(withEmail: user!.user.email!, password: password, completion: { (user, error) in
+                                            
+                                            if error == nil{
+                                                Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                                                    Global.stopActivity()
                                                     if error == nil
                                                     {
-                                                        print("User removed")
+                                                        completion(true, nil)
+                                                        print("Image uploaded")
+                                                        
+                                                    }
+                                                    else
+                                                    {
+                                                        Auth.auth().currentUser?.delete(completion: { (error) in
+                                                            if error == nil
+                                                            {
+                                                                print("User removed")
+                                                            }
+                                                        })
+                                                        
+                                                        completion(false, error)
+                                                        
+                                                        print("Error on sending email: \(error?.localizedDescription ?? "Error occured")")
                                                     }
                                                 })
-                                                
-                                                completion(false, error)
-                                                
-                                                print("Error on sending email: \(error?.localizedDescription ?? "Error occured")")
                                             }
                                         })
                                     }
+                                    else
+                                    {
+                                        completion(false, error)
+                                        print("Error uploading image \(String(describing: error?.localizedDescription))")
+                                        
+                                    }
                                 })
-                            }
-                            else
-                            {
-                                completion(false, error)
-                                print("Error uploading image \(String(describing: error?.localizedDescription))")
-                                
                             }
                         })
                     }

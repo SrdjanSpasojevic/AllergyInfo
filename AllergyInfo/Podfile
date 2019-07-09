@@ -15,5 +15,4 @@ target 'AllergyInfo' do
   pod 'Firebase/Storage'
   pod 'NVActivityIndicatorView'
   pod 'SDWebImage', '~> 4.0'
-
 end

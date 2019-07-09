@@ -136,14 +136,14 @@ extension SideMenuController {
         
         let updated = sidePanel.frame != destinationFrame
         
-        UIView.panelAnimation(duration, animations: {
+        UIView.panelAnimation(duration, animations: { () -> () in
             let alpha = CGFloat(hidden ? 0 : 1)
             self.centerPanelOverlay.alpha = alpha
             self.set(statusUnderlayAlpha: alpha)
             self.sidePanel.frame = destinationFrame
-        }) {
-            completion?(updated)
-        }
+            }, completion: {
+                completion?(updated)
+        })
     }
     
     @objc func handleLeftSwipe(){

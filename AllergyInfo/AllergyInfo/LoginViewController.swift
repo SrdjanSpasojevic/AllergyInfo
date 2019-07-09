@@ -106,7 +106,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Global.startActivity(view: self.view)
         Auth.auth().signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
-                if true{
+                if user!.user.isEmailVerified {
                     
                     print("No error on login")
                     
@@ -118,13 +118,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     Global.writeArchiveToDisk(withDict: userDict, withKey: "loggedInUser")
                     
                     var profilePhotoUrl = ""
-                    Global.DB_REF_URL.child("Users").child("    ").observeSingleEvent(of: .value, with: { (snapshot) in
+                    Global.DB_REF_URL.child("Users").child(user!.user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                         
-                        guard let userDict = snapshot.value as? NSDictionary else {
-                            return
-                        }
+                        let userDict = snapshot.value as? NSDictionary
                         
-                        profilePhotoUrl = userDict["profileImageUrl"] as! String
+                        profilePhotoUrl = userDict?["profileImageUrl"] as! String
+                        
                         
                         var userPhoto: UIImage!
                         
@@ -160,7 +159,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }else{
                     Global.stopActivity()
                     if self.counter > 0{
-                        self.displayAlert(message: "Resend you verification email?", viewController: self)
+                        self.displayAlert(message: "Resend verification email?", viewController: self)
                         self.counter += 1
                     }else{
                         self.displayClassicAlert(message: "Please confirm you email adress", viewController: self)

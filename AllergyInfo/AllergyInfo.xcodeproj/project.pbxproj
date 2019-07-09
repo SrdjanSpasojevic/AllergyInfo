@@ -293,7 +293,7 @@
 				A270D9DC1E82D51A007305E3 /* Sources */,
 				A270D9DD1E82D51A007305E3 /* Frameworks */,
 				A270D9DE1E82D51A007305E3 /* Resources */,
-				97DB1DAA62CDB1A171D59EAA /* [CP] Embed Pods Frameworks */,
+				B3A9369FCBB68AE6716CDA6C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,10 +438,12 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97DB1DAA62CDB1A171D59EAA /* [CP] Embed Pods Frameworks */ = {
+		B3A9369FCBB68AE6716CDA6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo-frameworks.sh",
@@ -458,6 +460,8 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",

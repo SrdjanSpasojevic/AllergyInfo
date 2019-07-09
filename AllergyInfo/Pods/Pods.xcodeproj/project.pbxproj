@@ -6399,37 +6399,6 @@
 			};
 			name = Debug;
 		};
-		53FD58904328A78F010C71DF23EF8E4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1FA24C2F77E2A8CABB85C4532522CB /* TextFieldEffects.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
-				PRODUCT_MODULE_NAME = TextFieldEffects;
-				PRODUCT_NAME = TextFieldEffects;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		54650F2BC27BD90802D4BE4E603C8982 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD109D935B7F9D6F40A9AFE9E7EBEF3 /* FirebaseAuth.xcconfig */;
@@ -6879,6 +6848,38 @@
 			};
 			name = Release;
 		};
+		A5D6CA095BF0C082566078FCB12FADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14380E68EE182711E43EB91E6C0B55E /* IHKeyboardAvoiding.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding.modulemap";
+				PRODUCT_MODULE_NAME = IHKeyboardAvoiding;
+				PRODUCT_NAME = IHKeyboardAvoiding;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A85089C3C62E8FD5EC267CB2E9C812F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAD109D935B7F9D6F40A9AFE9E7EBEF3 /* FirebaseAuth.xcconfig */;
@@ -7147,6 +7148,37 @@
 			};
 			name = Debug;
 		};
+		C1D9CA4F5A101BC531A1871FC58FEF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1FA24C2F77E2A8CABB85C4532522CB /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				PRODUCT_MODULE_NAME = TextFieldEffects;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C2929E5819B59CEFF1FD98EF519931BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22D19E8C5321C39EFAD9B9BB47930993 /* FirebaseCore.xcconfig */;
@@ -7209,7 +7241,52 @@
 			};
 			name = Debug;
 		};
-		CE09133FEE9270A15591FA0E57D89ECF /* Debug */ = {
+		C64023D0E0E559EE08B0B16F78514389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1FA24C2F77E2A8CABB85C4532522CB /* TextFieldEffects.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
+				PRODUCT_MODULE_NAME = TextFieldEffects;
+				PRODUCT_NAME = TextFieldEffects;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6519D24B915A00A922E21E8BCC62C44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFFFB906E679EAA914F529CA6270AF9 /* FirebaseAuthInterop.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBE90654471F292C322E7E11B03AD40B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D14380E68EE182711E43EB91E6C0B55E /* IHKeyboardAvoiding.xcconfig */;
 			buildSettings = {
@@ -7233,23 +7310,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D6519D24B915A00A922E21E8BCC62C44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BFFFB906E679EAA914F529CA6270AF9 /* FirebaseAuthInterop.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -7284,38 +7348,6 @@
 			};
 			name = Debug;
 		};
-		E8540520DA579D9C8CE2BE5C84B22763 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1FA24C2F77E2A8CABB85C4532522CB /* TextFieldEffects.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TextFieldEffects/TextFieldEffects-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TextFieldEffects/TextFieldEffects.modulemap";
-				PRODUCT_MODULE_NAME = TextFieldEffects;
-				PRODUCT_NAME = TextFieldEffects;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		EB4CD429C58F1FB2E67E8987B612CA2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25FFEDE4E8F17F63EB8ABA3B783C651E /* FirebaseAnalytics.xcconfig */;
@@ -7328,38 +7360,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		F218FA1D003D6EC2962CC72D30D4B863 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D14380E68EE182711E43EB91E6C0B55E /* IHKeyboardAvoiding.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IHKeyboardAvoiding/IHKeyboardAvoiding.modulemap";
-				PRODUCT_MODULE_NAME = IHKeyboardAvoiding;
-				PRODUCT_NAME = IHKeyboardAvoiding;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		F9BC22F0989BA2E2E889726702547F03 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -7489,8 +7489,8 @@
 		7B2169795CAEBD41BC923FE19C4DF788 /* Build configuration list for PBXNativeTarget "TextFieldEffects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53FD58904328A78F010C71DF23EF8E4C /* Debug */,
-				E8540520DA579D9C8CE2BE5C84B22763 /* Release */,
+				C1D9CA4F5A101BC531A1871FC58FEF0E /* Debug */,
+				C64023D0E0E559EE08B0B16F78514389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -7543,8 +7543,8 @@
 		D40289C45A8C5204725AC4456EF9CC03 /* Build configuration list for PBXNativeTarget "IHKeyboardAvoiding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE09133FEE9270A15591FA0E57D89ECF /* Debug */,
-				F218FA1D003D6EC2962CC72D30D4B863 /* Release */,
+				DBE90654471F292C322E7E11B03AD40B /* Debug */,
+				A5D6CA095BF0C082566078FCB12FADEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
