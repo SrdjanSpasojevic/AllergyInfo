@@ -58,12 +58,12 @@ class AIAppState: NSObject {
                 Storage.storage().reference().child("profilePhotos").child("\(NSUUID().uuidString).jpg").putData(chosenImage!, metadata: nil, completion: { (metaData, error) in
                     
                     if error == nil{
-                        
-                        Global.DB_REF_URL.child("Users").child(user!.uid).setValue(["username" : username, "password" : password, "location" : location, "profileImageUrl" : metaData!.downloadURL()!.absoluteString, "questions" : questions], withCompletionBlock: { (error, db_ref) in
+                        let userDict: [String : Any] = ["username" : username, "password" : password, "location" : location, "profileImageUrl" : "", "questions" : questions]
+                        Global.DB_REF_URL.child("Users").child(user!.user.uid).setValue(userDict, withCompletionBlock: { (error, db_ref) in
                             
                             if error == nil{
                                 
-                                Auth.auth().signIn(withEmail: user!.email!, password: password, completion: { (user, error) in
+                                Auth.auth().signIn(withEmail: user!.user.email!, password: password, completion: { (user, error) in
                                     
                                     if error == nil{
                                         Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in

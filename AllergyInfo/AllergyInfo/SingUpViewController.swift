@@ -148,9 +148,9 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             self.imagePicker.navigationBar.isTranslucent = false
             self.imagePicker.navigationBar.barTintColor = ColorsPallete.navigationBarColor
             self.imagePicker.navigationBar.tintColor =  .white
-            self.imagePicker.navigationBar.titleTextAttributes = [
-                NSForegroundColorAttributeName : UIColor.white
-            ]
+//            self.imagePicker.navigationBar.titleTextAttributes = [
+//                NSAttributedStringKey.foregroundColorme : UIColor.white
+//            ]
             
             self.present(self.imagePicker, animated: true, completion: nil)
         }

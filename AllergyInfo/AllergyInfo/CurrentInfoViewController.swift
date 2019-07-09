@@ -21,7 +21,7 @@ class CurrentInfoViewController: UIViewController {
         self.backgroundHolderView.roundCorners(cornerRadius: 15)
         self.backgroundHolderView.addDropShadow(color: UIColor.black, opacity: 1.0, offSet: CGSize(width: 1, height: 1), radius: 10, scale: true)
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)]
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dissmissVC))
         tapGesture.numberOfTapsRequired = 1

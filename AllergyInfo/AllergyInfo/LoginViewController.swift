@@ -106,7 +106,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         Global.startActivity(view: self.view)
         Auth.auth().signIn(withEmail: username, password: password, completion: { (user, error) in
             if error == nil{
-                if user!.isEmailVerified{
+                if true{
                     
                     print("No error on login")
                     
@@ -118,12 +118,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     Global.writeArchiveToDisk(withDict: userDict, withKey: "loggedInUser")
                     
                     var profilePhotoUrl = ""
-                    Global.DB_REF_URL.child("Users").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                    Global.DB_REF_URL.child("Users").child("    ").observeSingleEvent(of: .value, with: { (snapshot) in
                         
-                        let userDict = snapshot.value as? NSDictionary
+                        guard let userDict = snapshot.value as? NSDictionary else {
+                            return
+                        }
                         
-                        profilePhotoUrl = userDict?["profileImageUrl"] as! String
-                        
+                        profilePhotoUrl = userDict["profileImageUrl"] as! String
                         
                         var userPhoto: UIImage!
                         
