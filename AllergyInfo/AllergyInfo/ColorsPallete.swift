@@ -12,32 +12,27 @@ import TextFieldEffects
 class ColorsPallete: UIColor {
     
     enum Options {
-        
         case backgroundColor
         case titleColor
-        
     }
     
     typealias Map = [EntryPoint : UIColor]
     
     enum EntryPoint {
-        
         case baseColor
         case navigationBarColor
         case navigationBarLabelColor
-        case labelColor
+        case labelTintColor
         case startVCColor
     }
     
     
     private static var colorMap: Map  = [
-        
         .baseColor: UIColor.init(hex: "B3DEC1"),
         .navigationBarColor: UIColor.init(hex: "210124"),
         .navigationBarLabelColor: UIColor.init(hex: "750D37"),
-        .labelColor: UIColor.init(hex: "FEFFFE"),
+        .labelTintColor: UIColor.init(hex: "FEFFFE"),
         .startVCColor: UIColor.init(hex: "E5FCF5")
-    
     ]
     
     static func setColors(to views: [Any], color: UIColor, withOption option: Options) {
@@ -85,8 +80,8 @@ class ColorsPallete: UIColor {
         return self.colorMap[.navigationBarLabelColor] ?? .white
     }
     
-    static var labelColor: UIColor {
-        return self.colorMap[.labelColor] ?? .white
+    static var labelTintColor: UIColor {
+        return self.colorMap[.labelTintColor] ?? .white
     }
     
     static var startVCColor: UIColor {

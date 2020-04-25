@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         ColorsPallete.setColors(to: [self.usernameField, self.passwordField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
         
-        ColorsPallete.setColors(to: [self.usernameField, self.passwordField, self.dontHaveAccountLabel, self.singUpButton], color: ColorsPallete.labelColor, withOption: .titleColor)
+        ColorsPallete.setColors(to: [self.usernameField, self.passwordField, self.dontHaveAccountLabel, self.singUpButton], color: ColorsPallete.labelTintColor, withOption: .titleColor)
         
         self.usernameField.delegate = self
         self.passwordField.delegate = self
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.fastLoginUserLabel.text = ""
         
         self.singInButton.backgroundColor = ColorsPallete.navigationBarLabelColor
-        self.singInButton.setTitleColor(ColorsPallete.labelColor, for: .normal)
+        self.singInButton.setTitleColor(ColorsPallete.labelTintColor, for: .normal)
         self.singInButton.roundCorners(cornerRadius: 20.0)
         
         if let userDict = Global.retrieveDictionaryFromDisk(withKey: "loggedInUser"),

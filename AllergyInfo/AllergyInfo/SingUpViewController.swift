@@ -39,7 +39,7 @@ class SingUpViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.locationTextField.delegate = self
         
         self.singUpButton.backgroundColor = ColorsPallete.navigationBarLabelColor
-        self.singUpButton.setTitleColor(ColorsPallete.labelColor, for: .normal)
+        self.singUpButton.setTitleColor(ColorsPallete.labelTintColor, for: .normal)
         self.singUpButton.roundCorners(cornerRadius: 20.0)
         
         ColorsPallete.setColors(to: [emailTextField, passwordTextField, confirmPasswordTextField, locationTextField], color: ColorsPallete.navigationBarColor, withOption: .backgroundColor)
