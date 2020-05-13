@@ -51,8 +51,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             self.getData()
         }
-        
-        LocalNotificationManager.engine.createNotification(title: "Hello", body: "Welcome to Allergy Info System. System that will help you overcome allergies. Enjoy!", categoryID: .welcome, fireIn: 5)
     }
     
     @objc private func getData()
@@ -96,6 +94,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }else{
                 let addDate = (Calendar.current as NSCalendar).date(byAdding: .day, value: i, to: Date(), options: [])!
                 AIAppState.sharedInstance.dataSource[i].date = self.formatDate(date: addDate)
+            }
+        }
+        for day in AIAppState.sharedInstance.dataSource {
+            if day.weatherType == .bad {
+                LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
             }
         }
     }

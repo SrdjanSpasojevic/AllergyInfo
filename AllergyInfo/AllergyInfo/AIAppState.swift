@@ -33,7 +33,7 @@ class AIAppState: NSObject {
                 self.dataSource.append(WeatherData.init(dict: dict[dayOneKey] as! NSDictionary))
                 self.dataSource.append(WeatherData.init(dict: dict[dayTwoKey] as! NSDictionary))
                 self.dataSource.append(WeatherData.init(dict: dict[dayThreeKey] as! NSDictionary))
-                self.dataSource.append(WeatherData.init(dict: dict[dayFour] as! NSDictionary))
+                self.dataSource.append(WeatherData.init(dict: dict[dayFourKey] as! NSDictionary))
                 
                 if self.dataSource.isEmpty{
                     completion(false)

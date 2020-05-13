@@ -16,13 +16,22 @@ enum NotificationCategorie: String
     case dailyReport = "dailyReport"
 }
 
+class NotificationRequest: NSObject {
+    var request: UNNotificationRequest
+    var isNotificationSeen: Bool = false
+    
+    init(request: UNNotificationRequest) {
+        self.request = request
+    }
+}
+
 class LocalNotificationManager: NSObject
 {
     var badgeCountNumber = 0
     
     static let engine = LocalNotificationManager()
     
-    private var notificationRequests: [UNNotificationRequest] = []
+    private var notificationRequests: [NotificationRequest] = []
     
     /**
      Mechanism for creating and firing local notifications.
@@ -34,20 +43,18 @@ class LocalNotificationManager: NSObject
     
     public func createNotification(title: String, body: String, categoryID: NotificationCategorie, fireIn timeInterval: TimeInterval)
     {
-        
         UNUserNotificationCenter.current().getPendingNotificationRequests { (requests) in
             
             for request in requests
             {
                 for notifcationRequest in self.notificationRequests
                 {
-                    if request.identifier == notifcationRequest.identifier
+                    if request.identifier == notifcationRequest.request.identifier
                     {
                         return
                     }
                 }
             }
-            
         }
             
         let content = UNMutableNotificationContent()
@@ -58,14 +65,41 @@ class LocalNotificationManager: NSObject
         
         //Setting time for notification trigger
         let date = Date(timeIntervalSinceNow: timeInterval)
-        let dateCompenents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateCompenents, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
         //Adding Request
         let request = UNNotificationRequest(identifier: "timerdone", content: content, trigger: trigger)
-        self.notificationRequests.append(request)
+        let customRequest = NotificationRequest(request: request)
+        self.notificationRequests.append(customRequest)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+    func setIsNotificationSeen(isSeen: Bool) {
+        for notifcationRequest in self.notificationRequests
+        {
+            notifcationRequest.isNotificationSeen = true
+        }
+        updateRequests()
+    }
+    
+    private func updateRequests() {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (requests) in
+            
+            for request in requests
+            {
+                for notifcationRequest in self.notificationRequests
+                {
+                    if request.identifier == notifcationRequest.request.identifier,
+                        notifcationRequest.isNotificationSeen
+                    {
+                        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [notifcationRequest.request.identifier])
+                    }
+                }
+            }
+            
+        }
     }
 }

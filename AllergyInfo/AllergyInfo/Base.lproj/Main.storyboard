@@ -294,11 +294,11 @@
                         <viewControllerLayoutGuide type="bottom" id="YU8-Va-uoW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MLX-3l-Xem">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-a6-aPo" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us bit something about yourself" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-v9-GGo">
                                         <rect key="frame" x="20" y="50.000000000000007" width="335" height="92.666666666666686"/>
@@ -309,7 +309,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywd-R1-ROX">
                                         <rect key="frame" x="20" y="185.66666666666663" width="335" height="335"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Do they occur sometimes or all the time?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10p-79-O8w" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Do they occur all the time?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="10p-79-O8w" customClass="HoshiTextField" customModule="TextFieldEffects">
                                                 <rect key="frame" x="24" y="260" width="282" height="55"/>
                                                 <color key="backgroundColor" red="0.41990017889999998" green="0.53416097159999998" blue="0.58749759199999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -814,11 +814,11 @@
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvp-ZT-xRK">
                                                             <rect key="frame" x="0.0" y="29" width="345" height="170.66666666666666"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4PD-5j-dcJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="171"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="170.66666666666666"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today is a rainy day outside, no need to wory about allergy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqd-KF-baa">
-                                                                        <rect key="frame" x="8" y="16" width="241" height="137.66666666666666"/>
+                                                                        <rect key="frame" x="8" y="16" width="241" height="138"/>
                                                                         <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="26"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -1296,7 +1296,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2qd-MK-MbF"/>
         <segue reference="BvE-BQ-lmc"/>
         <segue reference="BXA-Ap-sSK"/>
     </inferredMetricsTieBreakers>
