@@ -101,6 +101,9 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         for day in AIAppState.sharedInstance.dataSource where day.weatherType == .bad {
              LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
+            DispatchQueue.main.asyncAfter(deadline: .now()+11.0) {
+                LocalNotificationManager.engine.setIsNotificationSeen()
+            }
         }
     }
     

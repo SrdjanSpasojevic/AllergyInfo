@@ -77,12 +77,8 @@ class LocalNotificationManager: NSObject
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
-    func setIsNotificationSeen(isSeen: Bool) {
-        for notifcationRequest in self.notificationRequests
-        {
-            notifcationRequest.isNotificationSeen = true
-        }
-        updateRequests()
+    @objc func setIsNotificationSeen() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
     private func updateRequests() {
