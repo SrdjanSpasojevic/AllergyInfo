@@ -44,13 +44,16 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        UIApplication.shared.statusBarStyle = .lightContent
         
         
         if !AIAppState.sharedInstance.dataLoaded
         {
             self.getData()
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @objc private func getData()
@@ -96,10 +99,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 AIAppState.sharedInstance.dataSource[i].date = self.formatDate(date: addDate)
             }
         }
-        for day in AIAppState.sharedInstance.dataSource {
-            if day.weatherType == .bad {
-                LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
-            }
+        for day in AIAppState.sharedInstance.dataSource where day.weatherType == .bad {
+             LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
         }
     }
     
