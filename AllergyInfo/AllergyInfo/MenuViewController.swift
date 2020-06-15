@@ -98,8 +98,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             Global.deleteDictionaryFromDisk(withKey: "loggedInUser") { (finishedWithSuccess) in
                 if finishedWithSuccess
                 {
-                    try!Auth.auth().signOut()
+                    try? Auth.auth().signOut()
+                    LocalNotificationManager.engine.setIsNotificationSeen()
                     let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "loginViewController")
+                    loginVC?.modalPresentationStyle = .fullScreen
                     self.present(loginVC!, animated: true, completion: nil)
                 }
                 else
