@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        UILabel.appearance().font = UIFont(name: "Kohinoor Devanagari", size: 15.0)
-        UITextView.appearance().font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
-        UIButton.appearance().titleLabel?.font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
+        UILabel.appearance().substituteFontName = "Kohinoor Devanagari"//UIFont(name: "Kohinoor Devanagari", size: 15.0)
+        //UITextView.appearance().font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
+        //UIButton.appearance().titleLabel?.font = UIFont(name: "Kohinoor Devanagari", size: 17.0)
         
         return true
     }
