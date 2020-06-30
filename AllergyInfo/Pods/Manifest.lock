@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.1)
   - Firebase/Auth (6.22.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.5.1)
@@ -102,6 +103,7 @@ PODS:
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -116,6 +118,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -143,6 +146,7 @@ SPEC REPOS:
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
   FirebaseAnalytics: 83f822fd0d33a46f49f89b8c3ab16ab4d89df08a
   FirebaseAuth: a6da11d78dfd956b7f7af3222a0f0b1c93ef8fc9
@@ -169,6 +173,6 @@ SPEC CHECKSUMS:
   Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 1db4583def49d4384bb15b3df4dbed7ef30a48d7
+PODFILE CHECKSUM: faaf07472703025e2fb157bc4e135a37997069eb
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

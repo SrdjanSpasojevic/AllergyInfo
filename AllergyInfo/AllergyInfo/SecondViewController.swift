@@ -138,7 +138,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.dateLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].date
         
-        cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
+        //cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
         
         if let icon = AIAppState.sharedInstance.dataSource[indexPath.row].iconType{
             cell.iconImageView.image = UIImage(named: icon)

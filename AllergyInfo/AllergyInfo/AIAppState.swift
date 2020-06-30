@@ -22,29 +22,36 @@ class AIAppState: NSObject {
         if self.dataSource.count > 0{
             self.dataSource.removeAll()
         }
-        
-        Global.DB_REF_URL.child(dataKey).observe(.value, with: { snapshot in
-            if snapshot.exists(){
-                guard let dict = snapshot.value! as? NSDictionary else {
-                    completion(false)
-                    return
-                }
-                
-                self.dataSource.append(WeatherData.init(dict: dict[dayOneKey] as! NSDictionary))
-                self.dataSource.append(WeatherData.init(dict: dict[dayTwoKey] as! NSDictionary))
-                self.dataSource.append(WeatherData.init(dict: dict[dayThreeKey] as! NSDictionary))
-                self.dataSource.append(WeatherData.init(dict: dict[dayFourKey] as! NSDictionary))
-                
-                if self.dataSource.isEmpty{
-                    completion(false)
-                }else{
-                    completion(true)
-                }
-            }else{
+        WeatherAPI().retrieveWeatherData { (data) in
+            self.dataSource = data
+            if self.dataSource.isEmpty{
                 completion(false)
+            }else{
+                completion(true)
             }
-            
-        })
+        }
+//        Global.DB_REF_URL.child(dataKey).observe(.value, with: { snapshot in
+//            if snapshot.exists(){
+//                guard let dict = snapshot.value! as? NSDictionary else {
+//                    completion(false)
+//                    return
+//                }
+//
+////                self.dataSource.append(WeatherData.init(dict: dict[dayOneKey] as! NSDictionary))
+////                self.dataSource.append(WeatherData.init(dict: dict[dayTwoKey] as! NSDictionary))
+////                self.dataSource.append(WeatherData.init(dict: dict[dayThreeKey] as! NSDictionary))
+////                self.dataSource.append(WeatherData.init(dict: dict[dayFourKey] as! NSDictionary))
+//
+//                if self.dataSource.isEmpty{
+//                    completion(false)
+//                }else{
+//                    completion(true)
+//                }
+//            }else{
+//                completion(false)
+//            }
+//
+//        })
     }
     
     func fireBaseCreateUser(userImage: UIImage, username: String, password: String, location: String, questions: [String : String], activityView: UIView, completion: @escaping (_ dataLoaded: Bool, _ error: Error?) -> Void){

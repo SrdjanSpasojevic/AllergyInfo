@@ -11,6 +11,7 @@
 		2A2DD17020A234F000874D37 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD16F20A234F000874D37 /* UserData.swift */; };
 		2AB61DC42065A328009832F3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC32065A328009832F3 /* Color+Extensions.swift */; };
 		2AB61DC62065A4D6009832F3 /* ColorsPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */; };
+		2AD9105D24AA4C1D00FC3456 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9105C24AA4C1D00FC3456 /* WeatherAPI.swift */; };
 		2AF21A73201CF957008BA316 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF21A72201CF957008BA316 /* QuestionsViewController.swift */; };
 		2AFEA45A1FE716C8007DA5EA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA4591FE716C8007DA5EA /* HomeTableViewCell.swift */; };
 		2AFEA45C1FE7177D007DA5EA /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFEA45B1FE7177D007DA5EA /* Global.swift */; };
@@ -65,6 +66,7 @@
 		2A2DD16F20A234F000874D37 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		2AB61DC32065A328009832F3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsPallete.swift; sourceTree = "<group>"; };
+		2AD9105C24AA4C1D00FC3456 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		2AF21A72201CF957008BA316 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		2AFEA4591FE716C8007DA5EA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2AFEA45B1FE7177D007DA5EA /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				2AFEA4631FE7393D007DA5EA /* WeatherData.swift */,
 				2AB61DC52065A4D6009832F3 /* ColorsPallete.swift */,
 				2A2DD16F20A234F000874D37 /* UserData.swift */,
+				2AD9105C24AA4C1D00FC3456 /* WeatherAPI.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AllergyInfo/Pods-AllergyInfo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework",
@@ -460,6 +464,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IHKeyboardAvoiding.framework",
@@ -494,6 +499,7 @@
 				A20756CC1F6172890064777C /* SingUpViewController.swift in Sources */,
 				A2B0115A1F94D7C200B9A447 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				2AFEA45C1FE7177D007DA5EA /* Global.swift in Sources */,
+				2AD9105D24AA4C1D00FC3456 /* WeatherAPI.swift in Sources */,
 				A20756C61F602DA50064777C /* AIAppState.swift in Sources */,
 				A28C66B31EB0ECBA0070471D /* CurrentInfoViewController.swift in Sources */,
 				2AFEA45A1FE716C8007DA5EA /* HomeTableViewCell.swift in Sources */,
