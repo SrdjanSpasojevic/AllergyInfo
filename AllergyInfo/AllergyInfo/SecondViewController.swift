@@ -58,14 +58,15 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @objc private func getData()
     {
-        AIAppState.sharedInstance.fetchData { (hasData) in
+        AIAppState.sharedInstance.fetchData { [weak self] (hasData) in
+            guard let self = self else { return }
             if hasData
             {
                 print("Data loaded")
                 self.refreshControl.endRefreshing()
                 self.tableView.backgroundView?.isHidden = true
                 self.tableView.reloadData()
-                self.addDaysInAdvance()
+                self.setNotification()
             }
             else
             {
@@ -99,8 +100,20 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 AIAppState.sharedInstance.dataSource[i].date = self.formatDate(date: addDate)
             }
         }
+    }
+    
+    private func setNotification() {
         for day in AIAppState.sharedInstance.dataSource where day.weatherType == .bad {
-             LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies today. If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
+            var notificationString = ""
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/mm/yyyy"
+            if let dayDate = dateFormatter.date(from: day.date),
+                dayDate == Date() {
+                notificationString = "today"
+            } else {
+                notificationString = day.date
+            }
+            LocalNotificationManager.engine.createNotification(title: "High Risk", body: "High risk of allergies for \(notificationString). If you are going out, make sure you have your medications with you.", categoryID: .critical, fireIn: 10)
             DispatchQueue.main.asyncAfter(deadline: .now()+11.0) {
                 LocalNotificationManager.engine.setIsNotificationSeen()
             }
@@ -138,7 +151,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.dateLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].date
         
-        //cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
+        cell.weatherDescriptionLabel.text = AIAppState.sharedInstance.dataSource[indexPath.row].dayDescription
         
         if let icon = AIAppState.sharedInstance.dataSource[indexPath.row].iconType{
             cell.iconImageView.image = UIImage(named: icon)

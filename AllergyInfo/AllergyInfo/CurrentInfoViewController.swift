@@ -40,8 +40,7 @@ class CurrentInfoViewController: UIViewController {
             {
                 self.weatherIcon.image = UIImage(named: icon)
             }
-            //TODO:
-            //self.todayLabel.text = dataObject.dayDescription
+            self.todayLabel.text = dataObject.dayDescription
         }
         
     }

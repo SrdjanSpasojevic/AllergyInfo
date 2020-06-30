@@ -30,8 +30,8 @@ struct WeatherAPI {
                         for day in days {
                             let weatherDataDay = WeatherData(dict: day)
                             weatherDataArray.append(weatherDataDay)
-                            completion(weatherDataArray)
                         }
+                        completion(weatherDataArray)
                     } else {
                         completion(weatherDataArray)
                     }
