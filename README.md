@@ -1,6 +1,6 @@
 # AllergyInfo
 
-Faculty project
+Thesis project
 
 Information about current state of allergies that affect people
 
